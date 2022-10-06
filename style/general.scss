@@ -1,8 +1,3 @@
-@font-face {
-    font-family: bd-plakatbau;
-    src: url(font/BD_Plakatbau.otf);
-}
-
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -13,8 +8,21 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background: #f3eee4;
-    font-family: bd-plakatbau, sans-serif;
+    background: #131313;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+    font-size: 10rem;
+    color: #fff;
 }
 
 img {
