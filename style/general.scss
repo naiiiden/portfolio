@@ -16,15 +16,6 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
-    height: 100vh;
-    scroll-snap-align: start;
-    text-align: center;
-    position: relative;
-    font-size: 10rem;
-    color: #fff;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -35,3 +26,6 @@ h1 {
     color: red;
     letter-spacing: 3px;
 }
+
+@import "./header";
+@import "./section";
