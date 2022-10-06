@@ -1,3 +1,7 @@
+@font-face {
+  font-family: bd-plakatbau;
+  src: url(font/BD_Plakatbau.otf);
+}
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -8,9 +12,17 @@
 body {
   width: 100%;
   min-height: 100vh;
+  background: #f3eee4;
+  font-family: bd-plakatbau, sans-serif;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+h1 {
+  font-size: 5rem;
+  color: red;
+  letter-spacing: 3px;
 }/*# sourceMappingURL=general.css.map */
