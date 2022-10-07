@@ -32,6 +32,11 @@ h1 {
   color: #fff;
   font-size: 1.5rem;
   gap: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 h1 .naiden, h1 .portfolio {
   display: flex;

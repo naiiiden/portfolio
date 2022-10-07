@@ -13,6 +13,8 @@ h1 {
     color: #fff;
     font-size: 1.5rem;
     gap: 1rem;
+    user-select: none;
+    pointer-events: none;
 
     .naiden, .portfolio {
         display: flex;
