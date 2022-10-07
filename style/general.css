@@ -30,20 +30,51 @@ h1 {
   justify-content: center;
   font-family: monospace;
   color: #fff;
+  font-size: 1.5rem;
+  gap: 1rem;
 }
-h1 .naiden {
+h1 .naiden, h1 .portfolio {
   display: flex;
+  justify-content: center;
 }
-h1 .naiden img {
-  width: 2rem;
-}
-h1 .portfolio {
-  display: flex;
-}
-h1 .portfolio img {
-  width: 2rem;
+h1 .naiden img, h1 .portfolio img {
+  width: calc(100% - 91.125vw);
 }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    gap: 1.25rem;
+  }
+  h1 .naiden img, h1 .portfolio img {
+    width: calc(100% - 92.5vw);
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+    gap: 1.5rem;
+  }
+  h1 .naiden img, h1 .portfolio img {
+    width: calc(100% - 93.75vw);
+  }
+}
+@media screen and (min-width: 1280px) {
+  h1 {
+    gap: 1.625rem;
+  }
+  h1 .naiden img, h1 .portfolio img {
+    width: calc(100% - 95vw);
+  }
+}
+@media screen and (min-width: 1600px) {
+  h1 {
+    gap: 2rem;
+  }
+  h1 .naiden img, h1 .portfolio img {
+    width: 4.5rem;
+  }
+}
 section {
   height: 100vh;
   scroll-snap-align: start;
@@ -51,4 +82,10 @@ section {
   position: relative;
   font-size: 10rem;
   color: #fff;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }/*# sourceMappingURL=general.css.map */
