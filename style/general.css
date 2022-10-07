@@ -17,12 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 5rem;
-  color: red;
-  letter-spacing: 3px;
-}
-
 header {
   height: 100vh;
   scroll-snap-align: start;
@@ -41,13 +35,13 @@ h1 .naiden {
   display: flex;
 }
 h1 .naiden img {
-  width: 7.5rem;
+  width: 2rem;
 }
 h1 .portfolio {
   display: flex;
 }
 h1 .portfolio img {
-  width: 5rem;
+  width: 2rem;
 }
 
 section {
