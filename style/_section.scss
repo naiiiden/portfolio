@@ -3,6 +3,57 @@ section {
     scroll-snap-align: start;
     text-align: center;
     position: relative;
-    font-size: 10rem;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+
+    h2 {
+        font-size: none;
+    }
+
+    picture {
+        img {
+            width: 256px;
+            height: 324px;
+        }
+    }
+
+    p {
+        max-width: 280px;
+        font-size: .9rem;
+    }
+
+    .project-gh-links-wrapper {
+        display: flex;
+        gap: 1rem;
+        
+        a {
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        picture {
+            img {
+                width: 306px;
+                height: 374px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+        picture {
+            img {
+                width: 420px;
+                height: 531.95px;
+            }
+        }
+    }
 }

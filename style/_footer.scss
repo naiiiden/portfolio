@@ -1,5 +1,11 @@
 footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    scroll-snap-align: start;
+
+    .text {
+        color: #fff;
+    }
+
+    nav {
+        display: none;
+    }
 }

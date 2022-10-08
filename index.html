@@ -11,54 +11,63 @@
     <header>
         <h1 aria-label="Naiden's portfolio">
             <div class="naiden">
-                <img src="images/N2.png" alt=""/>
-                <img src="images/a.png" alt=""/> 
-                <img src="images/i3.png" alt=""/>
-                <img src="images/D2.png" alt="">
-                <img src="images/e.png" alt=""/> 
-                <img src="images/n.png" alt=""/>  
+                <img src="images/letters/N2.png" alt=""/>
+                <img src="images/letters/a.png" alt=""/> 
+                <img src="images/letters/i3.png" alt=""/>
+                <img src="images/letters/D2.png" alt="">
+                <img src="images/letters/e.png" alt=""/> 
+                <img src="images/letters/n.png" alt=""/>  
                 <span>'</span>
-                <img src="images/s2.png" alt=""/> 
+                <img src="images/letters/s2.png" alt=""/> 
             </div>
             <div class="portfolio">
-                <img src="images/P (1).png" alt=""/> 
-                <img src="images/O2.png" alt=""/> 
-                <img src="images/R4.png" alt=""/> 
-                <img src="images/T4.png" alt=""/> 
-                <img src="images/F2.png" alt=""/> 
-                <img src="images/o2 (1).png" alt=""/> 
-                <img src="images/L2.png" alt=""/> 
-                <img src="images/I2.png" alt=""/> 
-                <img src="images/O3.png" alt=""/>  
+                <img src="images/letters/P (1).png" alt=""/> 
+                <img src="images/letters/O2.png" alt=""/> 
+                <img src="images/letters/R4.png" alt=""/> 
+                <img src="images/letters/T4.png" alt=""/> 
+                <img src="images/letters/F2.png" alt=""/> 
+                <img src="images/letters/o2 (1).png" alt=""/> 
+                <img src="images/letters/L2.png" alt=""/> 
+                <img src="images/letters/I2.png" alt=""/> 
+                <img src="images/letters/O3.png" alt=""/>  
             </div>
         </h1>
+        <a href="#main" class="skip">⌄</a>
     </header>
-    <main>
+    <main id="main">
         <section class="project-one" id="project-one">
-            1
+            <picture>
+                <source srcset="images/ableton/ableton_mobile.png" media="(max-width: 767px)"/>
+                <source srcset="images/ableton/ableton_tablet.png" media="(max-width: 1023px)"/>
+                <img src="images/ableton/ableton_desktop.png" alt="">
+            </picture>
+            <h2>Ableton Multi Page Website</h2>
+            <p>Note: this is the first time I used React Router. After deploying to Github the main page doesn't load so you need to click on the About link.</p>
+            <div class="project-gh-links-wrapper">
+                <a href="https://github.com/naiiiden/frontend-practice-ableton-about-page">Github repository</a>
+                <a href="https://naiiiden.github.io/frontend-practice-ableton-about-page/">Live Preview</a>
+            </div>
         </section>
-        
         <section class="project-two" id="project-two">
-            2
+            
         </section>
-        
         <section class="project-three" id="project-three">
-            3
+            
         </section>
-        
         <section class="project-four" id="project-four">
-            4
+            
         </section>
-        
         <section class="project-five" id="project-five">
-            5
+            
         </section>
-        
         <section class="project-six" id="project-six">
-            6
+            
         </section>
     </main>
     <footer>
+        <div class="text">
+            <!-- <p>O/ I'm Naiden - a self-taught frontend developer working remotely from home.</p> -->
+        </div>
         <nav>
             <ul>
                 <li><a href="#project-one">Project #1</a></li>
