@@ -159,6 +159,7 @@ footer nav {
 
 @media screen and (min-width: 1024px) {
   footer {
+    scroll-snap-align: unset;
     position: fixed;
     bottom: 0;
     width: 100%;
