@@ -12,6 +12,7 @@ section {
 
     h2 {
         font-size: none;
+        max-width: 260px;
     }
 
     picture {
@@ -38,6 +39,10 @@ section {
 
 @media screen and (min-width: 768px) {
     section {
+        h2 {
+            max-width: 320px;
+        }
+
         picture {
             img {
                 width: 306px;

@@ -105,6 +105,7 @@ section {
 }
 section h2 {
   font-size: none;
+  max-width: 260px;
 }
 section picture img {
   width: 256px;
@@ -123,6 +124,9 @@ section .project-gh-links-wrapper a {
 }
 
 @media screen and (min-width: 768px) {
+  section h2 {
+    max-width: 320px;
+  }
   section picture img {
     width: 306px;
     height: 374px;
