@@ -27,6 +27,18 @@ footer {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        animation-name: opacity;
+        animation-duration: 4s;
+
+        @keyframes opacity {
+            0%, 25%, 50%, 75% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
 
         .text {
             text-align: unset;
