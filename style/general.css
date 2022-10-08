@@ -232,6 +232,225 @@ span {
   }
 }
 
+.l8 {
+  -webkit-animation-name: l8;
+          animation-name: l8;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+}
+@-webkit-keyframes l8 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(-700px, 0, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l8 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(-700px, 0, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l9 {
+  -webkit-animation-name: l9;
+          animation-name: l9;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+@-webkit-keyframes l9 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(973px, 712px, 300px);
+  }
+}
+@keyframes l9 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(973px, 712px, 300px);
+  }
+}
+
+.l10 {
+  -webkit-animation-name: l10;
+          animation-name: l10;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}
+@-webkit-keyframes l10 {
+  0%, 25%, 50%, 65% {
+    transform: translate3d(900px, -821px, -200px);
+  }
+  67.5%, 70%, 80%, 85%, 90%, 95% {
+    transform: translateX(2.5rem);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l10 {
+  0%, 25%, 50%, 65% {
+    transform: translate3d(900px, -821px, -200px);
+  }
+  67.5%, 70%, 80%, 85%, 90%, 95% {
+    transform: translateX(2.5rem);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l11 {
+  -webkit-animation-name: l11;
+          animation-name: l11;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}
+@-webkit-keyframes l11 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(-1231px, 666px, 500px);
+  }
+  80%, 85%, 90%, 95% {
+    transform: translateX(-3.5rem);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l11 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(-1231px, 666px, 500px);
+  }
+  80%, 85%, 90%, 95% {
+    transform: translateX(-3.5rem);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l12 {
+  -webkit-animation-name: l12;
+          animation-name: l12;
+  -webkit-animation-duration: 2.75s;
+          animation-duration: 2.75s;
+}
+@-webkit-keyframes l12 {
+  0%, 25%, 50%, 75% {
+    transform: translateY(500px);
+  }
+  80%, 85%, 90%, 95% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l12 {
+  0%, 25%, 50%, 75% {
+    transform: translateY(500px);
+  }
+  80%, 85%, 90%, 95% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l13 {
+  -webkit-animation-name: l13;
+          animation-name: l13;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+}
+@-webkit-keyframes l13 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(1061px, -891px, 100px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l13 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(1061px, -891px, 100px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l14 {
+  -webkit-animation-name: l14;
+          animation-name: l14;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+@-webkit-keyframes l14 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(-999px, 808px, 1337px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l14 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(-999px, 808px, 1337px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l15 {
+  -webkit-animation-name: l15;
+          animation-name: l15;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+@-webkit-keyframes l15 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(0, 900px, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l15 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(0, 900px, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l16 {
+  -webkit-animation-name: l16;
+          animation-name: l16;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+}
+@-webkit-keyframes l16 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(1000px, 0, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l16 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(1000px, 0, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
 .skip {
   font-size: 5rem;
   color: #fff;
