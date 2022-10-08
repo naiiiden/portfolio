@@ -19,7 +19,7 @@ html {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,7 @@ header {
 }
 
 h1 {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +93,7 @@ h1 .naiden img, h1 .portfolio img {
   }
 }
 section {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   text-align: center;
   position: relative;
