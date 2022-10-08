@@ -136,10 +136,45 @@ section .project-gh-links-wrapper a {
 }
 footer {
   scroll-snap-align: start;
+  padding: 1.5rem;
 }
 footer .text {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+footer .text a {
   color: #fff;
 }
 footer nav {
   display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .text {
+    text-align: unset;
+    max-width: 300px;
+  }
+  footer nav {
+    display: unset;
+  }
+  footer nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  footer nav ul a {
+    color: #fff;
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=general.css.map */
