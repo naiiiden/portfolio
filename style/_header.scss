@@ -5,6 +5,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 h1 {
@@ -17,8 +18,8 @@ h1 {
     color: #fff;
     font-size: 1.5rem;
     gap: 1rem;
-    user-select: none;
-    pointer-events: none;
+    // user-select: none;
+    // pointer-events: none;
 
     .naiden, .portfolio {
         display: flex;
@@ -28,7 +29,127 @@ h1 {
             width: calc(100% - 91.125vw);
         }
     }
+}
 
+.l1 {
+    animation-name: l1;
+    animation-duration: 2s;
+
+    @keyframes l1 {
+        0%, 25%, 50%, 75% {
+            transform: translate3d(300px, 900px, 250px);
+        }
+
+        100% {
+            transform: unset;
+        }
+    }
+}
+
+.l2 {
+    animation-name: l2;
+    animation-duration: 1.5s;
+
+    @keyframes l2 {
+        0%, 25%, 50%, 75% {
+            transform: translate3d(6000px, 400px, 125px);
+        }
+
+        100% {
+            transform: unset;
+        }
+    }
+}
+
+.l3 {
+    animation-name: l3;
+    animation-duration: 1s;
+
+    @keyframes l3 {
+        0%, 25%, 50%, 75% {
+            transform: translate3d(0, -500px, 0);
+        }
+
+        100% {
+            transform: unset;
+        }
+    }
+}
+
+.l4 {
+    animation-name: l4;
+    animation-duration: 1.25s;
+
+    @keyframes l4 {
+        0%, 25%, 50%, 75% {
+            transform: translate3d(272px, 2000px, 0);
+        }
+
+        100% {
+            transform: unset;
+        }
+    }
+}
+
+.l5 {
+    animation-name: l5;
+    animation-duration: 1.75s;
+
+    @keyframes l5 {
+        0%, 25%, 50%, 75% {
+            transform: translate3d(-400px, 900px, 500px);
+        }
+
+        100% {
+            transform: unset;
+        }
+    }
+}
+
+.l6 {
+    animation-name: l6;
+    animation-duration: 1.5s;
+
+    @keyframes l6 {
+        0%, 25%, 50%, 75% {
+            transform: translate3d(666px, -666px, 666px);
+        }
+
+        100% {
+            transform: unset;
+        }
+    }
+}
+
+span {
+    animation-name: apostrophe;
+    animation-duration: 2s;
+
+    @keyframes apostrophe {
+        0%, 25%, 50%, 75% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.l7 {
+    transform: translateX(1.5rem) translateY(3rem) rotateZ(90deg);
+    animation-name: l7;
+    animation-duration: 2s;
+
+    @keyframes l7 {
+        0%, 25%, 50%, 75%, 80%, 85%, 90%, 95%, 99% {
+            transform: translate3d(0, -500px, 0);
+        }
+
+        100% {
+            transform: translateX(1.5rem) translateY(3rem) rotateZ(90deg);
+        }
+    }
 }
 
 .skip {

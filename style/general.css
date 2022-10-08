@@ -25,6 +25,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 h1 {
@@ -37,11 +38,6 @@ h1 {
   color: #fff;
   font-size: 1.5rem;
   gap: 1rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
 }
 h1 .naiden, h1 .portfolio {
   display: flex;
@@ -49,6 +45,191 @@ h1 .naiden, h1 .portfolio {
 }
 h1 .naiden img, h1 .portfolio img {
   width: calc(100% - 91.125vw);
+}
+
+.l1 {
+  -webkit-animation-name: l1;
+          animation-name: l1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+@-webkit-keyframes l1 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(300px, 900px, 250px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l1 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(300px, 900px, 250px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l2 {
+  -webkit-animation-name: l2;
+          animation-name: l2;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+@-webkit-keyframes l2 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(6000px, 400px, 125px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l2 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(6000px, 400px, 125px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l3 {
+  -webkit-animation-name: l3;
+          animation-name: l3;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+@-webkit-keyframes l3 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(0, -500px, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l3 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(0, -500px, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l4 {
+  -webkit-animation-name: l4;
+          animation-name: l4;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+}
+@-webkit-keyframes l4 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(272px, 2000px, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l4 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(272px, 2000px, 0);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l5 {
+  -webkit-animation-name: l5;
+          animation-name: l5;
+  -webkit-animation-duration: 1.75s;
+          animation-duration: 1.75s;
+}
+@-webkit-keyframes l5 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(-400px, 900px, 500px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l5 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(-400px, 900px, 500px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+.l6 {
+  -webkit-animation-name: l6;
+          animation-name: l6;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+@-webkit-keyframes l6 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(666px, -666px, 666px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+@keyframes l6 {
+  0%, 25%, 50%, 75% {
+    transform: translate3d(666px, -666px, 666px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+
+span {
+  -webkit-animation-name: apostrophe;
+          animation-name: apostrophe;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+@-webkit-keyframes apostrophe {
+  0%, 25%, 50%, 75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apostrophe {
+  0%, 25%, 50%, 75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.l7 {
+  transform: translateX(1.5rem) translateY(3rem) rotateZ(90deg);
+  -webkit-animation-name: l7;
+          animation-name: l7;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+@-webkit-keyframes l7 {
+  0%, 25%, 50%, 75%, 80%, 85%, 90%, 95%, 99% {
+    transform: translate3d(0, -500px, 0);
+  }
+  100% {
+    transform: translateX(1.5rem) translateY(3rem) rotateZ(90deg);
+  }
+}
+@keyframes l7 {
+  0%, 25%, 50%, 75%, 80%, 85%, 90%, 95%, 99% {
+    transform: translate3d(0, -500px, 0);
+  }
+  100% {
+    transform: translateX(1.5rem) translateY(3rem) rotateZ(90deg);
+  }
 }
 
 .skip {
