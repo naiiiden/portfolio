@@ -522,6 +522,7 @@ section .project-gh-links-wrapper {
 }
 section .project-gh-links-wrapper a {
   color: #fff;
+  z-index: 99;
 }
 
 @media screen and (min-width: 768px) {
