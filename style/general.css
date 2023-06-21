@@ -75,4 +75,17 @@ html {
   html {
     scroll-behavior: auto !important;
   }
+}
+@font-face {
+  font-family: "Helmet";
+  src: url("./fonts/Helmet-Regular.ttf");
+}
+body {
+  border: 1px solid red;
+  background: black;
+  color: white;
+}
+body h1 {
+  font-family: Helmet, sans-serif;
+  font-size: clamp(5.75rem, 12.5vw, 12.5rem);
 }/*# sourceMappingURL=general.css.map */
