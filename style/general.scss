@@ -2,7 +2,6 @@
 @import './fonts.scss';
 
 body {
-    border: 1px solid red;
     background: black;
     color: white;
     padding: clamp(1.5rem, 11.75vw, 20rem) clamp(1.5rem, 11.75vw, 20rem) 0 clamp(1.5rem, 11.75vw, 20rem);
@@ -13,12 +12,21 @@ body {
         line-height: .75;
     }
 
+    main {
+        max-width: 1400px;
+    }
+
     p {
         font-family: NeueMontreal, sans-serif;
+        font-size: clamp(1rem, 3vw, 1.25rem);
     }
 
     h2, a {
         font-family: Helmet, sans-serif;
+
+        &[href] {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+        }
     }
 
     .uppercase {

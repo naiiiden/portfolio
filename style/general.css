@@ -85,7 +85,6 @@ html {
   src: url("./fonts/PPNeueMontreal-Medium.otf");
 }
 body {
-  border: 1px solid red;
   background: black;
   color: white;
   padding: clamp(1.5rem, 11.75vw, 20rem) clamp(1.5rem, 11.75vw, 20rem) 0 clamp(1.5rem, 11.75vw, 20rem);
@@ -95,11 +94,18 @@ body h1 {
   font-size: clamp(4rem, 12.5vw, 12.5rem);
   line-height: 0.75;
 }
+body main {
+  max-width: 1400px;
+}
 body p {
   font-family: NeueMontreal, sans-serif;
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
 body h2, body a {
   font-family: Helmet, sans-serif;
+}
+body h2[href], body a[href] {
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 body .uppercase {
   text-transform: uppercase;
