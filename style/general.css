@@ -80,6 +80,10 @@ html {
   font-family: "Helmet";
   src: url("./fonts/Helmet-Regular.ttf");
 }
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("./fonts/PPNeueMontreal-Medium.otf");
+}
 body {
   border: 1px solid red;
   background: black;
@@ -88,4 +92,10 @@ body {
 body h1 {
   font-family: Helmet, sans-serif;
   font-size: clamp(5.75rem, 12.5vw, 12.5rem);
+}
+body p {
+  font-family: NeueMontreal, sans-serif;
+}
+body h2, body a {
+  font-family: Helmet, sans-serif;
 }/*# sourceMappingURL=general.css.map */
