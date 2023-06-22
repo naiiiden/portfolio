@@ -87,7 +87,7 @@ html {
 body {
   background: black;
   color: white;
-  padding: clamp(1.5rem, 11.75vw, 20rem) clamp(1.5rem, 11.75vw, 20rem) 0 clamp(1.5rem, 11.75vw, 20rem);
+  padding: clamp(1.5rem, 11.75vw, 20rem);
 }
 body h1 {
   font-family: Helmet, sans-serif;
