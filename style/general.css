@@ -84,9 +84,16 @@ html {
   font-family: "NeueMontreal";
   src: url("./fonts/PPNeueMontreal-Medium.otf");
 }
-body {
+::-moz-selection {
   background: black;
   color: white;
+}
+::selection {
+  background: black;
+  color: white;
+}
+
+body {
   padding: clamp(1.5rem, 11.75vw, 20rem);
 }
 body h1 {
@@ -107,8 +114,26 @@ body h2, body a {
 body h2[href], body a[href] {
   font-size: clamp(1rem, 3vw, 1.5rem);
   display: inline-block;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
 }
 body .uppercase {
   text-transform: uppercase;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-moz-selection {
+    background: white;
+    color: black;
+  }
+  ::selection {
+    background: white;
+    color: black;
+  }
+  body {
+    background: black;
+    color: white;
+  }
+  body a[href] {
+    border-bottom: 2px solid white;
+  }
 }/*# sourceMappingURL=general.css.map */

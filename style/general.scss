@@ -1,9 +1,12 @@
 @import '../node_modules/naiden-css-reset/reset.scss';
 @import './fonts.scss';
 
-body {
+::selection {
     background: black;
     color: white;
+}
+
+body {
     padding: clamp(1.5rem, 11.75vw, 20rem);
 
     h1 {
@@ -27,11 +30,27 @@ body {
         &[href] {
             font-size: clamp(1rem, 3vw, 1.5rem);
             display: inline-block;
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid black;
         }
     }
 
     .uppercase {
         text-transform: uppercase;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    ::selection {
+        background: white;
+        color: black;
+    }
+
+    body {
+        background: black;
+        color: white;
+
+        a[href] {
+            border-bottom: 2px solid white;
+        }
     }
 }
