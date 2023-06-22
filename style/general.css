@@ -106,6 +106,8 @@ body h2, body a {
 }
 body h2[href], body a[href] {
   font-size: clamp(1rem, 3vw, 1.5rem);
+  display: inline-block;
+  border-bottom: 2px solid white;
 }
 body .uppercase {
   text-transform: uppercase;

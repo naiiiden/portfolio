@@ -26,6 +26,8 @@ body {
 
         &[href] {
             font-size: clamp(1rem, 3vw, 1.5rem);
+            display: inline-block;
+            border-bottom: 2px solid white;
         }
     }
 
