@@ -8,7 +8,7 @@
 
 body {
     padding: clamp(1.5rem, 11.75vw, 20rem);
-    overflow-x: hidden;
+    background: white;
 
     h1 {
         font-family: Helmet, sans-serif;
@@ -50,7 +50,7 @@ body {
         width: 1.5rem;
         height: 1.5rem;
         border-radius: 50%;
-        background: black;
+        background-color:aliceblue;
         pointer-events: none;
         z-index: 9999;
         mix-blend-mode: difference;
