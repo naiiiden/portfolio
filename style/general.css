@@ -126,7 +126,6 @@ body .uppercase {
     cursor: none;
   }
   a {
-    border: 1px solid red;
     position: relative;
     line-height: 1;
   }
@@ -137,14 +136,6 @@ body .uppercase {
     top: 0;
     border-radius: 25%;
   }
-  a .left::after, a .right::after {
-    content: "Github";
-    color: transparent;
-    position: absolute;
-  }
-  a .left:hover::after, a .right:hover::after {
-    color: black;
-  }
   a .left {
     left: 0;
   }
@@ -153,9 +144,6 @@ body .uppercase {
     width: 100%;
     transition: 0.2s;
     background: white;
-  }
-  a .left:hover::after {
-    left: 0;
   }
   a .right {
     right: 0;
@@ -166,11 +154,10 @@ body .uppercase {
     transition: 0.2s;
     background: white;
   }
-  a .right:hover::after {
-    right: 0;
-  }
   .cursor {
     position: fixed;
+    top: -2rem;
+    left: -2rem;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
