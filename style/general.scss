@@ -8,6 +8,7 @@
 
 body {
     padding: clamp(1.5rem, 11.75vw, 20rem);
+    overflow-x: hidden;
 
     h1 {
         font-family: Helmet, sans-serif;
@@ -39,6 +40,23 @@ body {
     }
 }
 
+@media (any-pointer: fine) {
+    body {
+        cursor: none;
+    }
+
+    .cursor {
+        position: fixed;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background: black;
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: difference;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     ::selection {
         background: white;
@@ -51,6 +69,13 @@ body {
 
         a[href] {
             border-bottom: 2px solid white;
+        }
+    }
+
+    @media (any-pointer: fine) {
+        .cursor {
+            background: white;
+            mix-blend-mode: difference;
         }
     }
 }
