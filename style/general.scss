@@ -45,6 +45,54 @@ body {
         cursor: none;
     }
 
+    a {
+        position: relative;
+        line-height: 1;
+
+        .left, .right, .middle {
+            position: absolute;
+            width: 33%;
+            height: 100%;
+            top: 0;
+            border-radius: 25%;
+        }
+
+        .left {
+            left: 0;
+
+            &:hover {
+                z-index: 100;
+                width: 100%;
+                transition: .2s;
+                background: white;
+            }
+        }
+
+        .middle {
+            left: 33%;
+
+            &:hover {
+                width: 100%;
+                left: 0;
+                right: 0;
+                z-index: 100;
+                transition: .2s;
+                background: white;
+            }
+        }
+
+        .right {
+            right: 0;
+
+            &:hover {
+                z-index: 100;
+                width: 100%;
+                transition: .2s;
+                background: white;
+            }
+        }
+    }
+
     .cursor {
         position: fixed;
         width: 1.5rem;

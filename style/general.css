@@ -125,6 +125,46 @@ body .uppercase {
   body {
     cursor: none;
   }
+  a {
+    position: relative;
+    line-height: 1;
+  }
+  a .left, a .right, a .middle {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    top: 0;
+    border-radius: 25%;
+  }
+  a .left {
+    left: 0;
+  }
+  a .left:hover {
+    z-index: 100;
+    width: 100%;
+    transition: 0.2s;
+    background: white;
+  }
+  a .middle {
+    left: 33%;
+  }
+  a .middle:hover {
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: 0.2s;
+    background: white;
+  }
+  a .right {
+    right: 0;
+  }
+  a .right:hover {
+    z-index: 100;
+    width: 100%;
+    transition: 0.2s;
+    background: white;
+  }
   .cursor {
     position: fixed;
     width: 1.5rem;
