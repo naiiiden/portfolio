@@ -126,6 +126,24 @@ body h2[href]:active, body h2[href]:focus-visible, body a[href]:active, body a[h
   color: white;
   transition: 0.2s;
 }
+body .hover-container div {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  max-height: 0;
+  transition: max-height 0.25s, opacity 0.15s;
+}
+body .hover-container:hover div {
+  opacity: 1;
+  -webkit-user-select: unset;
+     -moz-user-select: unset;
+          user-select: unset;
+  pointer-events: unset;
+  max-height: 9999px;
+  transition: max-height 0.5s, opacity 0.3s;
+}
 body .uppercase {
   text-transform: uppercase;
 }

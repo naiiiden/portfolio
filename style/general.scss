@@ -44,7 +44,27 @@ body {
                 transition: .2s;
             }
         }
+    }
 
+    .hover-container {
+        div {
+            opacity: 0;
+            user-select: none;
+            pointer-events: none;
+            max-height: 0;
+            transition: max-height .25s, opacity .15s;
+
+        }
+
+        &:hover {
+            div {
+                opacity: 1;
+                user-select: unset;
+                pointer-events: unset;
+                max-height: 9999px;
+                transition: max-height .5s, opacity .3s;
+            }
+        }
     }
 
     .uppercase {
