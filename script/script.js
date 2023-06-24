@@ -6,13 +6,11 @@ document.addEventListener('mousemove', (e) => {
 })
 
 document.querySelectorAll('a[href]').forEach(link => {
-    link.addEventListener('mouseenter', (e) => {
-        link.classList.add('hover')
+    link.addEventListener('mouseenter', () => {
         cursor.classList.remove('cursor')
     })
 
-    link.addEventListener('mouseleave', (e) => {
-        link.classList.remove('hover')
+    link.addEventListener('mouseleave', () => {
         cursor.classList.add('cursor')
     })
 })
