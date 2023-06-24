@@ -121,18 +121,15 @@ body .uppercase {
   text-transform: uppercase;
 }
 
-@media (any-pointer: fine) {
-  body {
-    cursor: none;
-  }
-  body a {
+@media (hover: hover) {
+  a {
     position: relative;
     line-height: 1;
   }
-  body a[href]:hover {
+  a[href]:hover {
     border-bottom: none;
   }
-  body a[href] .left, body a[href] .right {
+  a[href] .left, a[href] .right {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -144,7 +141,7 @@ body .uppercase {
             user-select: none;
     transition: 0.2s;
   }
-  body a[href] .left:hover, body a[href] .right:hover {
+  a[href] .left:hover, a[href] .right:hover {
     z-index: 100;
     width: 100%;
     background: black;
@@ -152,23 +149,26 @@ body .uppercase {
     letter-spacing: unset;
     transition: 0.3s;
   }
-  body a[href] .left {
+  a[href] .left {
     left: 0;
   }
-  body a[href] .right {
+  a[href] .right {
     right: 0;
   }
-  body a[href] .right:hover {
+  a[href] .right:hover {
     direction: rtl;
   }
 }
-@media (any-pointer: fine) and (prefers-color-scheme: dark) {
-  body a[href] .left:hover, body a[href] .right:hover {
+@media (hover: hover) and (prefers-color-scheme: dark) {
+  a[href] .left:hover, a[href] .right:hover {
     background: white;
     color: black;
   }
 }
 @media (any-pointer: fine) {
+  body {
+    cursor: none;
+  }
   .cursor {
     position: fixed;
     top: -2rem;
