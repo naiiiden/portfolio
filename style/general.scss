@@ -43,52 +43,57 @@ body {
 @media (any-pointer: fine) {
     body {
         cursor: none;
-    }
-
-    a[href] { 
-        position: relative;
-        line-height: 1;
-
-        &:hover {
-            border-bottom: none;
-        }
-
-        .left, .right {
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            top: 0;
-            border-radius: 25%;
-            color: transparent;
-            letter-spacing: -.5rem;
-        }
         
-        .left {
-            left: 0;
+        a { 
+            position: relative;
+            line-height: 1;
+    
+            &[href]{
+                &:hover {
+                    border-bottom: none;
+                }
+        
+                .left, .right {
+                    position: absolute;
+                    width: 50%;
+                    height: 100%;
+                    top: 0;
+                    color: transparent;
+                    letter-spacing: -.5rem;
+                    user-select: none;
+                    transition: .2s;
 
-            &:hover {
-                z-index: 100;
-                width: 100%;
-                background: white;  
-                color: black;
-                letter-spacing: inherit;
-                transition: .2s, letter-spacing .3s;
+                    &:hover {
+                        z-index: 100;
+                        width: 100%;
+                        background: black;  
+                        color: white;
+                        letter-spacing: unset;
+                        transition: .3s;
+                    }
+                }
+                
+                .left {
+                    left: 0;
+                }
+        
+                .right {
+                    right: 0;
+        
+                    &:hover {
+                        direction: rtl;
+                    }
+                }
+                
+                @media (prefers-color-scheme: dark) {
+                    .left:hover, .right:hover {
+                        background: white;
+                        color: black;
+                    }
+                }
+                
             }
-        }
-
-        .right {
-            right: 0;
-
-            &:hover {
-                z-index: 100;
-                width: 100%;
-                background: white;
-                color: black;
-                letter-spacing: inherit;
-                direction: rtl;
-                transition: .2s, letter-spacing .3s;
-
-            }
+    
         }
     }
 

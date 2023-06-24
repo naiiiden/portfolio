@@ -125,45 +125,50 @@ body .uppercase {
   body {
     cursor: none;
   }
-  a[href] {
+  body a {
     position: relative;
     line-height: 1;
   }
-  a[href]:hover {
+  body a[href]:hover {
     border-bottom: none;
   }
-  a[href] .left, a[href] .right {
+  body a[href] .left, body a[href] .right {
     position: absolute;
     width: 50%;
     height: 100%;
     top: 0;
-    border-radius: 25%;
     color: transparent;
     letter-spacing: -0.5rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    transition: 0.2s;
   }
-  a[href] .left {
+  body a[href] .left:hover, body a[href] .right:hover {
+    z-index: 100;
+    width: 100%;
+    background: black;
+    color: white;
+    letter-spacing: unset;
+    transition: 0.3s;
+  }
+  body a[href] .left {
     left: 0;
   }
-  a[href] .left:hover {
-    z-index: 100;
-    width: 100%;
-    background: white;
-    color: black;
-    letter-spacing: inherit;
-    transition: 0.2s, letter-spacing 0.3s;
-  }
-  a[href] .right {
+  body a[href] .right {
     right: 0;
   }
-  a[href] .right:hover {
-    z-index: 100;
-    width: 100%;
+  body a[href] .right:hover {
+    direction: rtl;
+  }
+}
+@media (any-pointer: fine) and (prefers-color-scheme: dark) {
+  body a[href] .left:hover, body a[href] .right:hover {
     background: white;
     color: black;
-    letter-spacing: inherit;
-    direction: rtl;
-    transition: 0.2s, letter-spacing 0.3s;
   }
+}
+@media (any-pointer: fine) {
   .cursor {
     position: fixed;
     top: -2rem;
