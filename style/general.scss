@@ -10,7 +10,7 @@ body {
     padding: clamp(1.5rem, 11.75vw, 20rem);
     background: white;
 
-    h1 {
+    .heading {
         font-family: Helmet, sans-serif;
         font-size: clamp(4rem, 12.5vw, 12.5rem);
         line-height: .75;
