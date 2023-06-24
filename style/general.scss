@@ -45,9 +45,13 @@ body {
         cursor: none;
     }
 
-    a { 
+    a[href] { 
         position: relative;
         line-height: 1;
+
+        &:hover {
+            border-bottom: none;
+        }
 
         .left, .right {
             position: absolute;
@@ -55,6 +59,8 @@ body {
             height: 100%;
             top: 0;
             border-radius: 25%;
+            color: transparent;
+            letter-spacing: -.5rem;
         }
         
         .left {
@@ -63,8 +69,10 @@ body {
             &:hover {
                 z-index: 100;
                 width: 100%;
-                transition: .2s;
-                background: white;    
+                background: white;  
+                color: black;
+                letter-spacing: inherit;
+                transition: .2s, letter-spacing .3s;
             }
         }
 
@@ -74,8 +82,12 @@ body {
             &:hover {
                 z-index: 100;
                 width: 100%;
-                transition: .2s;
                 background: white;
+                color: black;
+                letter-spacing: inherit;
+                direction: rtl;
+                transition: .2s, letter-spacing .3s;
+
             }
         }
     }

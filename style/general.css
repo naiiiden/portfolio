@@ -125,34 +125,44 @@ body .uppercase {
   body {
     cursor: none;
   }
-  a {
+  a[href] {
     position: relative;
     line-height: 1;
   }
-  a .left, a .right {
+  a[href]:hover {
+    border-bottom: none;
+  }
+  a[href] .left, a[href] .right {
     position: absolute;
     width: 50%;
     height: 100%;
     top: 0;
     border-radius: 25%;
+    color: transparent;
+    letter-spacing: -0.5rem;
   }
-  a .left {
+  a[href] .left {
     left: 0;
   }
-  a .left:hover {
+  a[href] .left:hover {
     z-index: 100;
     width: 100%;
-    transition: 0.2s;
     background: white;
+    color: black;
+    letter-spacing: inherit;
+    transition: 0.2s, letter-spacing 0.3s;
   }
-  a .right {
+  a[href] .right {
     right: 0;
   }
-  a .right:hover {
+  a[href] .right:hover {
     z-index: 100;
     width: 100%;
-    transition: 0.2s;
     background: white;
+    color: black;
+    letter-spacing: inherit;
+    direction: rtl;
+    transition: 0.2s, letter-spacing 0.3s;
   }
   .cursor {
     position: fixed;
