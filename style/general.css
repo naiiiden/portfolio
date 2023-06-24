@@ -116,6 +116,15 @@ body h2[href], body a[href] {
   font-size: clamp(1rem, 3vw, 1.5rem);
   display: inline-block;
   border-bottom: 2px solid black;
+  transition: 0.2s;
+}
+body h2[href] span, body a[href] span {
+  display: none;
+}
+body h2[href]:active, body h2[href]:focus-visible, body a[href]:active, body a[href]:focus-visible {
+  background: black;
+  color: white;
+  transition: 0.2s;
 }
 body .uppercase {
   text-transform: uppercase;
@@ -197,6 +206,11 @@ body .uppercase {
   }
   body a[href] {
     border-bottom: 2px solid white;
+  }
+  body a[href]:active, body a[href]:focus-visible {
+    background: white;
+    color: black;
+    transition: 0.2s;
   }
 }
 @media (prefers-color-scheme: dark) and (any-pointer: fine) {

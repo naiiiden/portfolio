@@ -32,7 +32,19 @@ body {
             font-size: clamp(1rem, 3vw, 1.5rem);
             display: inline-block;
             border-bottom: 2px solid black;
+            transition: .2s;
+
+            span {
+                display: none;
+            }
+            
+            &:active, &:focus-visible {
+                background: black;
+                color: white;
+                transition: .2s;
+            }
         }
+
     }
 
     .uppercase {
@@ -123,6 +135,12 @@ body {
 
         a[href] {
             border-bottom: 2px solid white;
+
+            &:active, &:focus-visible {
+                background: white;
+                color: black;
+                transition: .2s;
+            }
         }
     }
 
