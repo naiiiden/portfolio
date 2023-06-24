@@ -139,6 +139,7 @@ body .uppercase {
     border-bottom: none;
   }
   a[href] .left, a[href] .right {
+    display: unset;
     position: absolute;
     width: 50%;
     height: 100%;

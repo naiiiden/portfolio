@@ -63,6 +63,7 @@ body {
             }
     
             .left, .right {
+                display: unset;
                 position: absolute;
                 width: 50%;
                 height: 100%;
