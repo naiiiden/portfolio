@@ -96,7 +96,6 @@ html {
 body {
   padding: clamp(1.5rem, 11.75vw, 20rem);
   background: white;
-  overflow-y: hidden;
 }
 body .heading {
   font-family: Helmet, sans-serif;
