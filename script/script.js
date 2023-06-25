@@ -20,6 +20,6 @@ document.querySelector('button').addEventListener('click', () => {
     const img = document.querySelector('img')
 
     text.classList.toggle('anim')
-    img.setAttribute('src', text.classList.contains('anim') ? './images/close.svg' : './images/open.svg')
+    img.setAttribute('src', text.classList.contains('anim') ? './images/close-dark.svg' : './images/open-dark.svg')
     img.setAttribute('aria-label', text.classList.contains('anim') ? 'Hide text' : 'Reveal text')
 })
