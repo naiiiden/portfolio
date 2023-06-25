@@ -14,3 +14,8 @@ document.querySelectorAll('a[href]').forEach(link => {
         cursor.classList.add('cursor')
     })
 })
+
+document.querySelector('button').addEventListener('click', () => {
+    console.log(1)
+    document.querySelector('.text-reveal').classList.toggle('anim')
+})
