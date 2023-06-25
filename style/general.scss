@@ -55,6 +55,10 @@ body {
     button {
         background: none;
         border: none;
+
+        img {
+            width: clamp(80%, 12.5vw, 100%);
+        }
     }
 
     .text-reveal {

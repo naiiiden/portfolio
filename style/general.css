@@ -135,6 +135,9 @@ body button {
   background: none;
   border: none;
 }
+body button img {
+  width: clamp(80%, 12.5vw, 100%);
+}
 body .text-reveal {
   opacity: 0;
   -webkit-user-select: none;
