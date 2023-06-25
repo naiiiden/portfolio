@@ -17,7 +17,8 @@ body {
 
         span {
             display: inline-block;
-            transform: rotateX(180deg);
+            transform: rotateX(180deg) translateY(.125rem);
+            line-height: .75;
         }
     }
 
@@ -73,8 +74,9 @@ body {
         pointer-events: none;
         max-height: 0;
         transition: max-height .25s, opacity .15s;
-
+  
         &.anim {
+            padding: .5rem 0 .5rem clamp(0rem, 1.5vw, .85rem);
             opacity: 1;
             user-select: unset;
             pointer-events: unset;

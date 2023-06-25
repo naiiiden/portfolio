@@ -104,7 +104,8 @@ body .heading {
 }
 body .heading span {
   display: inline-block;
-  transform: rotateX(180deg);
+  transform: rotateX(180deg) translateY(0.125rem);
+  line-height: 0.75;
 }
 body main {
   max-width: 975px;
@@ -153,6 +154,7 @@ body .text-reveal {
   transition: max-height 0.25s, opacity 0.15s;
 }
 body .text-reveal.anim {
+  padding: 0.5rem 0 0.5rem clamp(0rem, 1.5vw, 0.85rem);
   opacity: 1;
   -webkit-user-select: unset;
      -moz-user-select: unset;
