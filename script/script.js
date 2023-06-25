@@ -15,11 +15,11 @@ document.querySelectorAll('a[href]').forEach(link => {
     })
 })
 
-const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const text = document.querySelector('.text-reveal')
 const img = document.querySelector('img')
 
 function svgStrokeColor() {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     img.setAttribute('src', text.classList.contains('anim')
         ? isDark
             ? './images/close-dark.svg'
@@ -37,3 +37,5 @@ document.querySelector('button').addEventListener('click', () => {
     svgStrokeColor()
     img.setAttribute('aria-label', text.classList.contains('anim') ? 'Hide text' : 'Reveal text')
 })
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', svgStrokeColor)
