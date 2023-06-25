@@ -15,11 +15,25 @@ document.querySelectorAll('a[href]').forEach(link => {
     })
 })
 
-document.querySelector('button').addEventListener('click', () => {
-    const text = document.querySelector('.text-reveal')
-    const img = document.querySelector('img')
+const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const text = document.querySelector('.text-reveal')
+const img = document.querySelector('img')
 
+function svgStrokeColor() {
+    img.setAttribute('src', text.classList.contains('anim')
+        ? isDark
+            ? './images/close-dark.svg'
+            : './images/close-light.svg'
+        : isDark
+            ? './images/open-dark.svg'
+            : './images/open-light.svg'
+    )
+}
+
+svgStrokeColor()
+
+document.querySelector('button').addEventListener('click', () => {
     text.classList.toggle('anim')
-    img.setAttribute('src', text.classList.contains('anim') ? './images/close-dark.svg' : './images/open-dark.svg')
+    svgStrokeColor()
     img.setAttribute('aria-label', text.classList.contains('anim') ? 'Hide text' : 'Reveal text')
 })
