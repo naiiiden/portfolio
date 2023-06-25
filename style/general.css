@@ -109,6 +109,7 @@ body .heading span {
 }
 body main {
   max-width: 975px;
+  position: relative;
 }
 body p {
   font-family: NeueMontreal, sans-serif;
@@ -134,9 +135,14 @@ body h2[href]:active, body h2[href]:focus-visible, body a[href]:active, body a[h
 body button {
   background: none;
   border: none;
+  position: absolute;
+  top: -8.5rem;
 }
 body button img {
   width: clamp(80%, 12.5vw, 100%);
+}
+body .main-text-container {
+  margin-top: 8.5rem;
 }
 body .text-reveal {
   opacity: 0;

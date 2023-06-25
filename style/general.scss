@@ -24,6 +24,7 @@ body {
 
     main {
         max-width: 975px;
+        position: relative;
     }
 
     p {
@@ -55,10 +56,16 @@ body {
     button {
         background: none;
         border: none;
+        position: absolute;
+        top: -8.5rem;
 
         img {
             width: clamp(80%, 12.5vw, 100%);
         }
+    }
+
+    .main-text-container {
+        margin-top: 8.5rem;
     }
 
     .text-reveal {
