@@ -16,6 +16,10 @@ document.querySelectorAll('a[href]').forEach(link => {
 })
 
 document.querySelector('button').addEventListener('click', () => {
-    console.log(1)
-    document.querySelector('.text-reveal').classList.toggle('anim')
+    const text = document.querySelector('.text-reveal')
+    const img = document.querySelector('img')
+
+    text.classList.toggle('anim')
+    img.setAttribute('src', text.classList.contains('anim') ? './images/close.svg' : './images/open.svg')
+    img.setAttribute('aria-label', text.classList.contains('anim') ? 'Hide text' : 'Reveal text')
 })
