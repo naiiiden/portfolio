@@ -14,6 +14,11 @@ body {
         font-family: Helmet, sans-serif;
         font-size: clamp(4rem, 12.5vw, 12.5rem);
         line-height: .75;
+
+        span {
+            display: inline-block;
+            transform: rotateX(180deg);
+        }
     }
 
     main {
@@ -47,7 +52,8 @@ body {
     }
 
     button {
-        margin-bottom: 5rem;
+        background: none;
+        border: none;
     }
 
     .text-reveal {

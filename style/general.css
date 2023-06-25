@@ -102,6 +102,10 @@ body .heading {
   font-size: clamp(4rem, 12.5vw, 12.5rem);
   line-height: 0.75;
 }
+body .heading span {
+  display: inline-block;
+  transform: rotateX(180deg);
+}
 body main {
   max-width: 975px;
 }
@@ -127,7 +131,8 @@ body h2[href]:active, body h2[href]:focus-visible, body a[href]:active, body a[h
   transition: 0.2s;
 }
 body button {
-  margin-bottom: 5rem;
+  background: none;
+  border: none;
 }
 body .text-reveal {
   opacity: 0;
