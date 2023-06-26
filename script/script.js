@@ -1,3 +1,9 @@
+const today = new Date()
+const birthday = new Date(2000, 6, 5) // months are 0-based
+const age = today.getFullYear() - birthday.getFullYear() - (today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.getMonth() && today.getDate() < birthday.getDate()))
+
+document.querySelector('.years').textContent = age
+
 let cursor = document.querySelector('.cursor')
 
 document.addEventListener('mousemove', (e) => {
@@ -39,3 +45,10 @@ document.querySelector('button').addEventListener('click', () => {
 })
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', svgStrokeColor)
+
+// draw
+var canvas = document.querySelector('canvas')
+var ctx = canvas.getContext("2d");
+
+ctx.fillStyle = 'green'
+ctx.fillRect(10, 10, 10, 10)

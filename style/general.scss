@@ -143,6 +143,15 @@ body {
     }
 }
 
+canvas {
+    border: 1px solid red;
+    position: absolute;
+    inset: 0 0 0 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
 @media (any-pointer: fine) {
     body {
         cursor: none;
