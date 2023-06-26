@@ -74,7 +74,8 @@ body {
         pointer-events: none;
         max-height: 0;
         transition: max-height .25s, opacity .15s;
-  
+        padding: 0 0 0 clamp(0rem, 1.5vw, .85rem);
+
         &.anim {
             padding: .5rem 0 .5rem clamp(0rem, 1.5vw, .85rem);
             opacity: 1;
