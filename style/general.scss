@@ -7,7 +7,7 @@
 }
 
 body {
-    padding: clamp(1.5rem, 11.75vw, 20rem);
+    padding: clamp(1.5rem, 11.75vw, 18rem);
     background: white;
 
     .heading {
@@ -18,7 +18,6 @@ body {
         span {
             display: inline-block;
             transform: rotateX(180deg) translateY(.125rem);
-            line-height: .75;
         }
     }
 

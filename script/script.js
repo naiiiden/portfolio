@@ -52,10 +52,10 @@ const ctx = canvas.getContext('2d')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
+// TODO
 window.addEventListener("resize", function(){
     canvas.setAttribute("width", window.innerWidth)
     canvas.setAttribute("height", window.innerHeight)
-    redraw()
     console.log(canvas.width)
     console.log(canvas.height)
 })
