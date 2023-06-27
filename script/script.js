@@ -7,8 +7,8 @@ document.querySelector('.years').textContent = age
 let cursor = document.querySelector('.cursor')
 
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = (e.clientX - 7.5) + 'px'
-    cursor.style.top = (e.clientY - 2.5) + 'px' 
+    cursor.style.left = (e.clientX - 10) + 'px'
+    cursor.style.top = (e.clientY - 10) + 'px' 
 })
 
 document.querySelectorAll('a[href]').forEach(link => {
@@ -51,6 +51,15 @@ const ctx = canvas.getContext('2d')
 
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
+
+window.addEventListener("resize", function(){
+    canvas.setAttribute("width", window.innerWidth)
+    canvas.setAttribute("height", window.innerHeight)
+    redraw()
+    console.log(canvas.width)
+    console.log(canvas.height)
+})
+
 
 let isDrawing = false
 let points = []
