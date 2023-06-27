@@ -122,20 +122,6 @@ body p {
 body h2, body a {
   font-family: Helmet, sans-serif;
 }
-body h2[href], body a[href] {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  display: inline-block;
-  border-bottom: 2px solid black;
-  transition: 0.2s;
-}
-body h2[href] span, body a[href] span {
-  display: none;
-}
-body h2[href]:active, body h2[href]:focus-visible, body a[href]:active, body a[href]:focus-visible {
-  background: black;
-  color: white;
-  transition: 0.2s;
-}
 body button {
   background: none;
   border: none;
@@ -170,6 +156,69 @@ body .text-reveal.anim {
 }
 body .uppercase {
   text-transform: uppercase;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-moz-selection {
+    background: white;
+    color: black;
+  }
+  ::selection {
+    background: white;
+    color: black;
+  }
+  body {
+    background: black;
+    color: white;
+  }
+}
+@media (any-pointer: fine) {
+  body {
+    cursor: none;
+  }
+  .cursor {
+    position: fixed;
+    top: -2rem;
+    left: -2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: aliceblue;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+  }
+}
+a[href] {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  display: inline-block;
+  border-bottom: 2px solid black;
+  transition: 0.2s;
+}
+a[href] span {
+  display: none;
+}
+a[href]:active, a[href]:focus-visible {
+  background: black;
+  color: white;
+  transition: 0.2s;
+}
+@media (prefers-color-scheme: dark) {
+  a[href] {
+    border-bottom: 2px solid white;
+  }
+  a[href]:active, a[href]:focus-visible {
+    background: white;
+    color: black;
+    transition: 0.2s;
+  }
 }
 
 @media (hover: hover) {
@@ -215,51 +264,5 @@ body .uppercase {
   a[href] .left:hover, a[href] .right:hover {
     background: white;
     color: black;
-  }
-}
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  ::-moz-selection {
-    background: white;
-    color: black;
-  }
-  ::selection {
-    background: white;
-    color: black;
-  }
-  body {
-    background: black;
-    color: white;
-  }
-  body a[href] {
-    border-bottom: 2px solid white;
-  }
-  body a[href]:active, body a[href]:focus-visible {
-    background: white;
-    color: black;
-    transition: 0.2s;
-  }
-}
-@media (any-pointer: fine) {
-  body {
-    cursor: none;
-  }
-  .cursor {
-    position: fixed;
-    top: -2rem;
-    left: -2rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background-color: aliceblue;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
   }
 }/*# sourceMappingURL=general.css.map */
