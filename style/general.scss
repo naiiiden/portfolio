@@ -25,6 +25,8 @@ body {
     main {
         max-width: 975px;
         position: relative;
+        z-index: 1;
+        user-select: none;
     }
 
     p {
@@ -145,12 +147,10 @@ body {
 }
 
 canvas {
-    border: 1px solid red;
-    position: absolute;
-    inset: 0 0 0 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 @media (any-pointer: fine) {

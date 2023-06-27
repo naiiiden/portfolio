@@ -46,9 +46,35 @@ document.querySelector('button').addEventListener('click', () => {
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', svgStrokeColor)
 
-// draw
-var canvas = document.querySelector('canvas')
-var ctx = canvas.getContext("2d");
+const canvas = document.querySelector('canvas')
+const ctx = canvas.getContext('2d')
 
-ctx.fillStyle = 'green'
-ctx.fillRect(10, 10, 10, 10)
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+
+let isDrawing = false
+
+canvas.addEventListener('mousedown', startDrawing)
+canvas.addEventListener('mousemove', draw)
+canvas.addEventListener('mouseup', stopDrawing)
+document.addEventListener('mouseleave', stopDrawing)
+
+function startDrawing(e) {
+  isDrawing = true
+  ctx.beginPath()
+  ctx.moveTo(e.offsetX, e.offsetY)
+}
+
+// can't update existing drawings' strokeStyle when changing appeareance
+
+function draw(e) {
+  if (!isDrawing) return
+  ctx.lineTo(e.offsetX, e.offsetY)
+  ctx.stroke()
+  ctx.lineWidth = .5
+  ctx.strokeStyle = window.matchMedia('(prefers-color-scheme: dark)').matches ? '#fff' : '#000'
+}
+
+function stopDrawing() {
+  isDrawing = false
+}
