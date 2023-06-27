@@ -153,25 +153,6 @@ canvas {
     z-index: 0;
 }
 
-@media (any-pointer: fine) {
-    body {
-        cursor: none;
-    }
-
-    .cursor {
-        position: fixed;
-        top: -2rem;
-        left: -2rem;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 50%;
-        background-color:aliceblue;
-        pointer-events: none;
-        z-index: 9999;
-        mix-blend-mode: difference;
-    }
-}
-
 @media (prefers-color-scheme: dark) {
     ::selection {
         background: white;
@@ -192,11 +173,6 @@ canvas {
             }
         }
     }
-
-    @media (any-pointer: fine) {
-        .cursor {
-            background: white;
-            mix-blend-mode: difference;
-        }
-    }
 }
+
+@import './cursor';

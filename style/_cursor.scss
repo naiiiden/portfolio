@@ -1,0 +1,18 @@
+@media (any-pointer: fine) {
+    body {
+        cursor: none;
+    }
+
+    .cursor {
+        position: fixed;
+        top: -2rem;
+        left: -2rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color:aliceblue;
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: difference;
+    }
+}
