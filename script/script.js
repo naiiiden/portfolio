@@ -24,6 +24,12 @@ document.querySelectorAll('a[href]').forEach(link => {
 const text = document.querySelector('.text-reveal')
 const img = document.querySelector('img')
 
+document.querySelector('button').addEventListener('click', () => {
+    text.classList.toggle('anim')
+    svgStrokeColor()
+    img.setAttribute('aria-label', text.classList.contains('anim') ? 'Hide text' : 'Reveal text')
+})
+
 function svgStrokeColor() {
     const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     img.setAttribute('src', text.classList.contains('anim')
@@ -72,7 +78,7 @@ function draw(e) {
 
 function stopDrawing() {
   isDrawing = false
-  points.push(null) // Add null as a separator between drawings
+  points.push(null)
 }
 
 function getStrokeStyle() {
