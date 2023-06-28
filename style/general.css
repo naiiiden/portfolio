@@ -84,10 +84,24 @@ html {
   font-family: "NeueMontreal";
   src: url("./fonts/PPNeueMontreal-Medium.otf");
 }
+.mobile-message {
+  position: absolute;
+  inset: 0 0 0 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  animation: remove 4s forwards;
+}
+@keyframes remove {
+  100% {
+    display: none;
+  }
+}
+
 ::-moz-selection {
   background: black;
   color: white;
 }
+
 ::selection {
   background: black;
   color: white;
@@ -109,10 +123,19 @@ body .heading span {
 body main {
   max-width: 975px;
   position: relative;
-  z-index: 0;
+  z-index: 1;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  opacity: 0;
+  visibility: hidden;
+  animation: display 0.5s 4s forwards;
+}
+@keyframes display {
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 body p {
   font-family: NeueMontreal, sans-serif;
