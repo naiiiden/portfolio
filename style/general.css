@@ -87,9 +87,11 @@ html {
 .mobile-message {
   position: absolute;
   inset: 0 0 0 0;
-  font-size: 2rem;
   text-transform: uppercase;
-  animation: remove 4s forwards;
+  animation: remove 6s forwards;
+}
+.mobile-message p {
+  font-size: 2rem;
 }
 @keyframes remove {
   100% {
@@ -129,7 +131,7 @@ body main {
           user-select: none;
   opacity: 0;
   visibility: hidden;
-  animation: display 0.5s 4s forwards;
+  animation: display 0.5s 6s forwards;
 }
 @keyframes display {
   100% {
