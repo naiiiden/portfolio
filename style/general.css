@@ -85,25 +85,30 @@ html {
   src: url("./fonts/PPNeueMontreal-Medium.otf");
 }
 .mobile-message {
-  position: absolute;
-  inset: 0 0 0 0;
-  text-transform: uppercase;
-  animation: remove 6s forwards;
-}
-.mobile-message p {
-  font-size: 2rem;
-}
-@keyframes remove {
-  100% {
-    display: none;
-  }
+  display: none;
 }
 
+@media (pointer: coarse) {
+  .mobile-message {
+    display: block;
+    position: absolute;
+    inset: 0 0 0 0;
+    text-transform: uppercase;
+    animation: remove 6s forwards;
+  }
+  .mobile-message p {
+    font-size: 2rem;
+  }
+  @keyframes remove {
+    100% {
+      display: none;
+    }
+  }
+}
 ::-moz-selection {
   background: black;
   color: white;
 }
-
 ::selection {
   background: black;
   color: white;
@@ -129,14 +134,18 @@ body main {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  opacity: 0;
-  visibility: hidden;
-  animation: display 0.5s 6s forwards;
 }
-@keyframes display {
-  100% {
-    opacity: 1;
-    visibility: visible;
+@media (pointer: coarse) {
+  body main {
+    opacity: 0;
+    visibility: hidden;
+    animation: display 0.5s 6s forwards;
+  }
+  @keyframes display {
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 body p {
