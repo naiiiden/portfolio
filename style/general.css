@@ -151,6 +151,8 @@ body main {
 body p {
   font-family: NeueMontreal, sans-serif;
   font-size: clamp(1rem, 3vw, 1.25rem);
+  -webkit-hyphens: initial;
+          hyphens: initial;
 }
 body h2, body a {
   font-family: Helmet, sans-serif;

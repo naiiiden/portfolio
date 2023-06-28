@@ -25,7 +25,6 @@
     }
 }
 
-
 ::selection {
     background: black;
     color: white;
@@ -64,12 +63,12 @@ body {
                 }
             }
         }
-
     }
 
     p {
         font-family: NeueMontreal, sans-serif;
         font-size: clamp(1rem, 3vw, 1.25rem);
+        hyphens: initial;
     }
 
     h2, a {
