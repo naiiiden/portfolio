@@ -75,7 +75,7 @@ body {
         font-family: Helmet, sans-serif;
     }
 
-    button {
+    button:not(.draw) {
         background: none;
         border: none;
         position: absolute;
@@ -113,11 +113,13 @@ body {
     }
 }
 
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
+@media (pointer: fine) {
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
 }
 
 @media (prefers-color-scheme: dark) {

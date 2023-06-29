@@ -157,13 +157,13 @@ body p {
 body h2, body a {
   font-family: Helmet, sans-serif;
 }
-body button {
+body button:not(.draw) {
   background: none;
   border: none;
   position: absolute;
   top: -8.5rem;
 }
-body button img {
+body button:not(.draw) img {
   width: clamp(80%, 12.5vw, 100%);
 }
 body .main-text-container {
@@ -193,13 +193,14 @@ body .uppercase {
   text-transform: uppercase;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
+@media (pointer: fine) {
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
 }
-
 @media (prefers-color-scheme: dark) {
   ::-moz-selection {
     background: white;
