@@ -62,77 +62,145 @@ if (window.matchMedia('(pointer: fine)').matches) {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
   
-  // TODO
-  window.addEventListener("resize", function(){
-      canvas.setAttribute("width", window.innerWidth)
-      canvas.setAttribute("height", window.innerHeight)
-      console.log(canvas.width)
-      console.log(canvas.height)
-  })
+  // // TODO
+  // window.addEventListener("resize", function(){
+  //     canvas.setAttribute("width", window.innerWidth)
+  //     canvas.setAttribute("height", window.innerHeight)
+  //     console.log(canvas.width)
+  //     console.log(canvas.height)
+  // })
   
-  
-  let isDrawing = false
-  let points = []
-  
-  canvas.addEventListener('mousedown', startDrawing)
-  canvas.addEventListener('mousemove', draw)
-  canvas.addEventListener('mouseup', stopDrawing)
-  document.addEventListener('mouseleave', stopDrawing)
+  let isDrawing = false;
+  let points = [];
   
   function startDrawing(e) {
-    isDrawing = true
-    points.push({ x: e.offsetX, y: e.offsetY })
-    ctx.beginPath()
-    ctx.moveTo(e.offsetX, e.offsetY)
+    isDrawing = true;
+    points.push({ x: e.offsetX, y: e.offsetY });
+    ctx.beginPath();
+    ctx.moveTo(e.offsetX, e.offsetY);
   }
   
   function draw(e) {
-    if (!isDrawing) return
-    points.push({ x: e.offsetX, y: e.offsetY })
-    ctx.lineTo(e.offsetX, e.offsetY)
-    ctx.stroke()
-    ctx.lineWidth = 0.5
-    ctx.strokeStyle = getStrokeStyle()
+    if (!isDrawing) return;
+    points.push({ x: e.offsetX, y: e.offsetY });
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    ctx.lineWidth = 0.5;
+    ctx.strokeStyle = getStrokeStyle();
   }
   
   function stopDrawing() {
-    isDrawing = false
-    points.push(null)
+    isDrawing = false;
+    points.push(null);
   }
   
   function getStrokeStyle() {
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    return isDark ? '#fff' : '#000'
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return isDark ? '#fff' : '#000';
   }
   
-  function updateStrokeStyle() {
-    const strokeStyle = getStrokeStyle()
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
+  function enableDrawing() {
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    document.addEventListener('mouseleave', stopDrawing);
+  }
   
-    let drawingStarted = false
+  function disableDrawing() {
+    canvas.removeEventListener('mousedown', startDrawing);
+    canvas.removeEventListener('mousemove', draw);
+    canvas.removeEventListener('mouseup', stopDrawing);
+    document.removeEventListener('mouseleave', stopDrawing);
+  }
   
-    for (let i = 0; i < points.length; i++) {
-      const point = points[i]
+  function updateDrawingStatus() {
+    const drawButton = document.querySelector('.draw');
   
-      if (point === null) {
-        drawingStarted = false
-        continue
-      }
-  
-      const { x, y } = point
-  
-      if (!drawingStarted) {
-        ctx.beginPath()
-        ctx.moveTo(x, y)
-        drawingStarted = true
-      } else {
-        ctx.lineTo(x, y)
-        ctx.stroke()
-      }
-  
-      ctx.strokeStyle = strokeStyle
+    if (drawButton.dataset.drawing === 'true') {
+      drawButton.innerText = 'Enable Drawing';
+      drawButton.dataset.drawing = 'false';
+      disableDrawing();
+    } else {
+      drawButton.innerText = 'Disable Drawing';
+      drawButton.dataset.drawing = 'true';
+      enableDrawing();
     }
   }
   
-  svgStrokeColor()
-}
+  window.addEventListener('DOMContentLoaded', () => {
+    const drawButton = document.querySelector('.draw');
+    drawButton.addEventListener('click', updateDrawingStatus);
+  });
+  
+  if (window.matchMedia('(pointer: fine)').matches) {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+  
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      redrawCanvas();
+    }
+  
+    function redrawCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let drawingStarted = false;
+      const strokeStyle = getStrokeStyle();
+  
+      for (let i = 0; i < points.length; i++) {
+        const point = points[i];
+  
+        if (point === null) {
+          drawingStarted = false;
+          continue;
+        }
+  
+        const { x, y } = point;
+  
+        if (!drawingStarted) {
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          drawingStarted = true;
+        } else {
+          ctx.lineTo(x, y);
+          ctx.stroke();
+        }
+  
+        ctx.strokeStyle = strokeStyle;
+      }
+    }
+  
+    function updateStrokeStyle() {
+      const strokeStyle = getStrokeStyle();
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+      let drawingStarted = false;
+  
+      for (let i = 0; i < points.length; i++) {
+        const point = points[i];
+  
+        if (point === null) {
+          drawingStarted = false;
+          continue;
+        }
+  
+        const { x, y } = point;
+  
+        if (!drawingStarted) {
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          drawingStarted = true;
+        } else {
+          ctx.lineTo(x, y);
+          ctx.stroke();
+        }
+  
+        ctx.strokeStyle = strokeStyle;
+      }
+    }
+  
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    svgStrokeColor();
+  }  
+}  
