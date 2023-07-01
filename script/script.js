@@ -114,22 +114,22 @@ if (window.matchMedia('(pointer: fine)').matches) {
   }
   
   function updateDrawingStatus() {
-    const drawButton = document.querySelector('.draw');
+    const drawCheckbox = document.querySelector('.draw-checkbox');
   
-    if (drawButton.dataset.drawing === 'true') {
-      drawButton.innerText = 'Enable Drawing';
-      drawButton.dataset.drawing = 'false';
+    if (drawCheckbox.dataset.drawing === 'true') {
+      drawCheckbox.innerText = 'Enable Drawing';
+      drawCheckbox.dataset.drawing = 'false';
       disableDrawing();
     } else {
-      drawButton.innerText = 'Disable Drawing';
-      drawButton.dataset.drawing = 'true';
+      drawCheckbox.innerText = 'Disable Drawing';
+      drawCheckbox.dataset.drawing = 'true';
       enableDrawing();
     }
   }
   
   window.addEventListener('DOMContentLoaded', () => {
-    const drawButton = document.querySelector('.draw');
-    drawButton.addEventListener('click', updateDrawingStatus);
+    const drawCheckbox = document.querySelector('.draw-checkbox');
+    drawCheckbox.addEventListener('change', updateDrawingStatus);
   });
   
   if (window.matchMedia('(pointer: fine)').matches) {
