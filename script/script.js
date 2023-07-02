@@ -105,8 +105,10 @@ if (window.matchMedia('(pointer: fine)').matches) {
 
     if (drawCheckbox.checked) {
       enableDrawing();
+      canvas.style.zIndex = 'unset'
     } else {
       disableDrawing();
+      canvas.style.zIndex = '-1'
     }
   }
 
