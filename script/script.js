@@ -103,14 +103,10 @@ if (window.matchMedia('(pointer: fine)').matches) {
   function updateDrawingStatus() {
     const drawCheckbox = document.querySelector('.draw-checkbox');
 
-    if (drawCheckbox.dataset.drawing === 'true') {
-      drawCheckbox.innerText = 'Enable Drawing';
-      drawCheckbox.dataset.drawing = 'false';
-      disableDrawing();
-    } else {
-      drawCheckbox.innerText = 'Disable Drawing';
-      drawCheckbox.dataset.drawing = 'true';
+    if (drawCheckbox.checked) {
       enableDrawing();
+    } else {
+      disableDrawing();
     }
   }
 
