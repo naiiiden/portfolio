@@ -147,6 +147,9 @@ body main {
       visibility: visible;
     }
   }
+  body main label, body main canvas {
+    display: none;
+  }
 }
 body p {
   font-family: NeueMontreal, sans-serif;
