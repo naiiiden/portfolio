@@ -1,10 +1,6 @@
 @import '../node_modules/naiden-css-reset/reset.scss';
 @import './fonts.scss';
 
-* {
-    outline: 1px solid red;
-}
-
 .mobile-message {
     display: none;
 }
@@ -91,6 +87,12 @@ body {
 
     .main-text-container {
         margin-top: 8.5rem;
+    }
+
+    @media screen and (min-width: 1500px) {
+        .main-text-container {
+            margin-top: 5rem;
+        }
     }
 
     .text-reveal {

@@ -84,10 +84,6 @@ html {
   font-family: "NeueMontreal";
   src: url("./fonts/PPNeueMontreal-Medium.otf");
 }
-* {
-  outline: 1px solid red;
-}
-
 .mobile-message {
   display: none;
 }
@@ -171,6 +167,11 @@ body button:not(.draw) img {
 }
 body .main-text-container {
   margin-top: 8.5rem;
+}
+@media screen and (min-width: 1500px) {
+  body .main-text-container {
+    margin-top: 5rem;
+  }
 }
 body .text-reveal {
   opacity: 0;
