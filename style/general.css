@@ -84,6 +84,10 @@ html {
   font-family: "NeueMontreal";
   src: url("./fonts/PPNeueMontreal-Medium.otf");
 }
+* {
+  outline: 1px solid red;
+}
+
 .mobile-message {
   display: none;
 }
@@ -122,10 +126,6 @@ body .heading {
   font-family: Helmet, sans-serif;
   font-size: clamp(4rem, 12.5vw, 12.5rem);
   line-height: 0.75;
-}
-body .heading span {
-  display: inline-block;
-  transform: rotateX(180deg) translateY(0.125rem);
 }
 body main {
   max-width: 975px;

@@ -1,6 +1,10 @@
 @import '../node_modules/naiden-css-reset/reset.scss';
 @import './fonts.scss';
 
+* {
+    outline: 1px solid red;
+}
+
 .mobile-message {
     display: none;
 }
@@ -38,15 +42,9 @@ body {
         font-family: Helmet, sans-serif;
         font-size: clamp(4rem, 12.5vw, 12.5rem);
         line-height: .75;
-
-        span {
-            display: inline-block;
-            transform: rotateX(180deg) translateY(.125rem);
-        }
     }
 
     main {
-
         max-width: 975px;
         position: relative;
         z-index: 1;
