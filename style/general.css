@@ -122,14 +122,14 @@ body .heading {
   font-family: Helmet, sans-serif;
   font-size: clamp(4rem, 12.5vw, 12.5rem);
   line-height: 0.75;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 body main {
   max-width: 975px;
   position: relative;
   z-index: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 @media (pointer: coarse) {
   body main {

@@ -38,13 +38,13 @@ body {
         font-family: Helmet, sans-serif;
         font-size: clamp(4rem, 12.5vw, 12.5rem);
         line-height: .75;
+        user-select: none;
     }
 
     main {
         max-width: 975px;
         position: relative;
         z-index: 1;
-        user-select: none;
         
         @media (pointer: coarse) {
             opacity: 0;
