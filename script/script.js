@@ -20,21 +20,12 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = (e.clientY - 10) + 'px' 
 })
 
-document.querySelectorAll('a[href]').forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        cursor.classList.remove('cursor')
-    })
-
-    link.addEventListener('mouseleave', () => {
-        cursor.classList.add('cursor')
-    })
-})
-
 const text = document.querySelector('.text-reveal')
 const img = document.querySelector('img')
 
 document.querySelector('button').addEventListener('click', () => {
     text.classList.toggle('anim')
+    text.inert === true ? text.inert = false : text.inert = true
     svgStrokeColor()
     img.setAttribute('aria-label', text.classList.contains('anim') ? 'Hide text' : 'Reveal text')
 })
