@@ -174,24 +174,7 @@ body .main-text-container {
   }
 }
 body .text-reveal {
-  opacity: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  pointer-events: none;
-  max-height: 0;
-  transition: max-height 0.25s, opacity 0.15s;
-  padding: 0 0 0 clamp(0rem, 1.5vw, 0.85rem);
-}
-body .text-reveal.anim {
   padding: 0.5rem 0 0.5rem clamp(0rem, 1.5vw, 0.85rem);
-  opacity: 1;
-  -webkit-user-select: unset;
-     -moz-user-select: unset;
-          user-select: unset;
-  pointer-events: unset;
-  max-height: 9999px;
-  transition: max-height 0.5s, opacity 0.3s;
 }
 body .uppercase {
   text-transform: uppercase;

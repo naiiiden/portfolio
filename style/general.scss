@@ -96,21 +96,7 @@ body {
     }
 
     .text-reveal {
-        opacity: 0;
-        user-select: none;
-        pointer-events: none;
-        max-height: 0;
-        transition: max-height .25s, opacity .15s;
-        padding: 0 0 0 clamp(0rem, 1.5vw, .85rem);
-
-        &.anim {
-            padding: .5rem 0 .5rem clamp(0rem, 1.5vw, .85rem);
-            opacity: 1;
-            user-select: unset;
-            pointer-events: unset;
-            max-height: 9999px;
-            transition: max-height .5s, opacity .3s;
-        }
+        padding: .5rem 0 .5rem clamp(0rem, 1.5vw, .85rem);
     }
 
     .uppercase {
