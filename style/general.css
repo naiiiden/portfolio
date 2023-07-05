@@ -130,8 +130,16 @@ body .heading:nth-child(3) {
   font-weight: 700;
   display: flex;
 }
-body .heading:nth-child(3) span:nth-of-type(1) {
-  font-size: clamp(4rem, 12.5vw, 9rem);
+@media (pointer: fine) {
+  body .heading:nth-child(3) .no-cursor {
+    display: none;
+  }
+}
+body .heading:nth-child(3) span:nth-of-type(1):not(.no-cursor, :nth-child(4)) {
+  -webkit-margin-start: -0.5rem;
+          margin-inline-start: -0.5rem;
+  letter-spacing: -1rem;
+  font-size: clamp(4rem, 12.5vw, 11.25rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,6 +300,5 @@ input {
 
 input:checked + label {
   color: transparent;
-  text-shadow: 2px;
-  -webkit-text-stroke: 3px white;
+  -webkit-text-stroke: 2px white;
 }/*# sourceMappingURL=general.css.map */
