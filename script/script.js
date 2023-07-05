@@ -76,12 +76,18 @@ if (window.matchMedia('(pointer: fine)').matches) {
   function updateDrawingStatus() {
     const drawCheckbox = document.querySelector('.draw-checkbox');
 
+    const text = document.querySelector('.text')
+
     if (drawCheckbox.checked) {
       enableDrawing();
       canvas.style.zIndex = 'unset'
+      text.inert = true
+      document.querySelector('label').style.zIndex = '1000'
     } else {
       disableDrawing();
       canvas.style.zIndex = '-1'
+      text.inert = false
+      document.querySelector('label').style.zIndex = 'unset'
     }
   }
 
