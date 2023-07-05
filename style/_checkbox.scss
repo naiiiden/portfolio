@@ -1,0 +1,9 @@
+input {
+    appearance: none;
+}
+
+input:checked + label {
+    color: transparent;
+    text-shadow: 2px;
+    -webkit-text-stroke: 3px white;
+}
