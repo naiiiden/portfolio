@@ -20,30 +20,12 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = (e.clientY - 10) + 'px' 
 })
 
-const text = document.querySelector('.text-reveal')
-const img = document.querySelector('img')
-
-document.querySelector('button').addEventListener('click', () => {
-    text.classList.toggle('anim')
-    text.inert === true ? text.inert = false : text.inert = true
-    svgStrokeColor()
-    img.setAttribute('aria-label', text.classList.contains('anim') ? 'Hide text' : 'Reveal text')
-})
-
+// FIX
 function svgStrokeColor() {
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    img.setAttribute('src', text.classList.contains('anim')
-        ? isDark
-            ? './images/close-dark.svg'
-            : './images/close-light.svg'
-        : isDark
-            ? './images/open-dark.svg'
-            : './images/open-light.svg'
-    )
-    updateStrokeStyle()
+  updateStrokeStyle()
 }
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', svgStrokeColor)
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyle)
 
 if (window.matchMedia('(pointer: fine)').matches) {
   const canvas = document.getElementById('canvas');
