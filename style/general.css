@@ -161,6 +161,7 @@ body h2, body a {
 body .text {
   padding: 0.5rem 0 0.5rem clamp(0rem, 1.5vw, 0.85rem);
   max-width: 675px;
+  line-height: 1.75;
 }
 body .uppercase {
   text-transform: uppercase;
@@ -206,7 +207,7 @@ body .uppercase {
   }
 }
 a[href] {
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   display: inline-block;
   border-bottom: 2px solid black;
   transition: 0.2s;
