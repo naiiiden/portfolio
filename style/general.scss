@@ -31,7 +31,6 @@
 }
 
 body {
-    padding: clamp(1.5rem, 11.75vw, 18rem);
     background: white;
 
     .heading {
@@ -85,18 +84,9 @@ body {
         }
     }
 
-    .main-text-container {
-        margin-top: 8.5rem;
-    }
-
-    @media screen and (min-width: 1500px) {
-        .main-text-container {
-            margin-top: 5rem;
-        }
-    }
-
-    .text-reveal {
+    .text {
         padding: .5rem 0 .5rem clamp(0rem, 1.5vw, .85rem);
+        max-width: 700px;
     }
 
     .uppercase {

@@ -115,7 +115,6 @@ html {
 }
 
 body {
-  padding: clamp(1.5rem, 11.75vw, 18rem);
   background: white;
 }
 body .heading {
@@ -165,16 +164,9 @@ body button:not(.draw) {
 body button:not(.draw) img {
   width: clamp(80%, 12.5vw, 100%);
 }
-body .main-text-container {
-  margin-top: 8.5rem;
-}
-@media screen and (min-width: 1500px) {
-  body .main-text-container {
-    margin-top: 5rem;
-  }
-}
-body .text-reveal {
+body .text {
   padding: 0.5rem 0 0.5rem clamp(0rem, 1.5vw, 0.85rem);
+  max-width: 700px;
 }
 body .uppercase {
   text-transform: uppercase;
