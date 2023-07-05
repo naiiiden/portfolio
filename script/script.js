@@ -3,7 +3,7 @@ let timer = setInterval(() => {
   if (countdown <= 0) {
     clearInterval(timer)
   }
-  document.querySelector('.mobile-message span').innerHTML = countdown
+  document.querySelector('.mobile-message span').innerHTML = countdown != 1 ? `${countdown} seconds` : `${countdown} second`
   countdown -= 1
 }, 1000)
 
