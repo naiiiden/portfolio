@@ -2,13 +2,13 @@ input {
     appearance: none;
 }
 
-input:checked + label {
+input:checked + label, input:focus-visible + label {
     color: transparent;
     -webkit-text-stroke: 2px black;
 }
 
 @media (prefers-color-scheme: dark) {
-    input:checked + label {
+    input:checked + label, input:focus-visible + label {
         color: transparent;
         -webkit-text-stroke: 2px white;
     }
