@@ -300,5 +300,12 @@ input {
 
 input:checked + label {
   color: transparent;
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 2px black;
+}
+
+@media (prefers-color-scheme: dark) {
+  input:checked + label {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+  }
 }/*# sourceMappingURL=general.css.map */
