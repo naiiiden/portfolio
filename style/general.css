@@ -161,7 +161,7 @@ body main {
       visibility: visible;
     }
   }
-  body main label, body main canvas {
+  body main input, body main label, body main canvas {
     display: none;
   }
 }
