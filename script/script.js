@@ -1,37 +1,62 @@
-let countdown = 5
+let countdown = 5;
 let timer = setInterval(() => {
   if (countdown <= 0) {
-    clearInterval(timer)
+    clearInterval(timer);
   }
-  document.querySelector('.mobile-message span').innerHTML = countdown != 1 ? `${countdown} seconds` : `${countdown} second`
-  countdown -= 1
-}, 1000)
+  document.querySelector('.mobile-message span').innerHTML = countdown !== 1 ? `${countdown} seconds` : `${countdown} second`;
+  countdown -= 1;
+}, 1000);
 
-const today = new Date()
-const birthday = new Date(2000, 6, 5) // months are 0-based
-const age = today.getFullYear() - birthday.getFullYear() - (today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.getMonth() && today.getDate() < birthday.getDate()))
+const today = new Date();
+const birthday = new Date(2000, 6, 5); // months are 0-based
+const age = today.getFullYear() - birthday.getFullYear() - (today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.getMonth() && today.getDate() < birthday.getDate()));
 
-document.querySelector('.years').textContent = age
+document.querySelector('.years').textContent = age;
 
-let cursor = document.querySelector('.cursor')
+let cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = (e.clientX - 10) + 'px'
-    cursor.style.top = (e.clientY - 10) + 'px' 
-})
+  cursor.style.left = e.clientX - 10 + 'px';
+  cursor.style.top = e.clientY - 10 + 'px';
+});
 
-// FIX
-function svgStrokeColor() {
-  updateStrokeStyle()
+function updateStrokeStyle() {
+  const strokeStyle = getStrokeStyle();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  let drawingStarted = false;
+
+  for (let i = 0; i < points.length; i++) {
+    const point = points[i];
+
+    if (point === null) {
+      drawingStarted = false;
+      continue;
+    }
+
+    const { x, y } = point;
+
+    if (!drawingStarted) {
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      drawingStarted = true;
+    } else {
+      ctx.lineTo(x, y);
+      ctx.stroke();
+    }
+
+    ctx.strokeStyle = strokeStyle;
+  }
 }
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyle)
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyle);
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let points = [];
 
 if (window.matchMedia('(pointer: fine)').matches) {
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
   let isDrawing = false;
-  let points = [];
 
   function startDrawing(e) {
     isDrawing = true;
@@ -75,19 +100,18 @@ if (window.matchMedia('(pointer: fine)').matches) {
 
   function updateDrawingStatus() {
     const drawCheckbox = document.querySelector('.draw-checkbox');
-
-    const text = document.querySelector('.text')
+    const text = document.querySelector('.text');
 
     if (drawCheckbox.checked) {
       enableDrawing();
-      canvas.style.zIndex = 'unset'
-      text.inert = true
-      document.querySelector('label').style.zIndex = '1000'
+      canvas.style.zIndex = 'unset';
+      text.inert = true;
+      document.querySelector('label').style.zIndex = '1000';
     } else {
       disableDrawing();
-      canvas.style.zIndex = '-1'
-      text.inert = false
-      document.querySelector('label').style.zIndex = 'unset'
+      canvas.style.zIndex = '-1';
+      text.inert = false;
+      document.querySelector('label').style.zIndex = 'unset';
     }
   }
 
@@ -161,5 +185,4 @@ if (window.matchMedia('(pointer: fine)').matches) {
 
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
-  svgStrokeColor();
-}  
+}
