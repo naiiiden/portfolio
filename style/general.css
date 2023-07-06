@@ -300,8 +300,7 @@ input {
 
 input:checked + label, input:focus-visible + label {
   color: white;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 input:checked + label > span span {
@@ -311,7 +310,6 @@ input:checked + label > span span {
 @media (prefers-color-scheme: dark) {
   input:checked + label, input:focus-visible + label {
     color: black;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: white;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   }
 }/*# sourceMappingURL=general.css.map */
