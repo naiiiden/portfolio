@@ -62,10 +62,18 @@ body {
     }
 
     main {
-        height: 100vh;
+        border: 1px solid green;
         position: relative;
         z-index: 1;
-        display: grid;
+        
+        .full-page-wrapper {
+            height: 100vh;
+            display: grid;
+
+            &:nth-child(1) {
+                border: 1px solid yellow;
+            }
+        }
         
         .main-text-container {
             width: fit-content;
@@ -121,7 +129,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-    main {
+    .full-page-wrapper {
         grid-template-columns: 675px 1fr;
     }
 }

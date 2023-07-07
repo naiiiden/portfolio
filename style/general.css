@@ -144,10 +144,16 @@ body .heading:nth-child(3) span:nth-of-type(1):not(.no-cursor, :nth-child(4)) {
   align-items: center;
 }
 body main {
-  height: 100vh;
+  border: 1px solid green;
   position: relative;
   z-index: 1;
+}
+body main .full-page-wrapper {
+  height: 100vh;
   display: grid;
+}
+body main .full-page-wrapper:nth-child(1) {
+  border: 1px solid yellow;
 }
 body main .main-text-container {
   width: -moz-fit-content;
@@ -194,7 +200,7 @@ body .uppercase {
 }
 
 @media screen and (min-width: 1200px) {
-  main {
+  .full-page-wrapper {
     grid-template-columns: 675px 1fr;
   }
 }
