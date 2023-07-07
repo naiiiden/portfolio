@@ -73,11 +73,12 @@ body {
         }
 
         a[href="#selected-works"] {
-            border: 1px solid red;
             width: fit-content;
-            // font-size: clamp(4rem, 8vw, 10rem);
+            font-size: clamp(4rem, 8vw, 5rem);
             justify-self: flex-end;
             margin-top: auto;
+            user-select: none;
+            border-bottom: none;
         }
 
         @media (pointer: coarse) {

@@ -155,11 +155,15 @@ body main .main-text-container {
   border: 1px solid red;
 }
 body main a[href="#selected-works"] {
-  border: 1px solid red;
   width: -moz-fit-content;
   width: fit-content;
+  font-size: clamp(4rem, 8vw, 5rem);
   justify-self: flex-end;
   margin-top: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-bottom: none;
 }
 @media (pointer: coarse) {
   @keyframes display {
@@ -238,6 +242,7 @@ a[href] {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   display: inline-block;
   border-bottom: 2px solid black;
+  line-height: 1;
   transition: 0.2s;
 }
 a[href] span {
@@ -262,7 +267,6 @@ a[href]:active, a[href]:focus-visible {
 @media (hover: hover) {
   a {
     position: relative;
-    line-height: 1;
   }
   a[href]:hover {
     border-bottom: none;
