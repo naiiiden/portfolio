@@ -152,13 +152,12 @@ body main {
 body main .main-text-container {
   width: -moz-fit-content;
   width: fit-content;
-  border: 1px solid red;
 }
 body main a[href="#selected-works"] {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: clamp(4rem, 8vw, 5rem);
-  justify-self: flex-end;
+  font-size: clamp(2rem, 6vw, 5.5rem);
+  justify-self: center;
   margin-top: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -194,7 +193,7 @@ body .uppercase {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   main {
     grid-template-columns: 675px 1fr;
   }

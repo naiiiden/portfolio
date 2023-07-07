@@ -69,13 +69,13 @@ body {
         
         .main-text-container {
             width: fit-content;
-            border: 1px solid red;
         }
 
         a[href="#selected-works"] {
             width: fit-content;
-            font-size: clamp(4rem, 8vw, 5rem);
-            justify-self: flex-end;
+            font-size: clamp(2rem, 6vw, 5.5rem);
+            justify-self: center;
+            // justify-self: flex-end;
             margin-top: auto;
             user-select: none;
             border-bottom: none;
@@ -120,7 +120,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
     main {
         grid-template-columns: 675px 1fr;
     }
