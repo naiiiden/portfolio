@@ -119,6 +119,12 @@ body {
     }
 }
 
+@media screen and (min-width: 1400px) {
+    main {
+        grid-template-columns: 675px 1fr;
+    }
+}
+
 @media (pointer: fine) {
     canvas {
         position: fixed;
