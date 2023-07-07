@@ -144,11 +144,11 @@ body .heading:nth-child(3) span:nth-of-type(1):not(.no-cursor, :nth-child(4)) {
   align-items: center;
 }
 body main {
-  border: 1px solid green;
   position: relative;
   z-index: 1;
 }
 body main .full-page-wrapper {
+  min-height: 800px;
   height: 100vh;
   display: grid;
 }
@@ -333,4 +333,7 @@ input:checked + label > span span {
     color: black;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   }
+}
+#selected-works {
+  border: 1px solid red;
 }/*# sourceMappingURL=general.css.map */
