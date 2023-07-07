@@ -7,7 +7,7 @@
 
 @media (pointer: coarse) {
     .mobile-message {
-        display: block;
+        // display: block;
         position: absolute;
         inset: 0 0 0 0;
         text-transform: uppercase;
@@ -62,14 +62,28 @@ body {
     }
 
     main {
-        max-width: 975px;
+        height: 100vh;
         position: relative;
         z-index: 1;
+        display: grid;
         
+        .main-text-container {
+            width: fit-content;
+            border: 1px solid red;
+        }
+
+        a[href="#selected-works"] {
+            border: 1px solid red;
+            width: fit-content;
+            // font-size: clamp(4rem, 8vw, 10rem);
+            justify-self: flex-end;
+            margin-top: auto;
+        }
+
         @media (pointer: coarse) {
-            opacity: 0;
-            visibility: hidden;
-            animation: display .5s 6s forwards;
+            // opacity: 0;
+            // visibility: hidden;
+            // animation: display .5s 6s forwards;
 
             @keyframes display {
                 100% {
@@ -129,3 +143,4 @@ body {
 @import './cursor';
 @import './links';
 @import './checkbox';
+@import './works';

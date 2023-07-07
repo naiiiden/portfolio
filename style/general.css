@@ -90,7 +90,6 @@ html {
 
 @media (pointer: coarse) {
   .mobile-message {
-    display: block;
     position: absolute;
     inset: 0 0 0 0;
     text-transform: uppercase;
@@ -145,16 +144,24 @@ body .heading:nth-child(3) span:nth-of-type(1):not(.no-cursor, :nth-child(4)) {
   align-items: center;
 }
 body main {
-  max-width: 975px;
+  height: 100vh;
   position: relative;
   z-index: 1;
+  display: grid;
+}
+body main .main-text-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid red;
+}
+body main a[href="#selected-works"] {
+  border: 1px solid red;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-self: flex-end;
+  margin-top: auto;
 }
 @media (pointer: coarse) {
-  body main {
-    opacity: 0;
-    visibility: hidden;
-    animation: display 0.5s 6s forwards;
-  }
   @keyframes display {
     100% {
       opacity: 1;
