@@ -105,11 +105,13 @@ if (window.matchMedia('(pointer: fine)').matches) {
     if (drawCheckbox.checked) {
       enableDrawing();
       canvas.style.zIndex = 'unset';
+      canvas.style.backdropFilter = 'blur(.125rem)'
       text.inert = true;
       document.querySelector('label').style.zIndex = '1000';
     } else {
       disableDrawing();
       canvas.style.zIndex = '-1';
+      canvas.style.backdropFilter = 'unset'
       text.inert = false;
       document.querySelector('label').style.zIndex = 'unset';
     }
