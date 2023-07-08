@@ -122,7 +122,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
 
   function resizeCanvas() {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = document.body.scrollHeight;
     redrawCanvas();
   }
 
