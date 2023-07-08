@@ -163,7 +163,7 @@ body main a[href="#selected-works"] {
   width: -moz-fit-content;
   width: fit-content;
   font-size: clamp(2rem, 6vw, 5.5rem);
-  justify-self: center;
+  justify-self: flex-end;
   margin-top: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -202,6 +202,9 @@ body .uppercase {
 @media screen and (min-width: 1200px) {
   .full-page-wrapper {
     grid-template-columns: 675px 1fr;
+  }
+  a[href="#selected-works"] {
+    justify-self: center !important;
   }
 }
 @media (pointer: fine) {

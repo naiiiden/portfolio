@@ -82,7 +82,7 @@ body {
         a[href="#selected-works"] {
             width: fit-content;
             font-size: clamp(2rem, 6vw, 5.5rem);
-            justify-self: center;
+            justify-self: flex-end;
             margin-top: auto;
             user-select: none;
             border-bottom: none;
@@ -130,6 +130,10 @@ body {
 @media screen and (min-width: 1200px) {
     .full-page-wrapper {
         grid-template-columns: 675px 1fr;
+    }
+
+    a[href="#selected-works"] {
+        justify-self: center !important;
     }
 }
 
