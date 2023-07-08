@@ -43,6 +43,7 @@ body {
             font-size: clamp(4rem, 12.5vw, 11.25rem);
             font-weight: 700;
             display: flex;
+            position: relative;
 
             @media (pointer: fine) {
                 .no-cursor {
@@ -57,6 +58,11 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+            }
+
+            div:nth-of-type(3) {
+                margin-left: auto;
+                // padding-right: .5rem;
             }
         }
     }

@@ -1,3 +1,11 @@
+.sticky-label {
+    position: relative;
+}
+
+label {
+    position: fixed;
+}
+
 input {
     appearance: none;
 }
