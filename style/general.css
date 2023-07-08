@@ -322,7 +322,7 @@ input {
           appearance: none;
 }
 
-input:checked + label, input:focus-visible + label {
+input:checked + label, input:focus-visible + label, input:hover + label {
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
@@ -332,7 +332,7 @@ input:checked + label > span span {
 }
 
 @media (prefers-color-scheme: dark) {
-  input:checked + label, input:focus-visible + label {
+  input:checked + label, input:focus-visible + label, input:hover + label {
     color: black;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   }
