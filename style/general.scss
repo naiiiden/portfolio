@@ -62,7 +62,13 @@ body {
 
             @media (pointer: fine) {
                 div:nth-of-type(3) {
-                    margin-left: clamp(2.125rem, 7.5vw, 7.5rem);
+                    margin-left: clamp(2.125rem, 7.625vw, 8rem);
+                }
+
+                @media screen and (min-width: 1000px) {
+                    div:nth-of-type(3) {
+                        margin-left: clamp(4rem, 8vw, 7.25rem);
+                    }
                 }
             }
         }
