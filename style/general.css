@@ -325,7 +325,7 @@ a[href]:active, a[href]:focus-visible {
 }
 
 label {
-  position: fixed;
+  position: absolute;
 }
 
 input {

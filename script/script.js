@@ -101,19 +101,22 @@ if (window.matchMedia('(pointer: fine)').matches) {
   function updateDrawingStatus() {
     const drawCheckbox = document.querySelector('.draw-checkbox');
     const text = document.querySelector('.text');
+    const label = document.querySelector('label')
 
     if (drawCheckbox.checked) {
       enableDrawing();
       canvas.style.zIndex = 'unset';
       canvas.style.backdropFilter = 'blur(.125rem)'
       text.inert = true;
-      document.querySelector('label').style.zIndex = '1000';
+      label.style.zIndex = '1000';
+      label.style.position = 'fixed';
     } else {
       disableDrawing();
       canvas.style.zIndex = '-1';
       canvas.style.backdropFilter = 'unset'
       text.inert = false;
-      document.querySelector('label').style.zIndex = 'unset';
+      label.style.zIndex = 'unset';
+      label.style.position = 'absolute';
     }
   }
 
