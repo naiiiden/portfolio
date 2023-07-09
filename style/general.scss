@@ -60,9 +60,11 @@ body {
                 align-items: center;
             }
 
-            div:nth-of-type(3) {
-                margin-left: auto;
-                // padding-right: .5rem;
+            @media (pointer: fine) {
+                div:nth-of-type(3) {
+                    margin-left: auto;
+                    // padding-right: .5rem;
+                }
             }
         }
     }
