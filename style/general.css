@@ -146,7 +146,7 @@ body .heading:nth-child(3) span:nth-of-type(1):not(.no-cursor, :nth-child(4)) {
 }
 @media (pointer: fine) {
   body .heading:nth-child(3) div:nth-of-type(3) {
-    margin-left: auto;
+    margin-left: clamp(2.125rem, 7.5vw, 7.5rem);
   }
 }
 body main {
