@@ -162,19 +162,19 @@ if (window.matchMedia('(pointer: fine)').matches) {
   function updateStrokeStyle() {
     const strokeStyle = getStrokeStyle();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+  
     let drawingStarted = false;
-
+  
     for (let i = 0; i < points.length; i++) {
       const point = points[i];
-
+  
       if (point === null) {
         drawingStarted = false;
         continue;
       }
-
+  
       const { x, y } = point;
-
+  
       if (!drawingStarted) {
         ctx.beginPath();
         ctx.moveTo(x, y);
@@ -183,11 +183,22 @@ if (window.matchMedia('(pointer: fine)').matches) {
         ctx.lineTo(x, y);
         ctx.stroke();
       }
-
+  
       ctx.strokeStyle = strokeStyle;
     }
+  
+    updateFavicon();
   }
-
+  
+  function updateFavicon() {
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.querySelector("link[rel='icon']").href = prefersDarkScheme ? "./images/favicon_dark.ico" : "./images/favicon_light.ico";
+  }
+  
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateStrokeStyle);
+  
+  updateStrokeStyle();
+  
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
 }
