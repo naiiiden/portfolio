@@ -20,35 +20,6 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.top = e.clientY - 10 + 'px';
 });
 
-function updateStrokeStyle() {
-  const strokeStyle = getStrokeStyle();
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  let drawingStarted = false;
-
-  for (let i = 0; i < points.length; i++) {
-    const point = points[i];
-
-    if (point === null) {
-      drawingStarted = false;
-      continue;
-    }
-
-    const { x, y } = point;
-
-    if (!drawingStarted) {
-      ctx.beginPath();
-      ctx.moveTo(x, y);
-      drawingStarted = true;
-    } else {
-      ctx.lineTo(x, y);
-      ctx.stroke();
-    }
-
-    ctx.strokeStyle = strokeStyle;
-  }
-}
-
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyle);
 
 const canvas = document.getElementById('canvas');
