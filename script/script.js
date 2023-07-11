@@ -100,10 +100,8 @@ if (window.matchMedia('(pointer: fine)').matches) {
 
   function updateDrawingStatus() {
     const drawCheckbox = document.querySelector('.draw-checkbox');
-    const text = document.querySelector('.text');
     const label = document.querySelector('label');
-    const selectedWorksLink = document.querySelector('a[href="#selected-works"]')
-    const selectedWorksSection = document.querySelector('#selected-works');
+    const elementsToDisable = document.querySelectorAll('.inerted')
 
     if (drawCheckbox.checked) {
       enableDrawing();
@@ -111,19 +109,18 @@ if (window.matchMedia('(pointer: fine)').matches) {
       canvas.style.backdropFilter = 'blur(.125rem)'
       label.style.zIndex = '1000';
       label.style.position = 'fixed';
-      text.inert = true;
-      selectedWorksLink.inert = true;
-      selectedWorksSection.inert = true;
-
+      elementsToDisable.forEach(element => {
+        element.inert = true;
+      });
     } else {
       disableDrawing();
       canvas.style.zIndex = '-1';
       canvas.style.backdropFilter = 'unset'
       label.style.zIndex = 'unset';
       label.style.position = 'absolute';
-      text.inert = false;
-      selectedWorksLink.inert = false;
-      selectedWorksSection.inert = false;
+      elementsToDisable.forEach(element => {
+        element.inert = false;
+      });
     }
   }
 
