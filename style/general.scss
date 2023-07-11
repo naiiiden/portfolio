@@ -130,7 +130,7 @@ body {
     }
 
     .text {
-        padding: .5rem 0 .5rem clamp(0rem, 1.5vw, .85rem);
+        padding: clamp(.5rem, 2.5vw, 2rem) 0 clamp(.5rem, 2.5vw, 2rem) clamp(0rem, 1.5vw, .85rem);
         max-width: 675px;
         line-height: 1.75;
     }
