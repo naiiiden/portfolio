@@ -46,6 +46,29 @@ input {
     appearance: none;
 }
 
+// TEMPORARY?? MAYBE
+input:not(:checked) + label{
+    span > span:nth-child(1) {
+        color: black;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    }
+
+    span > span:not(:nth-child(1)) {
+        opacity: 0;
+        transform: translateY(-250px);
+        transition: .2s;
+    }
+}
+
+input:not(:checked):hover + label, input:not(:checked):focus-visible + label {
+    span > span:not(:nth-child(1)) {
+        opacity: 1;
+        transform: translateY(0);
+        transition: .2s;
+    }
+}
+// TEMPORARY?? MAYBE
+
 input:checked + label, input:focus-visible + label, input:hover + label {
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
