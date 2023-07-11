@@ -84,40 +84,36 @@ if (window.matchMedia('(pointer: fine)').matches) {
     return isDark ? '#fff' : '#000';
   }
 
-  function enableDrawing() {
-    canvas.addEventListener('mousedown', startDrawing);
-    canvas.addEventListener('mousemove', draw);
-    canvas.addEventListener('mouseup', stopDrawing);
-    document.addEventListener('mouseleave', stopDrawing);
-  }
-
-  function disableDrawing() {
-    canvas.removeEventListener('mousedown', startDrawing);
-    canvas.removeEventListener('mousemove', draw);
-    canvas.removeEventListener('mouseup', stopDrawing);
-    document.removeEventListener('mouseleave', stopDrawing);
-  }
-
   function updateDrawingStatus() {
     const drawCheckbox = document.querySelector('.draw-checkbox');
     const label = document.querySelector('label');
     const elementsToDisable = document.querySelectorAll('.inerted')
 
     if (drawCheckbox.checked) {
-      enableDrawing();
+      canvas.addEventListener('mousedown', startDrawing);
+      canvas.addEventListener('mousemove', draw);
+      canvas.addEventListener('mouseup', stopDrawing);
+      document.addEventListener('mouseleave', stopDrawing);
+
       canvas.style.zIndex = 'unset';
       canvas.style.backdropFilter = 'blur(.125rem)'
       label.style.zIndex = '1000';
       label.style.position = 'fixed';
+      
       elementsToDisable.forEach(element => {
         element.inert = true;
       });
     } else {
-      disableDrawing();
+      canvas.removeEventListener('mousedown', startDrawing);
+      canvas.removeEventListener('mousemove', draw);
+      canvas.removeEventListener('mouseup', stopDrawing);
+      document.removeEventListener('mouseleave', stopDrawing);
+
       canvas.style.zIndex = '-1';
       canvas.style.backdropFilter = 'unset'
       label.style.zIndex = 'unset';
       label.style.position = 'absolute';
+
       elementsToDisable.forEach(element => {
         element.inert = false;
       });
