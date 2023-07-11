@@ -20,7 +20,7 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.top = e.clientY - 10 + 'px';
 });
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyle);
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyleAndFavicon);
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -130,22 +130,22 @@ if (window.matchMedia('(pointer: fine)').matches) {
     }
   }
 
-  function updateStrokeStyle() {
+  function updateStrokeStyleAndFavicon() {
     const strokeStyle = getStrokeStyle();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
+
     let drawingStarted = false;
-  
+
     for (let i = 0; i < points.length; i++) {
       const point = points[i];
-  
+
       if (point === null) {
         drawingStarted = false;
         continue;
       }
-  
+
       const { x, y } = point;
-  
+
       if (!drawingStarted) {
         ctx.beginPath();
         ctx.moveTo(x, y);
@@ -154,21 +154,18 @@ if (window.matchMedia('(pointer: fine)').matches) {
         ctx.lineTo(x, y);
         ctx.stroke();
       }
-  
+
       ctx.strokeStyle = strokeStyle;
     }
-  
-    updateFavicon();
+
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const faviconPath = prefersDarkScheme ? './images/favicon_dark.ico' : './images/favicon_light.ico';
+    document.querySelector("link[rel='icon']").href = faviconPath;
   }
-  
-  function updateFavicon() {
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    document.querySelector("link[rel='icon']").href = prefersDarkScheme ? "./images/favicon_dark.ico" : "./images/favicon_light.ico";
-  }
-  
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateStrokeStyle);
-  
-  updateStrokeStyle();
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyleAndFavicon);
+
+  updateStrokeStyleAndFavicon();
   
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
