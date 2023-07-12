@@ -352,23 +352,31 @@ input:not(:checked) + label span > span:nth-child(1) {
 input:not(:checked) + label .label-letter-1 {
   transform: translateY(-125px);
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.075s;
 }
 input:not(:checked) + label .label-letter-2 {
   transform: translateY(-250px);
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.15s;
 }
 input:not(:checked) + label .label-letter-3 {
   transform: translateY(-375px);
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.225s;
 }
 
 input:not(:checked):hover + label span > span:not(:nth-child(1)), input:not(:checked):focus-visible + label span > span:not(:nth-child(1)) {
   opacity: 1;
   transform: translateY(0);
-  transition: 0.125s;
+}
+input:not(:checked):hover + label .label-letter-1, input:not(:checked):focus-visible + label .label-letter-1 {
+  transition: 0.075s;
+}
+input:not(:checked):hover + label .label-letter-2, input:not(:checked):focus-visible + label .label-letter-2 {
+  transition: 0.15s;
+}
+input:not(:checked):hover + label .label-letter-3, input:not(:checked):focus-visible + label .label-letter-3 {
+  transition: 0.225s;
 }
 
 input:checked + label, input:focus-visible + label, input:hover + label {

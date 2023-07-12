@@ -46,7 +46,6 @@ input {
     appearance: none;
 }
 
-// TEMPORARY?? MAYBE
 input:not(:checked) + label {
     .span-wrapper {
         height: 0;
@@ -61,7 +60,7 @@ input:not(:checked) + label {
         .label-letter-#{$i} {
             transform: translateY(-125px * $i);
             opacity: 0;
-            transition: .2s;
+            transition: .075s * $i;
         }
     }
 }
@@ -70,10 +69,14 @@ input:not(:checked):hover + label, input:not(:checked):focus-visible + label {
     span > span:not(:nth-child(1)) {
         opacity: 1;
         transform: translateY(0);
-        transition: .125s;
+    }
+
+    @for $i from 1 through 3 {
+        .label-letter-#{$i} {
+            transition: .075s * $i;
+        }
     }
 }
-// TEMPORARY?? MAYBE
 
 input:checked + label, input:focus-visible + label, input:hover + label {
     color: white;
