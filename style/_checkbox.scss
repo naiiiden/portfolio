@@ -47,7 +47,11 @@ input {
 }
 
 // TEMPORARY?? MAYBE
-input:not(:checked) + label{
+input:not(:checked) + label {
+    .span-wrapper {
+        height: 0;
+    }
+
     span > span:nth-child(1) {
         color: white;
         text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;

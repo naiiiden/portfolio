@@ -342,6 +342,9 @@ input {
           appearance: none;
 }
 
+input:not(:checked) + label .span-wrapper {
+  height: 0;
+}
 input:not(:checked) + label span > span:nth-child(1) {
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
