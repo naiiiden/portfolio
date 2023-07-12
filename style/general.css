@@ -343,8 +343,8 @@ input {
 }
 
 input:not(:checked) + label span > span:nth-child(1) {
-  color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 input:not(:checked) + label .label-letter-1 {
   transform: translateY(-125px);
@@ -378,6 +378,10 @@ input:checked + label > span span {
 }
 
 @media (prefers-color-scheme: dark) {
+  input:not(:checked) + label span > span:nth-child(1) {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  }
   input:checked + label, input:focus-visible + label, input:hover + label {
     color: black;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
