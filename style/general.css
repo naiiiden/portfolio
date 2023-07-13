@@ -399,5 +399,11 @@ input:checked + label > span span {
   }
 }
 #selected-works {
+  display: flex;
+}
+#selected-works ol {
   border: 1px solid red;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "a a a ";
 }/*# sourceMappingURL=general.css.map */
