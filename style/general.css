@@ -133,9 +133,6 @@ body main .full-page-wrapper {
   height: 100vh;
   display: grid;
 }
-body main .full-page-wrapper:nth-child(1) {
-  border: 1px solid yellow;
-}
 body main .main-text-container {
   width: -moz-fit-content;
   width: fit-content;
@@ -402,8 +399,17 @@ input:checked + label > span span {
   display: flex;
 }
 #selected-works ol {
-  border: 1px solid red;
   width: 100%;
   display: grid;
-  grid-template-areas: "a a a ";
+  grid-template-areas: "link";
+}
+#selected-works li p:first-child > a {
+  font-size: clamp(2rem, 6vw, 5rem);
+  border-bottom: none;
+}
+#selected-works li:first-child {
+  border-top: 3px dashed white;
+}
+#selected-works li:not(:last-child) {
+  border-bottom: 3px dashed white;
 }/*# sourceMappingURL=general.css.map */

@@ -2,9 +2,43 @@
     display: flex;
 
     ol {
-        border: 1px solid red;
+        // border: 1px solid red;
+        // height: 500px;
+        // overflow-y: auto;
         width: 100%;
         display: grid;
-        grid-template-areas: 'a a a ';
+        grid-template-areas: 'link';
+    }
+
+    li p:first-child > a {
+        font-size: clamp(2rem, 6vw, 5rem);
+        // font-weight: 700;
+        border-bottom: none;
+    }
+
+    li {
+        &:first-child {
+            border-top: 3px dashed white;
+        }
+        
+        &:not(:last-child) {
+            border-bottom: 3px dashed white;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #selected-works {
+        ol {
+            // grid-template-areas: 'link link';
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #selected-works {
+        ol {
+            // grid-template-areas: 'link link link';
+        }
     }
 }
