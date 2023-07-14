@@ -401,15 +401,25 @@ input:checked + label > span span {
 #selected-works ol {
   width: 100%;
   display: grid;
-  grid-template-areas: "link";
+  counter-reset: li-counter;
 }
 #selected-works li p:first-child > a {
   font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 700;
   border-bottom: none;
 }
+#selected-works li {
+  display: grid;
+  align-content: center;
+}
+#selected-works li::before {
+  counter-increment: li-counter;
+  content: counter(li-counter);
+  font-size: clamp(2rem, 6vw, 5rem);
+}
 #selected-works li:first-child {
-  border-top: 3px dashed white;
+  border-top: 2px dashed white;
 }
 #selected-works li:not(:last-child) {
-  border-bottom: 3px dashed white;
+  border-bottom: 2px dashed white;
 }/*# sourceMappingURL=general.css.map */
