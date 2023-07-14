@@ -409,7 +409,7 @@ input:checked + label > span span {
   border-bottom: none;
 }
 #selected-works li {
-  display: grid;
+  display: flex;
   align-content: center;
 }
 #selected-works li::before {
