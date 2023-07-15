@@ -54,15 +54,19 @@ input:not(:checked) + label {
 
     @for $i from 1 through 3 {
         .label-letter-#{$i} {
-            transform: translateY(-125px * $i);
+            display: none;
+            transform: translateX(-125px * $i);
             opacity: 0;
             transition: .075s * $i;
         }
     }
 }
 
+
+
 input:not(:checked):hover + label, input:not(:checked):focus-visible + label {
     span > span:not(:nth-child(1)) {
+        display: inline;
         opacity: 1;
         transform: translateY(0);
     }
