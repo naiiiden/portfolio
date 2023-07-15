@@ -32,19 +32,3 @@
         }
     }
 }
-
-@media screen and (min-width: 768px) {
-    #selected-works {
-        ol {
-            // grid-template-areas: 'link link';
-        }
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    #selected-works {
-        ol {
-            // grid-template-areas: 'link link link';
-        }
-    }
-}

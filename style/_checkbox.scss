@@ -83,8 +83,13 @@ input:checked + label, input:focus-visible + label, input:hover + label {
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
+input + label > span span {
+    transition: .15s;
+}
+
 input:checked + label > span span {
     transform: rotate(90deg) translate(-10px, -10px);
+    transition: .15s;
 }
 
 @media (prefers-color-scheme: dark) {
