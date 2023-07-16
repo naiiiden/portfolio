@@ -1,34 +1,41 @@
 #selected-works {
     display: flex;
+    max-width: 690px;
+    padding-left: clamp(0rem, 1.5vw, 0.85rem);
 
     ol {
         width: 100%;
         display: grid;
+        align-content: space-between;
         counter-reset: li-counter;
     }
 
-    li p:first-child > a {
-        font-size: clamp(2rem, 6vw, 5rem);
-        font-weight: 700;
-        border-bottom: none;
-    }
-
     li {
-        display: flex;
-        align-content: center;
+        max-width: 355px;
+        font-family: NeueMontreal, sans-serif;
+        height: fit-content;
+
+        &:nth-child(odd) {
+            justify-self: flex-end;
+
+            &::before {
+                text-align: start;
+            }
+        }
         
         &::before {
+            display: block;
+            text-align: end;
             counter-increment: li-counter;
-            content: counter(li-counter);
-            font-size: clamp(2rem, 6vw, 5rem);
+            content: "[" counter(li-counter) "]";
+            font-size: clamp(2rem, 6vw, 2rem);
+            font-weight: 400;
         }
 
-        &:first-child {
-            border-top: 2px dashed white;
-        }
-        
-        &:not(:last-child) {
-            border-bottom: 2px dashed white;
+        p:first-child > a {
+            font-size: 1.75rem;
+            font-weight: 700;
+            border-bottom: none;
         }
     }
 }

@@ -387,29 +387,37 @@ input:checked + label > span span {
 }
 #selected-works {
   display: flex;
+  max-width: 690px;
+  padding-left: clamp(0rem, 1.5vw, 0.85rem);
 }
 #selected-works ol {
   width: 100%;
   display: grid;
+  align-content: space-between;
   counter-reset: li-counter;
 }
-#selected-works li p:first-child > a {
-  font-size: clamp(2rem, 6vw, 5rem);
-  font-weight: 700;
-  border-bottom: none;
-}
 #selected-works li {
-  display: flex;
-  align-content: center;
+  max-width: 355px;
+  font-family: NeueMontreal, sans-serif;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#selected-works li:nth-child(odd) {
+  justify-self: flex-end;
+}
+#selected-works li:nth-child(odd)::before {
+  text-align: start;
 }
 #selected-works li::before {
+  display: block;
+  text-align: end;
   counter-increment: li-counter;
-  content: counter(li-counter);
-  font-size: clamp(2rem, 6vw, 5rem);
+  content: "[" counter(li-counter) "]";
+  font-size: clamp(2rem, 6vw, 2rem);
+  font-weight: 400;
 }
-#selected-works li:first-child {
-  border-top: 2px dashed white;
-}
-#selected-works li:not(:last-child) {
-  border-bottom: 2px dashed white;
+#selected-works li p:first-child > a {
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-bottom: none;
 }/*# sourceMappingURL=general.css.map */
