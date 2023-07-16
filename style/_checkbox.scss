@@ -45,36 +45,19 @@ input {
 }
 
 input:not(:checked) + label {
-    .span-wrapper {
-        height: 0;
-    }
-
     span > span:nth-child(1) {
         color: white;
         text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
     }
 
-    @for $i from 1 through 3 {
-        .label-letter-#{$i} {
-            display: none;
-            transform: translateX(-125px * $i);
-            opacity: 0;
-            transition: .075s * $i;
-        }
+    span > span:not(:nth-child(1)) {
+        display: none;
     }
 }
 
 input:not(:checked):hover + label, input:not(:checked):focus-visible + label {
     span > span:not(:nth-child(1)) {
         display: inline;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    @for $i from 1 through 3 {
-        .label-letter-#{$i} {
-            transition: .075s * $i;
-        }
     }
 
     & ~ .nev {
