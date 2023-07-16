@@ -175,7 +175,7 @@ body h2, body a {
   font-family: Helmet, sans-serif;
 }
 body .text {
-  padding: clamp(0.5rem, 2.5vw, 2rem) 0 clamp(0.5rem, 2.5vw, 2rem) clamp(0rem, 1.5vw, 0.85rem);
+  padding: clamp(0.5rem, 2.5vw, 2rem) 1rem clamp(0.5rem, 2.5vw, 2rem) clamp(0rem, 1.5vw, 0.85rem);
   max-width: 675px;
   line-height: 1.75;
 }
