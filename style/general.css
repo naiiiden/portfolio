@@ -374,10 +374,16 @@ input:not(:checked):hover + label .label-letter-2, input:not(:checked):focus-vis
 input:not(:checked):hover + label .label-letter-3, input:not(:checked):focus-visible + label .label-letter-3 {
   transition: 0.225s;
 }
+input:not(:checked):hover + label ~ .nev, input:not(:checked):focus-visible + label ~ .nev {
+  display: none;
+}
 
 input:checked + label, input:focus-visible + label, input:hover + label {
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+input:checked + label ~ .nev, input:focus-visible + label ~ .nev, input:hover + label ~ .nev {
+  display: none;
 }
 
 input + label > span span {

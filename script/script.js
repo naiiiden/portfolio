@@ -55,18 +55,8 @@ if (window.matchMedia('(pointer: fine)').matches) {
     return isDark ? '#fff' : '#000';
   }
 
-  const label = document.querySelector('label');
-  const nev = document.querySelector('.nev');
-
-  label.addEventListener('mouseenter', () => {
-    nev.style.opacity = '0';
-  });
-
-  label.addEventListener('mouseleave', () => {
-    nev.style.opacity = '1';
-  });
-
   function updateDrawingStatus() {
+    const label = document.querySelector('label');
     const drawCheckbox = document.querySelector('.draw-checkbox');
     const elementsToDisable = document.querySelectorAll('.inerted')
 
@@ -80,7 +70,6 @@ if (window.matchMedia('(pointer: fine)').matches) {
       canvas.style.backdropFilter = 'blur(.125rem)'
       label.style.zIndex = '1000';
       label.style.position = 'fixed';
-      nev.style.display = 'none';
       
       elementsToDisable.forEach(element => {
         element.inert = true;
@@ -95,7 +84,6 @@ if (window.matchMedia('(pointer: fine)').matches) {
       canvas.style.backdropFilter = 'unset'
       label.style.zIndex = 'unset';
       label.style.position = 'absolute';
-      nev.style.display = 'unset';
 
       elementsToDisable.forEach(element => {
         element.inert = false;

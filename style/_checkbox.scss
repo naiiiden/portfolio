@@ -62,8 +62,6 @@ input:not(:checked) + label {
     }
 }
 
-
-
 input:not(:checked):hover + label, input:not(:checked):focus-visible + label {
     span > span:not(:nth-child(1)) {
         display: inline;
@@ -76,11 +74,19 @@ input:not(:checked):hover + label, input:not(:checked):focus-visible + label {
             transition: .075s * $i;
         }
     }
+
+    & ~ .nev {
+        display: none;
+    }
 }
 
 input:checked + label, input:focus-visible + label, input:hover + label {
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+    & ~ .nev {
+        display: none;
+    }
 }
 
 input + label > span span {
