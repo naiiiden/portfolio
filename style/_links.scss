@@ -13,6 +13,7 @@ a[href] {
         background: black;
         color: white;
         transition: .2s;
+        outline: none;
     }
 
     @media (prefers-color-scheme: dark) {

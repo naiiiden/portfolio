@@ -238,6 +238,7 @@ a[href]:active, a[href]:focus-visible {
   background: black;
   color: white;
   transition: 0.2s;
+  outline: none;
 }
 @media (prefers-color-scheme: dark) {
   a[href] {
