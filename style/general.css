@@ -285,7 +285,6 @@ a[href]:active, a[href]:focus-visible {
 }
 .heading:nth-child(3) span:nth-of-type(1):not(.no-cursor, :nth-child(4)) {
   font-size: clamp(4rem, 12.5vw, 11.25rem);
-  align-items: center;
 }
 @media (pointer: fine) {
   .heading:nth-child(3) div:nth-of-type(3) {
@@ -335,15 +334,6 @@ input:checked + label, input:focus-visible + label, input:hover + label {
 }
 input:checked + label ~ .nev, input:focus-visible + label ~ .nev, input:hover + label ~ .nev {
   display: none;
-}
-
-input + label > span span {
-  transition: 0.15s;
-}
-
-input:checked + label > span span {
-  transform: rotate(90deg) translate(-10px, -10px);
-  transition: 0.15s;
 }
 
 input:checked:focus-visible + label {
