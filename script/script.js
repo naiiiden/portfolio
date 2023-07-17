@@ -1,12 +1,3 @@
-let countdown = 5;
-let timer = setInterval(() => {
-  if (countdown <= 0) {
-    clearInterval(timer);
-  }
-  document.querySelector('.mobile-message span').innerHTML = countdown !== 1 ? `${countdown} seconds` : `${countdown} second`;
-  countdown -= 1;
-}, 1000);
-
 const today = new Date();
 const birthday = new Date(2000, 6, 5); // months are 0-based
 const age = today.getFullYear() - birthday.getFullYear() - (today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.getMonth() && today.getDate() < birthday.getDate()));

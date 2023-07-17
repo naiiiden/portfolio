@@ -84,26 +84,6 @@ html {
   font-family: "NeueMontreal";
   src: url("./fonts/PPNeueMontreal-Medium.otf");
 }
-.mobile-message {
-  display: none;
-}
-
-@media (pointer: coarse) {
-  .mobile-message {
-    position: absolute;
-    inset: 0 0 0 0;
-    text-transform: uppercase;
-    animation: remove 6s forwards;
-  }
-  .mobile-message p {
-    font-size: 2rem;
-  }
-  @keyframes remove {
-    100% {
-      display: none;
-    }
-  }
-}
 ::-moz-selection {
   background: black;
   color: white;
@@ -155,12 +135,6 @@ body main a[href="#selected-works"]:hover span, body main a[href="#selected-work
   transition: 0.15s;
 }
 @media (pointer: coarse) {
-  @keyframes display {
-    100% {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
   body main input, body main label, body main canvas {
     display: none;
   }
