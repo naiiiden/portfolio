@@ -312,6 +312,9 @@ input {
      -moz-appearance: none;
           appearance: none;
 }
+input:focus-visible {
+  outline: none;
+}
 
 input:not(:checked) + label span > span:nth-child(1) {
   color: white;

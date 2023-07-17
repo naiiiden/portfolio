@@ -41,6 +41,10 @@ label {
 
 input {
     appearance: none;
+
+    &:focus-visible {
+        outline: none;
+    }
 }
 
 input:not(:checked) + label {
