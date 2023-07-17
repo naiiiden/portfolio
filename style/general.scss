@@ -84,10 +84,6 @@ body {
     .full-page-wrapper {
         grid-template-columns: 675px 1fr;
     }
-
-    a[href="#selected-works"] {
-        justify-self: center !important;
-    }
 }
 
 @media (pointer: fine) {
