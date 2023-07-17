@@ -1,0 +1,14 @@
+::-webkit-scrollbar {
+    width: .75rem;
+}
+   
+::-webkit-scrollbar-thumb {   
+    background: black;
+
+    @media (prefers-color-scheme: dark) {
+        & {
+            background: white;
+        }
+    }
+}
+

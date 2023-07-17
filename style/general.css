@@ -420,4 +420,17 @@ input:checked + label > span span {
   font-size: 1.75rem;
   font-weight: 700;
   border-bottom: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
 }/*# sourceMappingURL=general.css.map */
