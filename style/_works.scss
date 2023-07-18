@@ -22,6 +22,28 @@
                 text-align: start;
             }
         }
+
+        img {
+            display: none;
+        }
+        
+        mix-blend-mode: difference;
+
+        &:hover {
+            position: relative;
+
+            img {
+                display: unset;
+                position: absolute;
+                top: -50%;
+                z-index: -1;
+                min-width: 700px;
+            }
+        }
+
+        p, a {
+            mix-blend-mode: difference;
+        }
         
         &::before {
             display: block;

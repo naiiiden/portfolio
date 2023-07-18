@@ -387,12 +387,29 @@ input:checked:focus-visible + label {
   font-family: NeueMontreal, sans-serif;
   height: -moz-fit-content;
   height: fit-content;
+  mix-blend-mode: difference;
 }
 #selected-works li:nth-child(odd) {
   justify-self: flex-end;
 }
 #selected-works li:nth-child(odd)::before {
   text-align: start;
+}
+#selected-works li img {
+  display: none;
+}
+#selected-works li:hover {
+  position: relative;
+}
+#selected-works li:hover img {
+  display: unset;
+  position: absolute;
+  top: -50%;
+  z-index: -1;
+  min-width: 700px;
+}
+#selected-works li p, #selected-works li a {
+  mix-blend-mode: difference;
 }
 #selected-works li::before {
   display: block;
