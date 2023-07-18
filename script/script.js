@@ -161,3 +161,33 @@ if (window.matchMedia('(pointer: fine)').matches) {
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
 }
+
+const repos = document.querySelectorAll('ol li');
+const img = document.querySelector('#selected-works img');
+
+repos.forEach((repo, index) => {
+  repo.addEventListener('mouseenter', () => {
+    img.style.display = 'unset';
+
+    switch (index) {
+      case 0: 
+        return img.src = '../images/instrument.png';
+      case 1:
+        return img.src = '../images/stark.png';
+      case 2:
+        return img.src = '../images/ableton.png';
+      case 3:
+        return img.src = '../images/todo.png';
+      case 4:
+        return img.src = '../images/jobs.png';
+      case 5:
+        return img.src = '../images/countries.png';
+      default: 
+        img.style.display = 'none';
+    }
+  });
+
+  repo.addEventListener('mouseleave', () => {
+    img.style.display = 'none';
+  });
+});
