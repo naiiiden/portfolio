@@ -372,12 +372,10 @@ input:checked:focus-visible + label {
   }
 }
 #selected-works {
-  display: flex;
-  max-width: 690px;
   padding: 0 0 clamp(0rem, 1.5vw, 0.85rem) clamp(0rem, 1.5vw, 0.85rem);
 }
 #selected-works ol {
-  width: 100%;
+  max-width: 690px;
   display: grid;
   align-content: space-between;
   counter-reset: li-counter;
@@ -387,29 +385,12 @@ input:checked:focus-visible + label {
   font-family: NeueMontreal, sans-serif;
   height: -moz-fit-content;
   height: fit-content;
-  mix-blend-mode: difference;
 }
 #selected-works li:nth-child(odd) {
   justify-self: flex-end;
 }
 #selected-works li:nth-child(odd)::before {
   text-align: start;
-}
-#selected-works li img {
-  display: none;
-}
-#selected-works li:hover {
-  position: relative;
-}
-#selected-works li:hover img {
-  display: unset;
-  position: absolute;
-  top: -50%;
-  z-index: -1;
-  min-width: 700px;
-}
-#selected-works li p, #selected-works li a {
-  mix-blend-mode: difference;
 }
 #selected-works li::before {
   display: block;
@@ -423,6 +404,17 @@ input:checked:focus-visible + label {
   font-size: 1.75rem;
   font-weight: 700;
   border-bottom: none;
+}
+#selected-works img {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  #selected-works img {
+    display: unset;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+  }
 }
 
 ::-webkit-scrollbar {

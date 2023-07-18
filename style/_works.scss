@@ -1,10 +1,8 @@
 #selected-works {
-    display: flex;
-    max-width: 690px;
     padding: 0 0 clamp(0rem, 1.5vw, 0.85rem) clamp(0rem, 1.5vw, 0.85rem);
-
+    
     ol {
-        width: 100%;
+        max-width: 690px;
         display: grid;
         align-content: space-between;
         counter-reset: li-counter;
@@ -22,28 +20,6 @@
                 text-align: start;
             }
         }
-
-        img {
-            display: none;
-        }
-        
-        mix-blend-mode: difference;
-
-        &:hover {
-            position: relative;
-
-            img {
-                display: unset;
-                position: absolute;
-                top: -50%;
-                z-index: -1;
-                min-width: 700px;
-            }
-        }
-
-        p, a {
-            mix-blend-mode: difference;
-        }
         
         &::before {
             display: block;
@@ -58,6 +34,19 @@
             font-size: 1.75rem;
             font-weight: 700;
             border-bottom: none;
+        }
+    }
+
+    img {
+        display: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+        img {
+            display: unset;
+            width: 80%;
+            justify-self: center;
+            align-self: center;
         }
     }
 }
