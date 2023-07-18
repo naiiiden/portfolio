@@ -162,36 +162,21 @@ if (window.matchMedia('(pointer: fine)').matches) {
   resizeCanvas();
 }
 
-// const repos = document.querySelectorAll('ol li');
-// const img = document.querySelector('#selected-works img');
+const repos = document.querySelectorAll('ol li');
+const images = document.querySelectorAll('.image-container img');
 
-// // Define the image paths
-// const imagePaths = [
-//   '../images/instrument.png',
-//   '../images/stark.png',
-//   '../images/ableton.png',
-//   '../images/todo.png',
-//   '../images/jobs.png',
-//   '../images/countries.png'
-// ];
+repos.forEach((repo, index) => {
+  repo.addEventListener('mouseenter', () => {
+    images.forEach((img) => {
+      img.style.opacity = 0;
+    });
 
-// // Preload the images
-// const preloadImages = () => {
-//   imagePaths.forEach((path) => {
-//     const imgElement = new Image();
-//     imgElement.src = path;
-//   });
-// };
-// preloadImages();
+    images[index].style.opacity = 1;
+  });
 
-// // Add event listeners to repo items
-// repos.forEach((repo, index) => {
-//   repo.addEventListener('mouseenter', () => {
-//     img.style.display = 'unset';
-//     img.src = imagePaths[index];
-//   });
-
-//   repo.addEventListener('mouseleave', () => {
-//     img.style.display = 'none';
-//   });
-// });
+  repo.addEventListener('mouseleave', () => {
+    images.forEach((img) => {
+      img.style.opacity = 0;
+    });
+  });
+});

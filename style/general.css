@@ -411,11 +411,9 @@ input:checked:focus-visible + label {
 @media screen and (min-width: 1200px) {
   #selected-works .image-container {
     display: unset;
-    border: 1px solid red;
     position: relative;
   }
   #selected-works img {
-    border: 1px solid red;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -424,6 +422,7 @@ input:checked:focus-visible + label {
     width: 80%;
     justify-self: center;
     align-self: center;
+    opacity: 0;
   }
 }
 
