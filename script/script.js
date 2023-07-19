@@ -169,6 +169,7 @@ repos.forEach((repo, index) => {
   repo.addEventListener('mouseenter', () => {
     images.forEach((img) => {
       img.style.opacity = 0;
+      img.style.transition = '.1s';
     });
 
     images[index].style.opacity = 1;
