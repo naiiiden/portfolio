@@ -107,6 +107,10 @@ body {
     }
 }
 
+.sr-only {
+    display: unset !important;
+}
+
 @import './cursor';
 @import './links';
 @import './checkbox';

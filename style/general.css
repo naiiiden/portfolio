@@ -184,6 +184,10 @@ body .uppercase {
     color: white;
   }
 }
+.sr-only {
+  display: unset !important;
+}
+
 @media (any-pointer: fine) {
   body, a, input, button, label {
     cursor: none;
