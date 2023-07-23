@@ -340,8 +340,7 @@ input:checked + label ~ .nev, input:focus-visible + label ~ .nev, input:hover + 
 }
 
 input:checked:focus-visible + label {
-  -webkit-padding-end: 1rem;
-          padding-inline-end: 1rem;
+  padding-inline-end: 1rem;
   background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0);
   background-position: 0 0, 0 100%, 0 0, 100% 0;
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
