@@ -188,7 +188,7 @@ body .uppercase {
   display: unset !important;
 }
 
-@media (any-pointer: fine) {
+@media (pointer: fine) {
   body, a, input, button, label {
     cursor: none;
   }
