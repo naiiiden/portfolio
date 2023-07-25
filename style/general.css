@@ -217,7 +217,8 @@ body .uppercase {
 a[href] {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   display: inline-block;
-  border-bottom: 2px solid black;
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
   line-height: 1;
   transition: 0.2s;
 }
@@ -232,7 +233,8 @@ a[href]:active, a[href]:focus-visible {
 }
 @media (prefers-color-scheme: dark) {
   a[href] {
-    border-bottom: 2px solid white;
+    -webkit-text-decoration: underline 2px;
+            text-decoration: underline 2px;
   }
   a[href]:active, a[href]:focus-visible {
     background: white;
