@@ -78,6 +78,8 @@ a[href="#selected-works"] {
             justify-self: center;
             align-self: center;
             opacity: 0;
+            user-select: none;
+            pointer-events: none;
         }
     }
 }

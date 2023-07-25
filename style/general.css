@@ -436,6 +436,10 @@ a[href="#selected-works"]:hover span, a[href="#selected-works"]:focus-visible sp
     justify-self: center;
     align-self: center;
     opacity: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    pointer-events: none;
   }
 }
 
