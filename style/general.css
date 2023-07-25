@@ -416,6 +416,8 @@ input:checked:focus-visible + label {
   font-size: 1.75rem;
   font-weight: 700;
   border-bottom: none;
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
 }
 #selected-works img, #selected-works .image-container {
   display: none;
