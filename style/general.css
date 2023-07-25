@@ -407,7 +407,7 @@ a[href="#selected-works"]:hover span, a[href="#selected-works"]:focus-visible sp
   display: block;
   text-align: end;
   counter-increment: li-counter;
-  content: "[" counter(li-counter) "]";
+  content: "[" counter(li-counter) "]"/"";
   font-size: clamp(2rem, 6vw, 2rem);
   font-weight: 400;
 }
