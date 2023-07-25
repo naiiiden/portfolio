@@ -217,10 +217,6 @@ a[href]:active, a[href]:focus-visible {
   outline: none;
 }
 @media (prefers-color-scheme: dark) {
-  a[href] {
-    -webkit-text-decoration: underline 2px;
-            text-decoration: underline 2px;
-  }
   a[href]:active, a[href]:focus-visible {
     background: white;
     color: black;
@@ -233,7 +229,7 @@ a[href]:active, a[href]:focus-visible {
     position: relative;
   }
   a[href]:hover {
-    border-bottom: none;
+    text-decoration: none;
   }
   a[href] .left, a[href] .right {
     display: unset;

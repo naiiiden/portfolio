@@ -17,14 +17,10 @@ a[href] {
     }
 
     @media (prefers-color-scheme: dark) {
-        & {
-            text-decoration: underline 2px;
-    
-            &:active, &:focus-visible {
-                background: white;
-                color: black;
-                transition: .2s;
-            }
+        &:active, &:focus-visible {
+            background: white;
+            color: black;
+            transition: .2s;
         }
     }
 }
@@ -35,7 +31,7 @@ a[href] {
 
         &[href]{
             &:hover {
-                border-bottom: none;
+                text-decoration: none;
             }
     
             .left, .right {
