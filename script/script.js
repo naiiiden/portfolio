@@ -164,20 +164,31 @@ if (window.matchMedia('(pointer: fine)').matches) {
 
 const repos = document.querySelectorAll('ol li');
 const images = document.querySelectorAll('.image-container img');
+const repoLinks = document.querySelectorAll('.repo-preview-link');
+
+function updateImageOpacity(index) {
+  images.forEach((img, i) => {
+    img.style.opacity = i === index ? 1 : 0;
+    img.style.transition = '.1s';
+  });
+}
 
 repos.forEach((repo, index) => {
   repo.addEventListener('mouseenter', () => {
-    images.forEach((img) => {
-      img.style.opacity = 0;
-      img.style.transition = '.1s';
-    });
-
-    images[index].style.opacity = 1;
+    updateImageOpacity(index);
   });
 
   repo.addEventListener('mouseleave', () => {
-    images.forEach((img) => {
-      img.style.opacity = 0;
-    });
+    updateImageOpacity(-1);
+  });
+});
+
+repoLinks.forEach((repo, index) => {
+  repo.addEventListener('focusin', () => {
+    updateImageOpacity(index);
+  });
+
+  repo.addEventListener('focusout', () => {
+    updateImageOpacity(-1);
   });
 });
