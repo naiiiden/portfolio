@@ -74,7 +74,8 @@ if (window.matchMedia('(pointer: fine)').matches) {
       canvas.style.zIndex = '-1';
       canvas.style.backdropFilter = 'unset'
       label.style.zIndex = 'unset';
-      label.style.position = 'absolute';
+      // label.style.position = 'absolute';
+      label.style.position = 'unset';
 
       elementsToDisable.forEach(element => {
         element.inert = false;

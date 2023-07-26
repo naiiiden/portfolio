@@ -32,11 +32,6 @@
 .sticky-label {
     position: relative;
     display: flex;
-    gap: clamp(2.75rem, 8vw, 7rem);
-}
-
-label {
-    position: absolute;
 }
 
 input {
