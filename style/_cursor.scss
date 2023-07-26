@@ -15,4 +15,12 @@
         z-index: 9999;
         mix-blend-mode: difference;
     }
+
+    .cursor-draw {
+        cursor: crosshair !important;
+
+        input, label {
+            cursor: crosshair !important;
+        }
+    }
 }

@@ -198,6 +198,12 @@ body .uppercase {
     z-index: 9999;
     mix-blend-mode: difference;
   }
+  .cursor-draw {
+    cursor: crosshair !important;
+  }
+  .cursor-draw input, .cursor-draw label {
+    cursor: crosshair !important;
+  }
 }
 a[href] {
   font-size: clamp(1.25rem, 3vw, 1.5rem);

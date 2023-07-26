@@ -62,6 +62,9 @@ if (window.matchMedia('(pointer: fine)').matches) {
       label.style.zIndex = '1000';
       label.style.position = 'fixed';
       
+      document.querySelector('#cursor').classList.remove('cursor');
+      document.body.classList.add('cursor-draw');
+
       elementsToDisable.forEach(element => {
         element.inert = true;
       });
@@ -76,6 +79,9 @@ if (window.matchMedia('(pointer: fine)').matches) {
       label.style.zIndex = 'unset';
       // label.style.position = 'absolute';
       label.style.position = 'unset';
+
+      document.querySelector('#cursor').classList.add('cursor');
+      document.body.classList.remove('cursor-draw');
 
       elementsToDisable.forEach(element => {
         element.inert = false;
