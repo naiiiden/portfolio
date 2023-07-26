@@ -22,8 +22,12 @@
         left: -2rem;
         width: 40px;
         height: 40px;
-        background: url('/images/edit_FILL0_wght300_GRAD0_opsz40.svg') center center;
+        background: url('/images/pen_light.svg') center center;
         pointer-events: none;
         z-index: 9999;
+
+        @media (prefers-color-scheme: dark) {
+            background: url('/images/pen_dark.svg') center center;
+        }
     }
 }
