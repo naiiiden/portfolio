@@ -11,6 +11,15 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.top = e.clientY - 10 + 'px';
 });
 
+let cursorDraw = document.querySelector('.cursor-draw');
+
+document.addEventListener('mousemove', (e) => {
+  cursorDraw.style.left = e.clientX - 15 + 'px';
+  cursorDraw.style.top = e.clientY - 35 + 'px';
+});
+
+cursorDraw.style.display = "none";
+
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyleAndFavicon);
 
 const canvas = document.getElementById('canvas');
@@ -63,7 +72,8 @@ if (window.matchMedia('(pointer: fine)').matches) {
       label.style.position = 'fixed';
       
       document.querySelector('#cursor').classList.remove('cursor');
-      document.body.classList.add('cursor-draw');
+      // document.body.classList.add('cursor-draw');
+      cursorDraw.style.display = "unset";
 
       elementsToDisable.forEach(element => {
         element.inert = true;
@@ -81,7 +91,8 @@ if (window.matchMedia('(pointer: fine)').matches) {
       label.style.position = 'unset';
 
       document.querySelector('#cursor').classList.add('cursor');
-      document.body.classList.remove('cursor-draw');
+      // document.body.classList.remove('cursor-draw');
+      cursorDraw.style.display = "none";
 
       elementsToDisable.forEach(element => {
         element.inert = false;

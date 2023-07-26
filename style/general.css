@@ -199,10 +199,14 @@ body .uppercase {
     mix-blend-mode: difference;
   }
   .cursor-draw {
-    cursor: crosshair !important;
-  }
-  .cursor-draw input, .cursor-draw label {
-    cursor: crosshair !important;
+    position: fixed;
+    top: -2rem;
+    left: -2rem;
+    width: 40px;
+    height: 40px;
+    background: url("/images/edit_FILL0_wght300_GRAD0_opsz40.svg") center center;
+    pointer-events: none;
+    z-index: 9999;
   }
 }
 a[href] {

@@ -17,10 +17,13 @@
     }
 
     .cursor-draw {
-        cursor: crosshair !important;
-
-        input, label {
-            cursor: crosshair !important;
-        }
+        position: fixed;
+        top: -2rem;
+        left: -2rem;
+        width: 40px;
+        height: 40px;
+        background: url('/images/edit_FILL0_wght300_GRAD0_opsz40.svg') center center;
+        pointer-events: none;
+        z-index: 9999;
     }
 }
