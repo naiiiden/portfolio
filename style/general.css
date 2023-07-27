@@ -156,20 +156,19 @@ body .uppercase {
     height: unset !important;
   }
 }
-@media (prefers-color-scheme: dark) {
-  ::-moz-selection {
-    background: white;
-    color: black;
-  }
-  ::selection {
-    background: white;
-    color: black;
-  }
-  body {
-    background: black;
-    color: white;
-  }
+[data-theme=dark] ::-moz-selection {
+  background: white;
+  color: black;
 }
+[data-theme=dark] ::selection {
+  background: white;
+  color: black;
+}
+[data-theme=dark] body {
+  background: black;
+  color: white;
+}
+
 .visually-hidden {
   display: unset !important;
   clip: rect(0 0 0 0);

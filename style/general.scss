@@ -76,12 +76,12 @@ body {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+[data-theme="dark"] {
     ::selection {
         background: white;
         color: black;
     }
-
+    
     body {
         background: black;
         color: white;
