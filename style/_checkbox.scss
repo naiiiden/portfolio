@@ -93,7 +93,7 @@ input:checked:focus-visible + label {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+[data-theme="dark"] {
     input:not(:checked) + label{
         span > span:nth-child(1) {
             color: black;

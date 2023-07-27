@@ -368,19 +368,18 @@ input:checked:focus-visible + label {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  input:not(:checked) + label span > span:nth-child(1) {
-    color: black;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-  }
-  input:checked + label, input:focus-visible + label, input:hover + label {
-    color: black;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-  }
-  input:checked:focus-visible + label {
-    background-image: linear-gradient(90deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, transparent 0), linear-gradient(180deg, #fff 50%, transparent 0), linear-gradient(180deg, #fff 50%, transparent 0);
-  }
+[data-theme=dark] input:not(:checked) + label span > span:nth-child(1) {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
+[data-theme=dark] input:checked + label, [data-theme=dark] input:focus-visible + label, [data-theme=dark] input:hover + label {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+[data-theme=dark] input:checked:focus-visible + label {
+  background-image: linear-gradient(90deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, transparent 0), linear-gradient(180deg, #fff 50%, transparent 0), linear-gradient(180deg, #fff 50%, transparent 0);
+}
+
 a[href="#selected-works"] {
   font-size: clamp(2rem, 6vw, 3rem);
   padding: 0 1rem 0 clamp(0rem, 1.5vw, 0.625rem);
