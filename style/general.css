@@ -218,9 +218,7 @@ body .uppercase {
     height: 2.5rem;
     background: url("../images/pen_light.svg") center center;
   }
-}
-@media (pointer: fine) and (prefers-color-scheme: dark) {
-  .cursor.cursor-draw, .cursor-draw.cursor-draw {
+  [data-theme=dark] .cursor-draw {
     background: url("../images/pen_dark.svg") center center;
   }
 }
