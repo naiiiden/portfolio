@@ -182,6 +182,14 @@ body .uppercase {
   white-space: nowrap;
 }
 
+.toggle {
+  position: fixed;
+  right: 0.25rem;
+  top: 0.25rem;
+  width: clamp(50px, 5vw, 60px);
+  height: clamp(50px, 5vw, 60px);
+}
+
 @media (pointer: fine) {
   body, a, input, button, label {
     cursor: none;

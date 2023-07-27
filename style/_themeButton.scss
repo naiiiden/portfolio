@@ -1,0 +1,7 @@
+.toggle {
+    position: fixed;
+    right: .25rem;
+    top: .25rem;
+    width: clamp(50px, 5vw, 60px);
+    height: clamp(50px, 5vw, 60px);
+}
