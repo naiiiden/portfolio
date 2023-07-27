@@ -241,12 +241,11 @@ a[href]:active, a[href]:focus-visible {
   transition: 0.2s;
   outline: none;
 }
-@media (prefers-color-scheme: dark) {
-  a[href]:active, a[href]:focus-visible {
-    background: white;
-    color: black;
-    transition: 0.2s;
-  }
+
+[data-theme=dark] a[href]:active, [data-theme=dark] a[href]:focus-visible {
+  background: white;
+  color: black;
+  transition: 0.2s;
 }
 
 @media (hover: hover) {
@@ -286,9 +285,7 @@ a[href]:active, a[href]:focus-visible {
   a[href] .right:hover {
     direction: rtl;
   }
-}
-@media (hover: hover) and (prefers-color-scheme: dark) {
-  a[href] .left:hover, a[href] .right:hover {
+  [data-theme=dark] a[href] .left:hover, [data-theme=dark] a[href] .right:hover {
     background: white;
     color: black;
   }
