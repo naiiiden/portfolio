@@ -4,11 +4,10 @@
    
 ::-webkit-scrollbar-thumb {   
     background: black;
-
-    @media (prefers-color-scheme: dark) {
-        & {
-            background: white;
-        }
-    }
 }
 
+[data-theme="dark"] {
+    ::-webkit-scrollbar-thumb {   
+        background: white;
+    }
+}

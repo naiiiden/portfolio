@@ -470,8 +470,7 @@ a[href="#selected-works"]:hover span, a[href="#selected-works"]:focus-visible sp
 ::-webkit-scrollbar-thumb {
   background: black;
 }
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-thumb {
-    background: white;
-  }
+
+[data-theme=dark] ::-webkit-scrollbar-thumb {
+  background: white;
 }/*# sourceMappingURL=general.css.map */
