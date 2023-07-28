@@ -6,11 +6,23 @@
     top: .25rem;
     width: clamp(50px, 5vw, 60px);
     height: clamp(50px, 5vw, 60px);
-    user-select: none;
+    // user-select: none;
     z-index: 9999;
+    border: 1px solid red;
+
+    background: url('../images/moon.svg') no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
 
     img {
         width: 100%;
         height: 100%;
+    }
+}
+
+[data-theme="dark"] {
+    .toggle {
+        background: url('../images/sun.svg') no-repeat;
+        background-size: 100% 100%;
     }
 }
