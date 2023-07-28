@@ -1,9 +1,11 @@
+// years
 const today = new Date();
 const birthday = new Date(2000, 6, 5); // months are 0-based
 const age = today.getFullYear() - birthday.getFullYear() - (today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.getMonth() && today.getDate() < birthday.getDate()));
 
 document.querySelector('.years').textContent = age;
 
+// cursors
 let cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', (e) => {
@@ -20,6 +22,39 @@ document.addEventListener('mousemove', (e) => {
 
 cursorDraw.style.display = "none";
 
+// repos
+const repos = document.querySelectorAll('ol li');
+const images = document.querySelectorAll('.image-container img');
+const repoLinks = document.querySelectorAll('.repo-preview-link');
+
+function updateImageOpacity(index) {
+  images.forEach((img, i) => {
+    img.style.opacity = i === index ? 1 : 0;
+    img.style.transition = '.1s';
+  });
+}
+
+repos.forEach((repo, index) => {
+  repo.addEventListener('mouseenter', () => {
+    updateImageOpacity(index);
+  });
+
+  repo.addEventListener('mouseleave', () => {
+    updateImageOpacity(-1);
+  });
+});
+
+repoLinks.forEach((repo, index) => {
+  repo.addEventListener('focusin', () => {
+    updateImageOpacity(index);
+  });
+
+  repo.addEventListener('focusout', () => {
+    updateImageOpacity(-1);
+  });
+});
+
+// canvas, favicon
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyleAndFavicon);
 
 const canvas = document.getElementById('canvas');
@@ -180,37 +215,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
   resizeCanvas();
 }
 
-const repos = document.querySelectorAll('ol li');
-const images = document.querySelectorAll('.image-container img');
-const repoLinks = document.querySelectorAll('.repo-preview-link');
-
-function updateImageOpacity(index) {
-  images.forEach((img, i) => {
-    img.style.opacity = i === index ? 1 : 0;
-    img.style.transition = '.1s';
-  });
-}
-
-repos.forEach((repo, index) => {
-  repo.addEventListener('mouseenter', () => {
-    updateImageOpacity(index);
-  });
-
-  repo.addEventListener('mouseleave', () => {
-    updateImageOpacity(-1);
-  });
-});
-
-repoLinks.forEach((repo, index) => {
-  repo.addEventListener('focusin', () => {
-    updateImageOpacity(index);
-  });
-
-  repo.addEventListener('focusout', () => {
-    updateImageOpacity(-1);
-  });
-});
-
+// theme toggle
 // https://web.dev/building-a-theme-switch-component/#javascript
 const onClick = () => {
   theme.value = theme.value === 'light'
