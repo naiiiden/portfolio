@@ -189,6 +189,10 @@ body .uppercase {
   top: 0.25rem;
   width: clamp(50px, 5vw, 60px);
   height: clamp(50px, 5vw, 60px);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 9999;
 }
 .toggle img {
   width: 100%;
