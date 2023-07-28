@@ -82,7 +82,7 @@ const setPreference = () => {
 const reflectPreference = () => {
   document.firstElementChild.setAttribute('data-theme', theme.value)
   document.querySelector('.color-scheme-toggle')?.setAttribute('aria-label', `Toggle ${theme.value === 'dark' ? 'light' : 'dark'} mode`)
-  // document.querySelector('.color-scheme-toggle img').setAttribute('src', theme.value === 'light' ? './images/moon.svg' :  './images/sun.svg')
+  document.querySelector('.color-scheme-toggle img').setAttribute('src', theme.value === 'light' ? './images/moon.svg' :  './images/sun.svg')
 }
 
 const theme = {
