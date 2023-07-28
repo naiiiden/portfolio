@@ -54,6 +54,56 @@ repoLinks.forEach((repo, index) => {
   });
 });
 
+// theme toggle
+// https://web.dev/building-a-theme-switch-component/#javascript
+const onClick = () => {
+  theme.value = theme.value === 'light'
+      ? 'dark'
+      : 'light'
+  setPreference()
+  updateStrokeStyleAndFavicon(); // Call the function to update stroke color and favicon when theme changes
+}
+
+const getColorPreference = () => {
+  if (localStorage.getItem('theme-preference')) {
+      return localStorage.getItem('theme-preference')
+  } else {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
+  }
+}
+
+const setPreference = () => {
+  localStorage.setItem('theme-preference', theme.value)
+  reflectPreference()
+}
+
+const reflectPreference = () => {
+  document.firstElementChild.setAttribute('data-theme', theme.value)
+  document.querySelector('.color-scheme-toggle')?.setAttribute('aria-label', `Toggle ${theme.value === 'dark' ? 'light' : 'dark'} mode`)
+  document.querySelector('.color-scheme-toggle img').setAttribute('src', theme.value === 'light' ? './images/moon.svg' :  './images/sun.svg')
+}
+
+const theme = {
+  value: getColorPreference(),
+}
+
+reflectPreference()
+
+window.onload = () => {
+  reflectPreference()
+
+  document.querySelector('.color-scheme-toggle').addEventListener('click', onClick)
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
+  theme.value = isDark 
+      ? 'dark' 
+      : 'light'
+  setPreference()
+})
+
 // canvas, favicon
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateStrokeStyleAndFavicon);
 
@@ -86,8 +136,8 @@ if (window.matchMedia('(pointer: fine)').matches) {
   }
 
   function getStrokeStyle() {
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return isDark ? '#fff' : '#000';
+    const themePreference = theme.value;
+    return themePreference === 'dark' ? '#fff' : '#000';
   }
 
   function updateDrawingStatus() {
@@ -214,52 +264,3 @@ if (window.matchMedia('(pointer: fine)').matches) {
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
 }
-
-// theme toggle
-// https://web.dev/building-a-theme-switch-component/#javascript
-const onClick = () => {
-  theme.value = theme.value === 'light'
-      ? 'dark'
-      : 'light'
-  setPreference()
-}
-
-const getColorPreference = () => {
-  if (localStorage.getItem('theme-preference')) {
-      return localStorage.getItem('theme-preference')
-  } else {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark'
-          : 'light'
-  }
-}
-
-const setPreference = () => {
-  localStorage.setItem('theme-preference', theme.value)
-  reflectPreference()
-}
-
-const reflectPreference = () => {
-  document.firstElementChild.setAttribute('data-theme', theme.value)
-  document.querySelector('.color-scheme-toggle')?.setAttribute('aria-label', `Toggle ${theme.value === 'dark' ? 'light' : 'dark'} mode`)
-  document.querySelector('.color-scheme-toggle img').setAttribute('src', theme.value === 'light' ? './images/moon.svg' :  './images/sun.svg')
-}
-
-const theme = {
-  value: getColorPreference(),
-}
-
-reflectPreference()
-
-window.onload = () => {
-  reflectPreference()
-
-  document.querySelector('.color-scheme-toggle').addEventListener('click', onClick)
-}
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
-  theme.value = isDark 
-      ? 'dark' 
-      : 'light'
-  setPreference()
-})
