@@ -156,7 +156,6 @@ if (window.matchMedia('(pointer: fine)').matches) {
       label.style.position = 'fixed';
       
       document.querySelector('#cursor').classList.remove('cursor');
-      // document.body.classList.add('cursor-draw');
       cursorDraw.style.display = "unset";
 
       elementsToDisable.forEach(element => {
@@ -171,11 +170,9 @@ if (window.matchMedia('(pointer: fine)').matches) {
       canvas.style.zIndex = '-1';
       canvas.style.backdropFilter = 'unset'
       label.style.zIndex = 'unset';
-      // label.style.position = 'absolute';
       label.style.position = 'unset';
 
       document.querySelector('#cursor').classList.add('cursor');
-      // document.body.classList.remove('cursor-draw');
       cursorDraw.style.display = "none";
 
       elementsToDisable.forEach(element => {
