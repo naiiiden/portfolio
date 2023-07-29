@@ -42,6 +42,18 @@ input {
     }
 }
 
+input:not(:checked):not(:hover):not(:focus-visible) + label > span:first-child {
+    outline: 1px solid red;
+
+    &::before {
+        content: "click me";
+        position: absolute;
+        top: -1rem;
+        left: 4rem;
+        font-size: .65rem;
+    }
+}
+
 input:not(:checked) + label {
     span > span:nth-child(1) {
         color: white;

@@ -7,18 +7,17 @@ document.querySelector('.years').textContent = age;
 
 // cursors
 let cursor = document.querySelector('.cursor');
-
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.clientX - 10 + 'px';
-  cursor.style.top = e.clientY - 10 + 'px';
-});
-
 let cursorDraw = document.querySelector('.cursor-draw');
 
-document.addEventListener('mousemove', (e) => {
-  cursorDraw.style.left = e.clientX - 15 + 'px';
-  cursorDraw.style.top = e.clientY - 35 + 'px';
-});
+function cursorPosition(cursorElement, xPosSubstractValue, yPosSubstractValue) {
+  document.addEventListener('mousemove', (e) => {
+    cursorElement.style.left = e.clientX - xPosSubstractValue + 'px';
+    cursorElement.style.top = e.clientY - yPosSubstractValue + 'px';
+  });
+}
+
+cursorPosition(cursor, 10, 10);
+cursorPosition(cursorDraw, 15, 35);
 
 cursorDraw.style.display = "none";
 

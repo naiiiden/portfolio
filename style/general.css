@@ -331,6 +331,17 @@ input:focus-visible {
   outline: none;
 }
 
+input:not(:checked):not(:hover):not(:focus-visible) + label > span:first-child {
+  outline: 1px solid red;
+}
+input:not(:checked):not(:hover):not(:focus-visible) + label > span:first-child::before {
+  content: "click me";
+  position: absolute;
+  top: -1rem;
+  left: 4rem;
+  font-size: 0.65rem;
+}
+
 input:not(:checked) + label span > span:nth-child(1) {
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
