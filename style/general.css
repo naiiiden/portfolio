@@ -148,8 +148,13 @@ body .uppercase {
     grid-template-columns: 675px 1fr;
   }
 }
-@media (pointer: fine) {
+canvas {
+  display: none;
+}
+
+@media (pointer: fine) and (min-width: 1200px) {
   canvas {
+    display: unset;
     position: absolute;
     top: 0;
     left: 0;
