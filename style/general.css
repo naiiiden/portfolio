@@ -309,9 +309,6 @@ a[href]:active, a[href]:focus-visible {
     display: none;
   }
 }
-.heading:nth-child(3) span:nth-of-type(1):not(.no-cursor, :nth-child(4)) {
-  font-size: clamp(4rem, 12.5vw, 11.25rem);
-}
 
 .sticky-label {
   position: relative;
