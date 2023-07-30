@@ -70,7 +70,7 @@ canvas {
     display: none;
 }
 
-@media (pointer: fine) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (pointer: fine) {
     canvas {
         display: unset;
         position: absolute;
