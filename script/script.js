@@ -248,8 +248,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
       ctx.strokeStyle = strokeStyle;
     }
 
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const faviconPath = prefersDarkScheme ? './images/favicon_dark.ico' : './images/favicon_light.ico';
+    const faviconPath = theme.value === 'dark' ? './images/favicon_dark.ico' : './images/favicon_light.ico';
     document.querySelector("link[rel='icon']").href = faviconPath;
   }
 
