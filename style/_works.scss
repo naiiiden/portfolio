@@ -8,11 +8,12 @@ a[href="#selected-works"] {
         display: inline-block;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         transition: .15s;
+        transform: rotate(270deg);
     }
 
     &:hover, &:focus-visible {
         span {
-            transform: rotate(90deg);
+            transform: rotate(360deg);
             transition: .15s;
         }
     }
