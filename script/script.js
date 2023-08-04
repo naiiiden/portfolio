@@ -143,6 +143,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
     const label = document.querySelector('label');
     const drawCheckbox = document.querySelector('.draw-checkbox');
     const elementsToDisable = document.querySelectorAll('.inerted')
+    const themeButton = document.querySelector('.color-scheme-toggle');
 
     if (drawCheckbox.checked) {
       canvas.addEventListener('mousedown', startDrawing);
@@ -154,6 +155,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
       canvas.style.backdropFilter = 'blur(.125rem)'
       label.style.zIndex = '1000';
       label.style.position = 'fixed';
+      themeButton.style.zIndex = '0';
       
       document.querySelector('#cursor').classList.remove('cursor');
       cursorDraw.style.display = "unset";
@@ -171,6 +173,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
       canvas.style.backdropFilter = 'unset'
       label.style.zIndex = 'unset';
       label.style.position = 'unset';
+      themeButton.style.zIndex = '9999';
 
       document.querySelector('#cursor').classList.add('cursor');
       cursorDraw.style.display = "none";
