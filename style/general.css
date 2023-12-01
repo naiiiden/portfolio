@@ -73,4 +73,31 @@ html {
   html {
     scroll-behavior: auto !important;
   }
+}
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+}
+
+.container {
+  height: 100vh;
+  width: 25%;
+}
+.container h1 {
+  text-transform: uppercase;
+}
+.container:nth-child(1) {
+  background: #eee;
+}
+.container:nth-child(2) {
+  background: #e30512;
+}
+.container:nth-child(3) {
+  background: #00783d;
+}
+.container:nth-child(4) {
+  background: #00f;
 }/*# sourceMappingURL=general.css.map */
