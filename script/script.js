@@ -81,7 +81,7 @@ const setPreference = () => {
 const reflectPreference = () => {
   document.firstElementChild.setAttribute('data-theme', theme.value)
   document.querySelector('.color-scheme-toggle')?.setAttribute('aria-label', `Toggle ${theme.value === 'dark' ? 'light' : 'dark'} mode`)
-  document.querySelector('.color-scheme-toggle img').setAttribute('src', theme.value === 'light' ? './images/moon.svg' :  './images/sun.svg')
+  document.querySelector('.color-scheme-toggle img').setAttribute('src', theme.value === 'light' ? './assets/moon.svg' :  './assets/sun.svg')
 }
 
 const theme = {
@@ -251,7 +251,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
       ctx.strokeStyle = strokeStyle;
     }
 
-    const faviconPath = theme.value === 'dark' ? './images/favicon_dark.ico' : './images/favicon_light.ico';
+    const faviconPath = theme.value === 'dark' ? './assets/favicon_dark.ico' : './assets/favicon_light.ico';
     document.querySelector("link[rel='icon']").href = faviconPath;
   }
 
