@@ -12,8 +12,6 @@ body {
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-          hyphens: auto;
 }
 
 img, video, picture, canvas, svg {
@@ -226,10 +224,10 @@ canvas {
   .cursor.cursor-draw, .cursor-draw.cursor-draw {
     width: 2.5rem;
     height: 2.5rem;
-    background: url("../images/pen_light.svg") center center;
+    background: url("../../../assets/pen_light.svg") center center;
   }
   [data-theme=dark] .cursor-draw {
-    background: url("../images/pen_dark.svg") center center;
+    background: url("../../../assets/pen_dark.svg") center center;
   }
 }
 a[href] {
