@@ -27,12 +27,7 @@ main {
 }
 
 section {
-    transition: .2s;
-
-    h2 a {
-        // writing-mode: vertical-lr;
-        text-align: center;
-    }
+    transition: .4s;
 }
 
 section:target {
@@ -41,7 +36,7 @@ section:target {
     }
 
     flex-grow: 1;
-    transition: .2s;
+    transition: .4s;
 }
 
 .container {

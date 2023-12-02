@@ -98,15 +98,12 @@ main {
   }
 }
 section {
-  transition: 0.2s;
-}
-section h2 a {
-  text-align: center;
+  transition: 0.4s;
 }
 
 section:target {
   flex-grow: 1;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 section:target h2 a {
   writing-mode: unset;
