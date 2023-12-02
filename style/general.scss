@@ -8,7 +8,10 @@ body {
 }
 
 header {
-    background: #eee;
+    background: $gray;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 main {
@@ -20,20 +23,23 @@ main {
 .container {
     height: 100vh;
     flex-grow: 1;
+    outline: 1px solid black;
 
-    h1 {
+    h1, h2 {
         text-transform: uppercase;
     }
 
     &:nth-child(1) {
-        background: $red;
+        // background: $red;
+        background: $gray;
     }
     
     &:nth-child(2) {
-        background: $green;
+        // background: $green;
+        background: $gray;
     }
     
     &:nth-child(3) {
-        background: $blue;
+        background: $gray;
     }
 }

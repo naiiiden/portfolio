@@ -80,7 +80,10 @@ body {
 }
 
 header {
-  background: #eee;
+  background: #ddd;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 main {
@@ -92,16 +95,17 @@ main {
 .container {
   height: 100vh;
   flex-grow: 1;
+  outline: 1px solid black;
 }
-.container h1 {
+.container h1, .container h2 {
   text-transform: uppercase;
 }
 .container:nth-child(1) {
-  background: #e30512;
+  background: #ddd;
 }
 .container:nth-child(2) {
-  background: #00783d;
+  background: #ddd;
 }
 .container:nth-child(3) {
-  background: #00f;
+  background: #ddd;
 }/*# sourceMappingURL=general.css.map */
