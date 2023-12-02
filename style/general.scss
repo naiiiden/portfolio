@@ -16,12 +16,11 @@ header {
 
 main {
     display: flex;
-    flex-grow: 1;
+    flex-direction: column;
     width: 100%;
 }
 
 .container {
-    height: 100vh;
     flex-grow: 1;
     outline: 1px solid black;
 
