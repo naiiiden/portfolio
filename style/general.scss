@@ -7,13 +7,6 @@ body {
     display: flex;
 }
 
-header {
-    background: $gray;
-    writing-mode: vertical-lr;
-    text-transform: uppercase;
-    text-align: center;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -63,3 +56,5 @@ section {
         background: $gray;
     }
 }
+
+@import './header';

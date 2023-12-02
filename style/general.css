@@ -79,13 +79,6 @@ body {
   display: flex;
 }
 
-header {
-  background: #ddd;
-  writing-mode: vertical-lr;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -116,4 +109,11 @@ section {
 }
 .container:nth-child(3) {
   background: #ddd;
+}
+
+header {
+  background: #ddd;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  text-orientation: upright;
 }/*# sourceMappingURL=general.css.map */
