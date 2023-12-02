@@ -92,8 +92,27 @@ main {
   width: 100%;
 }
 
-.container {
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+}
+section {
+  transition: 0.2s;
+}
+section h2 a {
+  text-align: center;
+}
+
+section:target {
   flex-grow: 1;
+  transition: 0.2s;
+}
+section:target h2 a {
+  writing-mode: unset;
+}
+
+.container {
   outline: 1px solid black;
 }
 .container h1, .container h2 {
