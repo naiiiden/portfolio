@@ -94,19 +94,12 @@ main {
 
 @media screen and (min-width: 768px) {
   main {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 section {
-  transition: 0.4s;
-}
-
-section:target {
   flex-grow: 1;
-  transition: 0.4s;
-}
-section:target h2 a {
-  writing-mode: unset;
 }
 
 .container {

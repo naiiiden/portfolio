@@ -22,22 +22,25 @@ main {
 
 @media screen and (min-width: 768px) {
     main {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));        
     }
 }
 
 section {
-    transition: .4s;
-}
-
-section:target {
-    h2 a {
-        writing-mode: unset;
-    }
-
+    // transition: .4s;
     flex-grow: 1;
-    transition: .4s;
 }
+
+// SLIDES
+// section:target {
+//     h2 a {
+//         writing-mode: unset;
+//     }
+    
+//     flex-grow: 1;
+//     transition: .4s;
+// }
 
 .container {
     outline: 1px solid black;

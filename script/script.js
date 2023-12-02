@@ -1,39 +1,32 @@
-const targetSectionId = window.location.hash.slice(1);
-const sections = document.querySelectorAll("section");
+// const sections = document.querySelectorAll("section");
+// function setFlexGrow(section, value) {
+//   section.style.flexGrow = value;
+// }
 
-if (!targetSectionId) {
-  sections[0].style.flexGrow = "1";
-} else {
-  sections.forEach((section) => (section.style.flexGrow = "0"));
-  const targetSection = document.getElementById(targetSectionId);
-  if (targetSection) {
-    targetSection.style.flexGrow = "1";
-  }
-}
+// function updateFlexGrow(targetSectionId) {
+//   if (!targetSectionId) {
+//     setFlexGrow(sections[0], "1");
+//   } else {
+//     sections.forEach((section) => setFlexGrow(section, "0"));
+//     const targetSection = document.getElementById(targetSectionId);
+//     if (targetSection) {
+//       setFlexGrow(targetSection, "1");
+//     }
+//   }
+// }
 
-const sectionLinks = document.querySelectorAll('section a[href*="#"]');
-sectionLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    sections.forEach((section) => (section.style.flexGrow = "0"));
-    const targetSection = document.getElementById(link.getAttribute("href").slice(1));
-    if (targetSection) {
-      targetSection.style.flexGrow = "1";
-    }
-  });
-});
+// const targetSectionId = window.location.hash.slice(1);
+// updateFlexGrow(targetSectionId);
 
-window.addEventListener("hashchange", () => {
-  const targetSectionId = window.location.hash.slice(1);
-  const sections = document.querySelectorAll("section");
+// const sectionLinks = document.querySelectorAll('section a[href*="#"]');
+// sectionLinks.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     const targetSectionId = link.getAttribute("href").slice(1);
+//     updateFlexGrow(targetSectionId);
+//   });
+// });
 
-  if (!targetSectionId) {
-    sections[0].style.flexGrow = "1";
-  } else {
-    sections.forEach((section) => (section.style.flexGrow = "0"));
-
-    const targetSection = document.getElementById(targetSectionId);
-    if (targetSection) {
-      targetSection.style.flexGrow = "1";
-    }
-  }
-});
+// window.addEventListener("hashchange", () => {
+//   const targetSectionId = window.location.hash.slice(1);
+//   updateFlexGrow(targetSectionId);
+// });
