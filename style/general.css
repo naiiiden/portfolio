@@ -74,9 +74,21 @@ html {
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: "NeueMontreal-Bold";
+  src: url("./fonts/PPNeueMontreal-Bold.otf");
+}
+@font-face {
+  font-family: "NeueMontreal-Book";
+  src: url("./fonts/PPNeueMontreal-Book.otf");
+}
+@font-face {
+  font-family: "NeueMontreal-Medium";
+  src: url("./fonts/PPNeueMontreal-Medium.otf");
+}
 body {
-  font-family: Helvetica, sans-serif;
   display: flex;
+  font-family: "NeueMontreal-Book", Helvetica;
 }
 
 main {
