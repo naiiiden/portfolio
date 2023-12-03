@@ -1,11 +1,10 @@
 @import '../node_modules/naiden-css-reset/reset.scss';
 
 @import './variables';
-@import './fonts';
 
 body {
     display: flex;
-    font-family: 'NeueMontreal-Book', Helvetica;
+    font-family: Arial, Helvetica;
 }
 
 main {

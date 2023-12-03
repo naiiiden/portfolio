@@ -74,21 +74,9 @@ html {
     scroll-behavior: auto !important;
   }
 }
-@font-face {
-  font-family: "NeueMontreal-Bold";
-  src: url("./fonts/PPNeueMontreal-Bold.otf");
-}
-@font-face {
-  font-family: "NeueMontreal-Book";
-  src: url("./fonts/PPNeueMontreal-Book.otf");
-}
-@font-face {
-  font-family: "NeueMontreal-Medium";
-  src: url("./fonts/PPNeueMontreal-Medium.otf");
-}
 body {
   display: flex;
-  font-family: "NeueMontreal-Book", Helvetica;
+  font-family: Arial, Helvetica;
 }
 
 main {
@@ -135,14 +123,13 @@ section {
 }
 .container p {
   padding: 0.83rem clamp(0.5rem, 2vw, 1rem);
-  letter-spacing: -0.025rem;
+  letter-spacing: -0.0375rem;
 }
 .container p, .container li {
   font-size: clamp(1.25rem, 2vw, 1.875rem);
 }
 .container ol {
   padding: 0 1rem;
-  font-family: "NeueMontreal-Medium", Helvetica;
 }
 
 @media screen and (min-width: 768px) {
