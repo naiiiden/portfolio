@@ -1,0 +1,36 @@
+section {
+    // transition: .4s;
+    flex-grow: 1;
+}
+
+// SLIDES
+// section:target {
+//     h2 a {
+//         writing-mode: unset;
+//     }
+    
+//     flex-grow: 1;
+//     transition: .4s;
+// }
+
+.container {
+    outline: 1px solid black;
+
+    h1, h2 {
+        text-transform: uppercase;
+    }
+
+    &:nth-child(1) {
+        // background: $red;
+        background: $gray;
+    }
+    
+    &:nth-child(2) {
+        // background: $green;
+        background: $gray;
+    }
+    
+    &:nth-child(3) {
+        background: $gray;
+    }
+}

@@ -103,6 +103,13 @@ main {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+header {
+  background: #ddd;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  text-orientation: upright;
+}
+
 section {
   flex-grow: 1;
 }
@@ -121,11 +128,4 @@ section {
 }
 .container:nth-child(3) {
   background: #ddd;
-}
-
-header {
-  background: #ddd;
-  writing-mode: vertical-lr;
-  text-transform: uppercase;
-  text-orientation: upright;
 }/*# sourceMappingURL=general.css.map */
