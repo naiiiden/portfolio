@@ -87,12 +87,8 @@ main {
 
 @media screen and (min-width: 900px) {
   main {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    flex-direction: row;
   }
-}
-header {
-  background: #ddd;
 }
 header h1 {
   display: flex;
@@ -106,17 +102,50 @@ header h1 {
   }
 }
 section {
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+section .info {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+section h2 a {
+  transform: scale(-1, -1);
+  transition: 0.2s;
+  padding: unset !important;
+}
+section h2 {
+  border-bottom: unset !important;
+}
+
+section:target {
   flex-grow: 1;
+  transition: 0.4s;
+}
+section:target .info {
+  opacity: 1;
+  visibility: unset;
+  transition: 0.4s;
+}
+section:target h2 a {
+  letter-spacing: unset;
+  transform: unset !important;
+  transition: 0.2s;
+}
+section:target h2 {
+  border-bottom: 1px solid black;
 }
 
 .container {
   outline: 1px solid black;
-  background: #ddd;
 }
 .container .info {
   padding: 0.83rem clamp(0.5rem, 2vw, 1rem);
 }
-.container h2 {
+.container h2, .container h2 a {
   padding: 0 clamp(0.5rem, 2vw, 1rem);
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   text-transform: uppercase;
@@ -131,16 +160,16 @@ section {
 .container p, .container li, .container a {
   font-size: clamp(1.125rem, 2vw, 1.875rem);
 }
-.container a {
+.container a:not(h2 a) {
   color: blue;
   text-decoration: underline;
 }
-.container a:hover, .container a:focus-visible {
+.container a:not(h2 a):hover, .container a:not(h2 a):focus-visible {
   color: #000;
   text-decoration: none;
   font-style: italic;
 }
-.container a:focus-visible {
+.container a:not(h2 a):focus-visible {
   outline: 3px dashed #000;
 }
 
