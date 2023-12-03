@@ -124,17 +124,24 @@ section {
 .container {
   outline: 1px solid black;
 }
+.container:nth-child(1) p:nth-last-child(2) {
+  padding: 0.83rem 1rem 0 1rem;
+}
 .container h2 {
   font-size: clamp(2rem, 4vw, 2.5rem);
   text-transform: uppercase;
 }
 .container p {
-  font-family: "NeueMontreal-Book", Helvetica;
+  padding: 0.83rem 1rem;
   font-size: clamp(1.25rem, 2vw, 1.875rem);
   letter-spacing: -0.025rem;
 }
-.container p:nth-of-type(2) {
-  margin-top: clamp(1.25rem, 2vw, 1.875rem);
+.container p, .container li {
+  font-size: clamp(1.25rem, 2vw, 1.875rem);
+}
+.container ol {
+  padding: 0 1rem;
+  font-family: "NeueMontreal-Medium", Helvetica;
 }
 .container:nth-child(1) {
   background: #ddd;
@@ -151,8 +158,5 @@ section {
     font-size: clamp(2rem, 4vw, 2.5rem);
     border-bottom: 1px solid black;
     padding: 0 1rem;
-  }
-  .container p {
-    padding: 1rem;
   }
 }/*# sourceMappingURL=general.css.map */
