@@ -15,9 +15,20 @@ section {
 
 .container {
     outline: 1px solid black;
+    padding: 1rem;
 
     h1, h2 {
         text-transform: uppercase;
+    }
+
+    p {
+        font-family: "NeueMontreal-Book";
+        font-size: clamp(1.25rem, 2vw, 1.875rem);
+        letter-spacing: -.025rem;
+
+        &:nth-of-type(2) {
+            margin-top: clamp(1.25rem, 2vw, 1.875rem);
+        }
     }
 
     &:nth-child(1) {
