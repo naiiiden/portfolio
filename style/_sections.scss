@@ -15,14 +15,14 @@ section {
 
 .container {
     outline: 1px solid black;
-    padding: 1rem;
 
-    h1, h2 {
+    h2 {
+        font-size: clamp(2rem, 4vw, 2.5rem);
         text-transform: uppercase;
     }
 
     p {
-        font-family: "NeueMontreal-Book";
+        font-family: "NeueMontreal-Book", Helvetica;
         font-size: clamp(1.25rem, 2vw, 1.875rem);
         letter-spacing: -.025rem;
 
@@ -43,5 +43,19 @@ section {
     
     &:nth-child(3) {
         background: $gray;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            border-bottom: 1px solid black;
+            padding: 0 1rem;
+        }
+        
+        p {
+            padding: 1rem;
+        }
     }
 }

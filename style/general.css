@@ -105,24 +105,31 @@ main {
 }
 header {
   background: #ddd;
-  writing-mode: vertical-lr;
-  text-transform: uppercase;
-  text-orientation: upright;
+}
+header h1 {
+  display: flex;
 }
 
+@media screen and (min-width: 768px) {
+  header h1 {
+    padding: 0 1rem 0 1rem;
+    border-bottom: 1px solid black;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+}
 section {
   flex-grow: 1;
 }
 
 .container {
   outline: 1px solid black;
-  padding: 1rem;
 }
-.container h1, .container h2 {
+.container h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
   text-transform: uppercase;
 }
 .container p {
-  font-family: "NeueMontreal-Book";
+  font-family: "NeueMontreal-Book", Helvetica;
   font-size: clamp(1.25rem, 2vw, 1.875rem);
   letter-spacing: -0.025rem;
 }
@@ -137,4 +144,15 @@ section {
 }
 .container:nth-child(3) {
   background: #ddd;
+}
+
+@media screen and (min-width: 768px) {
+  .container h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    border-bottom: 1px solid black;
+    padding: 0 1rem;
+  }
+  .container p {
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=general.css.map */
