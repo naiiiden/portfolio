@@ -3,15 +3,15 @@ header {
 
     h1 {
         display: flex;
+        padding: 0 clamp(0.5rem, 2vw, 1rem);
+        font-size: clamp(2rem, 4vw, 2.5rem);
     }
 }
 
 @media screen and (min-width: 768px) {
     header {
         h1 {
-            padding: 0 1rem 0 1rem;
             border-bottom: 1px solid black;
-            font-size: clamp(2rem, 4vw, 2.5rem);
         }
     }
 }

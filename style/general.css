@@ -108,13 +108,13 @@ header {
 }
 header h1 {
   display: flex;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
 }
 
 @media screen and (min-width: 768px) {
   header h1 {
-    padding: 0 1rem 0 1rem;
     border-bottom: 1px solid black;
-    font-size: clamp(2rem, 4vw, 2.5rem);
   }
 }
 section {
@@ -123,17 +123,18 @@ section {
 
 .container {
   outline: 1px solid black;
+  background: #ddd;
 }
 .container:nth-child(1) p:nth-last-child(2) {
   padding: 0.83rem 1rem 0 1rem;
 }
 .container h2 {
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
   font-size: clamp(2rem, 4vw, 2.5rem);
   text-transform: uppercase;
 }
 .container p {
-  padding: 0.83rem 1rem;
-  font-size: clamp(1.25rem, 2vw, 1.875rem);
+  padding: 0.83rem clamp(0.5rem, 2vw, 1rem);
   letter-spacing: -0.025rem;
 }
 .container p, .container li {
@@ -143,20 +144,9 @@ section {
   padding: 0 1rem;
   font-family: "NeueMontreal-Medium", Helvetica;
 }
-.container:nth-child(1) {
-  background: #ddd;
-}
-.container:nth-child(2) {
-  background: #ddd;
-}
-.container:nth-child(3) {
-  background: #ddd;
-}
 
 @media screen and (min-width: 768px) {
   .container h2 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
     border-bottom: 1px solid black;
-    padding: 0 1rem;
   }
 }/*# sourceMappingURL=general.css.map */

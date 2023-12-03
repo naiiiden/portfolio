@@ -15,6 +15,7 @@ section {
 
 .container {
     outline: 1px solid black;
+    background: $gray;
 
     &:nth-child(1) {
         p:nth-last-child(2) {
@@ -23,13 +24,13 @@ section {
     }
 
     h2 {
+        padding: 0 clamp(0.5rem, 2vw, 1rem);
         font-size: clamp(2rem, 4vw, 2.5rem);
         text-transform: uppercase;
     }
 
     p {
-        padding: 0.83rem 1rem;
-        font-size: clamp(1.25rem, 2vw, 1.875rem);
+        padding: 0.83rem clamp(0.5rem, 2vw, 1rem);
         letter-spacing: -.025rem;
     }
 
@@ -41,28 +42,12 @@ section {
         padding: 0 1rem;
         font-family: "NeueMontreal-Medium", Helvetica;
     }
-
-    &:nth-child(1) {
-        // background: $red;
-        background: $gray;
-    }
-    
-    &:nth-child(2) {
-        // background: $green;
-        background: $gray;
-    }
-    
-    &:nth-child(3) {
-        background: $gray;
-    }
 }
 
 @media screen and (min-width: 768px) {
     .container {
         h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
             border-bottom: 1px solid black;
-            padding: 0 1rem;
         }
     }
 }
