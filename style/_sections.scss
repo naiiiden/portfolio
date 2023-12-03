@@ -41,6 +41,21 @@ section {
     ol, ul {
         padding: 0 1rem;
     }
+
+    a {
+        color: blue;
+        text-decoration: underline;
+
+        &:hover, &:focus-visible {
+            color: $black;
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        &:focus-visible {
+            outline: 3px dashed $black;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {

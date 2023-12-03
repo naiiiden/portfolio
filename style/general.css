@@ -131,6 +131,18 @@ section {
 .container ol, .container ul {
   padding: 0 1rem;
 }
+.container a {
+  color: blue;
+  text-decoration: underline;
+}
+.container a:hover, .container a:focus-visible {
+  color: #000;
+  text-decoration: none;
+  font-style: italic;
+}
+.container a:focus-visible {
+  outline: 3px dashed #000;
+}
 
 @media screen and (min-width: 768px) {
   .container h2 {
