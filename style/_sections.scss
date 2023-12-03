@@ -17,7 +17,7 @@ section {
     outline: 1px solid black;
     background: $gray;
 
-    &:nth-child(1) {
+    &:nth-child(1), &:nth-child(3) {
         p:nth-last-child(2) {
             padding: 0.83rem 1rem 0 1rem;
         }
@@ -34,11 +34,11 @@ section {
         letter-spacing: -.0375rem;
     }
 
-    p, li {
+    p, li, a {
         font-size: clamp(1.25rem, 2vw, 1.875rem);
     }
 
-    ol {
+    ol, ul {
         padding: 0 1rem;
     }
 }

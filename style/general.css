@@ -113,7 +113,7 @@ section {
   outline: 1px solid black;
   background: #ddd;
 }
-.container:nth-child(1) p:nth-last-child(2) {
+.container:nth-child(1) p:nth-last-child(2), .container:nth-child(3) p:nth-last-child(2) {
   padding: 0.83rem 1rem 0 1rem;
 }
 .container h2 {
@@ -125,10 +125,10 @@ section {
   padding: 0.83rem clamp(0.5rem, 2vw, 1rem);
   letter-spacing: -0.0375rem;
 }
-.container p, .container li {
+.container p, .container li, .container a {
   font-size: clamp(1.25rem, 2vw, 1.875rem);
 }
-.container ol {
+.container ol, .container ul {
   padding: 0 1rem;
 }
 
