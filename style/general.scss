@@ -15,8 +15,6 @@ main {
 
 @media screen and (min-width: 900px) {
     main {
-        // display: grid;
-        // grid-template-columns: repeat(3, minmax(0, 1fr));        
         flex-direction: row;
     }
 }

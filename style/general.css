@@ -114,7 +114,6 @@ section .info {
   transition: 0.4s;
 }
 section h2 a {
-  transform: scale(-1, -1);
   transition: 0.2s;
   padding: unset !important;
 }
@@ -127,12 +126,13 @@ section:target {
   transition: 0.4s;
 }
 section:target .info {
+  height: 100%;
+  overflow-y: auto;
   opacity: 1;
   visibility: unset;
   transition: 0.4s;
 }
 section:target h2 a {
-  letter-spacing: unset;
   transform: unset !important;
   transition: 0.2s;
 }
