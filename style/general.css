@@ -105,6 +105,7 @@ section {
   transition: 0.4s;
   position: relative;
   overflow: hidden;
+  border-left: 1px solid #000;
 }
 section .info {
   position: absolute;
@@ -118,7 +119,7 @@ section h2 a {
   padding: unset !important;
 }
 section h2 {
-  border-bottom: unset !important;
+  border-bottom: 1px solid black;
 }
 
 section:target {
@@ -139,9 +140,6 @@ section:target h2 {
   border-bottom: 1px solid black;
 }
 
-.container {
-  outline: 1px solid black;
-}
 .container .info {
   padding: 0.83rem clamp(0.5rem, 2vw, 1rem);
 }
@@ -171,10 +169,4 @@ section:target h2 {
 }
 .container a:not(h2 a):focus-visible {
   outline: 3px dashed #000;
-}
-
-@media screen and (min-width: 768px) {
-  .container h2 {
-    border-bottom: 1px solid black;
-  }
 }/*# sourceMappingURL=general.css.map */

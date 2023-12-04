@@ -3,7 +3,8 @@ section {
     transition: .4s;
     position: relative;
     overflow: hidden;
-    
+    border-left: 1px solid $black;
+
     & .info {
         position: absolute;
         opacity: 0;
@@ -12,15 +13,14 @@ section {
     }
     
     h2 a {
-        // writing-mode: vertical-lr;
         // letter-spacing: -1.25rem;
         transform: scale(-1, -1);
         transition: .2s;
         padding: unset !important;
     }
-
+    
     h2 {
-        border-bottom: unset !important;
+        border-bottom: 1px solid black;
     }
 }
 
@@ -49,9 +49,6 @@ section:target {
 // TESTING
 
 .container {
-    outline: 1px solid black;
-    // background: $gray;
-
     .info {
         padding: 0.83rem clamp(0.5rem, 2vw, 1rem);
     }
@@ -87,14 +84,6 @@ section:target {
 
         &:focus-visible {
             outline: 3px dashed $black;
-        }
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .container {
-        h2 {
-            border-bottom: 1px solid black;
         }
     }
 }
