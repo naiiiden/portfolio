@@ -18,14 +18,6 @@
 // const targetSectionId = window.location.hash.slice(1);
 // updateFlexGrow(targetSectionId);
 
-// const sectionLinks = document.querySelectorAll('section a[href*="#"]');
-// sectionLinks.forEach((link) => {
-//   link.addEventListener("click", () => {
-//     const targetSectionId = link.getAttribute("href").slice(1);
-//     updateFlexGrow(targetSectionId);
-//   });
-// });
-
 // window.addEventListener("hashchange", () => {
 //   const targetSectionId = window.location.hash.slice(1);
 //   updateFlexGrow(targetSectionId);

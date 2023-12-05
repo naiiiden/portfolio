@@ -3,7 +3,6 @@ section {
     transition: .4s;
     position: relative;
     overflow: hidden;
-    border-left: 1px solid $black;
 
     & .info {
         position: absolute;
@@ -24,6 +23,8 @@ section {
 
 // SLIDES
 section:target {
+    border-left: 1px solid $black;
+
     & .info {
         height: 100%;
         overflow-y: auto;

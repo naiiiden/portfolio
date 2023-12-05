@@ -105,7 +105,6 @@ section {
   transition: 0.4s;
   position: relative;
   overflow: hidden;
-  border-left: 1px solid #000;
 }
 section .info {
   position: absolute;
@@ -122,6 +121,7 @@ section h2 {
 }
 
 section:target {
+  border-left: 1px solid #000;
   flex-grow: 1;
   transition: 0.4s;
 }
