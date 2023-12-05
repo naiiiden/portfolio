@@ -4,6 +4,12 @@ section {
     position: relative;
     overflow: hidden;
 
+    @media screen and (max-width: 899px) {
+        & {
+            border-left: 1px solid black;
+        }
+    }
+
     & .info {
         position: absolute;
         opacity: 0;
