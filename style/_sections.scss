@@ -4,12 +4,6 @@ section {
     position: relative;
     overflow: hidden;
 
-    @media screen and (max-width: 899px) {
-        & {
-            border-left: 1px solid black;
-        }
-    }
-
     & .info {
         position: absolute;
         opacity: 0;
@@ -21,15 +15,75 @@ section {
         transition: .2s;
         padding: unset !important;
     }
-    
-    h2 {
-        border-bottom: 1px solid black;
+
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        h2 a {
+            display: block;
+            letter-spacing: -10rem;
+            color: transparent;
+            width: fit-content;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                background: black;
+            }
+
+            &:hover {
+                letter-spacing: 0;
+                color: black;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                }
+            }
+        }
+    } 
+
+    &:nth-child(1) {
+        h2 a {
+            &::before {
+                width: clamp(1.75rem, 3.5vw, 1.875rem);
+                height: clamp(1.75rem, 3.5vw, 1.875rem);
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        h2 a {
+            &::before {
+                width: clamp(1.75rem, 3.5vw, 1.875rem);
+                height: clamp(1.75rem, 3.5vw, 1.875rem);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        h2 a {
+            &::before {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 30px solid black;
+                background: unset;
+            }
+        }
     }
 }
 
 // SLIDES
 section:target {
-    border-left: 1px solid $black;
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        h2 a {
+            letter-spacing: 0;
+            color: black;
+
+            &::before {
+
+            }
+        }
+    } 
 
     & .info {
         height: 100%;
@@ -42,10 +96,6 @@ section:target {
     h2 a {
         transform: unset !important;
         transition: .2s;
-    }
-
-    h2 {
-        border-bottom: 1px solid black;
     }
     
     flex-grow: 1;

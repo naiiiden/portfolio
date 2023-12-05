@@ -96,20 +96,10 @@ header h1 {
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
 }
 
-@media screen and (min-width: 768px) {
-  header h1 {
-    border-bottom: 1px solid black;
-  }
-}
 section {
   transition: 0.4s;
   position: relative;
   overflow: hidden;
-}
-@media screen and (max-width: 899px) {
-  section {
-    border-left: 1px solid black;
-  }
 }
 section .info {
   position: absolute;
@@ -121,14 +111,49 @@ section h2 a {
   transition: 0.2s;
   padding: unset !important;
 }
-section h2 {
-  border-bottom: 1px solid black;
+section:nth-child(1) h2 a, section:nth-child(2) h2 a, section:nth-child(3) h2 a {
+  display: block;
+  letter-spacing: -10rem;
+  color: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before, section:nth-child(3) h2 a::before {
+  content: "";
+  display: inline-block;
+  background: black;
+}
+section:nth-child(1) h2 a:hover, section:nth-child(2) h2 a:hover, section:nth-child(3) h2 a:hover {
+  letter-spacing: 0;
+  color: black;
+}
+section:nth-child(1) h2 a:hover::before, section:nth-child(2) h2 a:hover::before, section:nth-child(3) h2 a:hover::before {
+  content: "";
+  display: inline-block;
+}
+section:nth-child(1) h2 a::before {
+  width: clamp(1.75rem, 3.5vw, 1.875rem);
+  height: clamp(1.75rem, 3.5vw, 1.875rem);
+}
+section:nth-child(2) h2 a::before {
+  width: clamp(1.75rem, 3.5vw, 1.875rem);
+  height: clamp(1.75rem, 3.5vw, 1.875rem);
+  border-radius: 50%;
+}
+section:nth-child(3) h2 a::before {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid black;
+  background: unset;
 }
 
 section:target {
-  border-left: 1px solid #000;
   flex-grow: 1;
   transition: 0.4s;
+}
+section:target:nth-child(1) h2 a, section:target:nth-child(2) h2 a, section:target:nth-child(3) h2 a {
+  letter-spacing: 0;
+  color: black;
 }
 section:target .info {
   height: 100%;
@@ -140,9 +165,6 @@ section:target .info {
 section:target h2 a {
   transform: unset !important;
   transition: 0.2s;
-}
-section:target h2 {
-  border-bottom: 1px solid black;
 }
 
 .container .info {
