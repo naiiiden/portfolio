@@ -24,6 +24,6 @@
 // });
 
 // ???
-// if (window.location.hash === "") {
-//     window.location.hash = "#about";
-// }
+if (window.location.hash === "") {
+    window.location.hash = "#about";
+}

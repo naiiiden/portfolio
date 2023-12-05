@@ -112,9 +112,9 @@ section h2 a {
   padding: unset !important;
 }
 section:nth-child(1) h2 a, section:nth-child(2) h2 a, section:nth-child(3) h2 a {
-  display: block;
-  letter-spacing: -10rem;
-  color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -123,27 +123,23 @@ section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before, section:nt
   display: inline-block;
   background: black;
 }
-section:nth-child(1) h2 a:hover, section:nth-child(2) h2 a:hover, section:nth-child(3) h2 a:hover {
-  letter-spacing: 0;
-  color: black;
-}
 section:nth-child(1) h2 a:hover::before, section:nth-child(2) h2 a:hover::before, section:nth-child(3) h2 a:hover::before {
   content: "";
   display: inline-block;
 }
 section:nth-child(1) h2 a::before {
-  width: clamp(1.75rem, 3.5vw, 1.875rem);
-  height: clamp(1.75rem, 3.5vw, 1.875rem);
+  width: clamp(1.5rem, 3vw, 1.875rem);
+  height: clamp(1.5rem, 3vw, 1.875rem);
 }
 section:nth-child(2) h2 a::before {
-  width: clamp(1.75rem, 3.5vw, 1.875rem);
-  height: clamp(1.75rem, 3.5vw, 1.875rem);
+  width: clamp(1.55rem, 3vw, 1.875rem);
+  height: clamp(1.55rem, 3vw, 1.875rem);
   border-radius: 50%;
 }
 section:nth-child(3) h2 a::before {
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 30px solid black;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 25px solid black;
   background: unset;
 }
 
@@ -156,7 +152,6 @@ section:target:nth-child(1) h2 a, section:target:nth-child(2) h2 a, section:targ
   color: black;
 }
 section:target .info {
-  height: 100%;
   overflow-y: auto;
   opacity: 1;
   visibility: unset;

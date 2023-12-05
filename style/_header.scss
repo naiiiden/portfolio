@@ -1,17 +1,7 @@
 header {
-    // background: $gray;
-
     h1 {
         display: flex;
         padding: 0 clamp(0.5rem, 2vw, 1rem);
         font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    }
-}
-
-@media screen and (min-width: 768px) {
-    header {
-        h1 {
-            // border-bottom: 1px solid black;
-        }
     }
 }
