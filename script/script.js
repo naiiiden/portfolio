@@ -22,3 +22,8 @@
 //   const targetSectionId = window.location.hash.slice(1);
 //   updateFlexGrow(targetSectionId);
 // });
+
+// ???
+// if (window.location.hash === "") {
+//     window.location.hash = "#about";
+// }
