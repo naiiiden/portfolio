@@ -82,8 +82,25 @@ section:target {
         }
     } 
 
+    &:nth-child(2) {
+        .info {
+            overflow-y: scroll;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            a {
+                display: block;
+                word-break: break-word;
+            }
+        }
+    }
+
     & .info {
-        // height: 100%;
+        height: 100%;
         overflow-y: auto;
         opacity: 1;
         visibility: unset;

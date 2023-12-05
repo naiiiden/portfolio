@@ -151,7 +151,20 @@ section:target:nth-child(1) h2 a, section:target:nth-child(2) h2 a, section:targ
   letter-spacing: 0;
   color: black;
 }
+section:target:nth-child(2) .info {
+  overflow-y: scroll;
+}
+section:target:nth-child(2) .info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+section:target:nth-child(2) .info a {
+  display: block;
+  word-break: break-word;
+}
 section:target .info {
+  height: 100%;
   overflow-y: auto;
   opacity: 1;
   visibility: unset;
