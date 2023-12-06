@@ -1,4 +1,3 @@
-// TESTING
 section {
     transition: .4s;
     position: relative;
@@ -11,13 +10,6 @@ section {
         transition: .4s;
     }
     
-    
-    h2 a {
-        transition: .2s;
-        padding: unset !important;
-    }
-
-
     h2 a {
         transition: .2s;
         padding: unset !important;
@@ -36,62 +28,34 @@ section {
                 content: '';
                 display: inline-block;
                 background: black;
-                transition: .4s;
-            }
-
-            &:hover {
-                &::before {
-                    content: '';
-                    display: inline-block;
-                }
             }
         }
     } 
 
-    &:nth-child(1) {
-        h2 a {
-            &::before {
-                width: clamp(1.5rem, 3vw, 3.25rem);
-                height: clamp(1.5rem, 3vw, 3.25rem);
-            }
-        }
+    &:nth-child(1) h2 a::before {
+        width: clamp(1.5rem, 3vw, 3.25rem);
+        height: clamp(1.5rem, 3vw, 3.25rem);
     }
 
-    &:nth-child(2) {
-        h2 a {
-            &::before {
-                width: clamp(1.55rem, 3vw, 3.25rem);
-                height: clamp(1.55rem, 3vw, 3.25rem);
-                border-radius: 50%;
-            }
-        }
+    &:nth-child(2) h2 a::before {
+        width: clamp(1.55rem, 3vw, 3.25rem);
+        height: clamp(1.55rem, 3vw, 3.25rem);
+        border-radius: 50%;
     }
 
-    &:nth-child(3) {
-        h2 a {
-            &::before {
-                border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
-                border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
-                border-bottom: clamp(24.8px, 3vw, 52px) solid black;
-                background: unset;
-            }
-        }
+    &:nth-child(3) h2 a::before {
+        border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
+        border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
+        border-bottom: clamp(24.8px, 3vw, 52px) solid black;
+        background: unset;
     }
 }
 
-// SLIDES
 section:target {
     h2 a {
         transform: unset !important;
         transition: .2s;
     }
-
-    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-        h2 a {
-            &::before {
-            }
-        }
-    } 
 
     &:nth-child(2) {
         .info {
@@ -101,10 +65,6 @@ section:target {
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
-            }
-
-            a {
-                word-break: break-word;
             }
         }
     }
@@ -123,16 +83,9 @@ section:target {
         transition: .2s;
     }
     
-    
-    h2 a {
-        transform: unset !important;
-        transition: .2s;
-    }
-    
     flex-grow: 1;
     transition: .4s;
 }
-// TESTING
 
 ::-webkit-scrollbar {
     width: 1px;
@@ -187,26 +140,14 @@ section:target {
 }
 
 @media screen and (min-width: 900px) {
-    // main {
-    //     overflow-y: hidden;
-    // }
-
-    // section {
-    //     .info {
-    //         // border: 1px solid red;
-    //         position: absolute;
-    //         top: 50rem;
-    //         width: 100vh;
-    //         left: 0;
-    //         right: 0;
-    //     }
-    // }
-
-    // section:target {
-    //     .info {
-    //         top: 5rem;
-    //     }
-    // }
+    section {
+        .info {
+            position: absolute;
+            width: 100vh;
+            left: 0;
+            right: 0;
+        }
+    }
 }
 
 // #test {
