@@ -92,6 +92,15 @@ main {
     flex-direction: row;
   }
 }
+::-webkit-scrollbar {
+  width: 1px;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.875);
+}
+
 header .heading-container {
   font-size: clamp(1.75rem, 3.75vw, 4.375rem);
   position: relative;

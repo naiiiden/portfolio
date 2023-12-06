@@ -19,5 +19,14 @@ main {
     }
 }
 
+::-webkit-scrollbar {
+    width: 1px;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(17, 17, 17, .875);
+}
+
 @import './header';
 @import './sections';
