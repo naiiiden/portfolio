@@ -93,30 +93,35 @@ main {
   }
 }
 header .heading-container {
+  font-size: clamp(1.75rem, 3.75vw, 4.375rem);
   position: relative;
   display: flex;
   padding: 0 clamp(0.5rem, 2vw, 1rem);
-  font-size: clamp(1.75rem, 3.75vw, 4.375rem);
   font-weight: 500;
 }
 header .vertical-text {
   position: absolute;
-  font-size: clamp(1.75rem, 3.75vw, 4.375rem);
-  transform: translate(50%);
   opacity: 0;
 }
 header .vertical-text span {
   display: flex;
   flex-direction: column;
-  position: relative;
-  transform: rotate(90deg);
+  transform: translate(50%) rotate(90deg);
+  color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 header .vertical-text span::after {
+  color: black;
   letter-spacing: -2.75rem;
   content: "Naiden Radnev";
   position: absolute;
   text-transform: uppercase;
   transition: 0.3s;
+}
+header .vertical-text span.cyrilic::after {
+  content: "Найден Раднев";
 }
 header .heading-container:hover .horizontal-text {
   opacity: 0;
