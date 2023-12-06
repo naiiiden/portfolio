@@ -154,9 +154,8 @@ section .info {
   visibility: hidden;
   transition: 0.4s;
 }
-section h2 a {
-  transition: 0.2s;
-  padding: unset !important;
+section .info > :last-child {
+  margin-bottom: 3rem;
 }
 section:nth-child(1) h2 a, section:nth-child(2) h2 a, section:nth-child(3) h2 a {
   display: flex;
@@ -165,20 +164,17 @@ section:nth-child(1) h2 a, section:nth-child(2) h2 a, section:nth-child(3) h2 a 
   width: -moz-fit-content;
   width: fit-content;
   transition: 0.2s;
-  padding: unset !important;
+  padding: unset;
 }
 section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before, section:nth-child(3) h2 a::before {
   content: "";
-  display: inline-block;
   background: black;
 }
-section:nth-child(1) h2 a::before {
+section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before {
   width: clamp(1.5rem, 3vw, 3.25rem);
   height: clamp(1.5rem, 3vw, 3.25rem);
 }
 section:nth-child(2) h2 a::before {
-  width: clamp(1.55rem, 3vw, 3.25rem);
-  height: clamp(1.55rem, 3vw, 3.25rem);
   border-radius: 50%;
 }
 section:nth-child(3) h2 a::before {
@@ -192,17 +188,15 @@ section:target {
   flex-grow: 1;
   transition: 0.4s;
 }
-section:target h2 a {
-  transform: unset !important;
-  transition: 0.2s;
-}
 section:target:nth-child(2) .info {
-  overflow-y: scroll;
+  overflow-y: hidden !important;
 }
 section:target:nth-child(2) .info ul {
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  height: 100%;
 }
 section:target .info {
   height: 100%;
@@ -210,19 +204,6 @@ section:target .info {
   opacity: 1;
   visibility: unset;
   transition: 0.4s;
-}
-section:target h2 a {
-  transform: unset !important;
-  transition: 0.2s;
-}
-
-::-webkit-scrollbar {
-  width: 1px;
-  display: none;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(17, 17, 17, 0.875);
 }
 
 .container .info {
@@ -257,13 +238,4 @@ section:target h2 a {
 }
 .container a:not(h2 a):focus-visible {
   outline: 3px dashed #000;
-}
-
-@media screen and (min-width: 900px) {
-  section .info {
-    position: absolute;
-    width: 100vh;
-    left: 0;
-    right: 0;
-  }
 }/*# sourceMappingURL=general.css.map */

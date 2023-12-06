@@ -8,11 +8,10 @@ section {
         opacity: 0;
         visibility: hidden;
         transition: .4s;
-    }
-    
-    h2 a {
-        transition: .2s;
-        padding: unset !important;
+
+        & > :last-child {
+            margin-bottom: 3rem;
+        }
     }
 
     &:nth-child(1), &:nth-child(2), &:nth-child(3) {
@@ -22,24 +21,21 @@ section {
             gap: .5rem;
             width: fit-content;
             transition: .2s;
-            padding: unset !important;
+            padding: unset;
 
             &::before {
                 content: '';
-                display: inline-block;
                 background: black;
             }
         }
     } 
 
-    &:nth-child(1) h2 a::before {
+    &:nth-child(1) h2 a::before, &:nth-child(2) h2 a::before {
         width: clamp(1.5rem, 3vw, 3.25rem);
         height: clamp(1.5rem, 3vw, 3.25rem);
     }
 
     &:nth-child(2) h2 a::before {
-        width: clamp(1.55rem, 3vw, 3.25rem);
-        height: clamp(1.55rem, 3vw, 3.25rem);
         border-radius: 50%;
     }
 
@@ -52,19 +48,19 @@ section {
 }
 
 section:target {
-    h2 a {
-        transform: unset !important;
-        transition: .2s;
-    }
+    flex-grow: 1;
+    transition: .4s;
 
     &:nth-child(2) {
         .info {
-            overflow-y: scroll;
+            overflow-y: hidden !important;
 
             ul {
+                overflow-y: scroll;
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
+                height: 100%;
             }
         }
     }
@@ -76,24 +72,6 @@ section:target {
         visibility: unset;
         transition: .4s;
     }
-
-
-    h2 a {
-        transform: unset !important;
-        transition: .2s;
-    }
-    
-    flex-grow: 1;
-    transition: .4s;
-}
-
-::-webkit-scrollbar {
-    width: 1px;
-    display: none;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(17, 17, 17, .875);
 }
 
 .container {
@@ -138,27 +116,3 @@ section:target {
         }
     }
 }
-
-@media screen and (min-width: 900px) {
-    section {
-        .info {
-            position: absolute;
-            width: 100vh;
-            left: 0;
-            right: 0;
-        }
-    }
-}
-
-// #test {
-//     border: 1px solid red;
-//     background: black;
-//     position: absolute;
-//     inset: 0 0 0 0;
-//     top: 110%;
-// }
-
-// #test:target {
-//     top: 0;
-//     overflow: scroll;
-// }
