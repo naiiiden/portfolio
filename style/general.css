@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap");
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -76,7 +77,7 @@ html {
 }
 body {
   display: flex;
-  font-family: Arial, Helvetica;
+  font-family: "Public Sans", Arial;
 }
 
 main {
@@ -160,7 +161,6 @@ section:target:nth-child(2) .info ul {
   gap: 2rem;
 }
 section:target:nth-child(2) .info a {
-  display: block;
   word-break: break-word;
 }
 section:target .info {
@@ -173,6 +173,15 @@ section:target .info {
 section:target h2 a {
   transform: unset !important;
   transition: 0.2s;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.875);
 }
 
 .container .info {

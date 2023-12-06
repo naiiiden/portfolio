@@ -93,7 +93,6 @@ section:target {
             }
 
             a {
-                display: block;
                 word-break: break-word;
             }
         }
@@ -116,6 +115,15 @@ section:target {
     transition: .4s;
 }
 // TESTING
+
+::-webkit-scrollbar {
+    width: 1px;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(17, 17, 17, .875);
+}
 
 .container {
     .info {
