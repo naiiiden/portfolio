@@ -2,6 +2,7 @@ header {
     h1 {
         display: flex;
         padding: 0 clamp(0.5rem, 2vw, 1rem);
-        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+        font-size: clamp(1.75rem, 3.75vw, 4.375rem);
+        font-weight: 500;
     }
 }

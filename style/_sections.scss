@@ -11,6 +11,13 @@ section {
         transition: .4s;
     }
     
+    
+    h2 a {
+        transition: .2s;
+        padding: unset !important;
+    }
+
+
     h2 a {
         transition: .2s;
         padding: unset !important;
@@ -22,11 +29,14 @@ section {
             align-items: center;
             gap: .5rem;
             width: fit-content;
+            transition: .2s;
+            padding: unset !important;
 
             &::before {
                 content: '';
                 display: inline-block;
                 background: black;
+                transition: .4s;
             }
 
             &:hover {
@@ -41,8 +51,8 @@ section {
     &:nth-child(1) {
         h2 a {
             &::before {
-                width: clamp(1.5rem, 3vw, 1.875rem);
-                height: clamp(1.5rem, 3vw, 1.875rem);
+                width: clamp(1.5rem, 3vw, 3.25rem);
+                height: clamp(1.5rem, 3vw, 3.25rem);
             }
         }
     }
@@ -50,8 +60,8 @@ section {
     &:nth-child(2) {
         h2 a {
             &::before {
-                width: clamp(1.55rem, 3vw, 1.875rem);
-                height: clamp(1.55rem, 3vw, 1.875rem);
+                width: clamp(1.55rem, 3vw, 3.25rem);
+                height: clamp(1.55rem, 3vw, 3.25rem);
                 border-radius: 50%;
             }
         }
@@ -60,9 +70,9 @@ section {
     &:nth-child(3) {
         h2 a {
             &::before {
-                border-left: 12.5px solid transparent;
-                border-right: 12.5px solid transparent;
-                border-bottom: 25px solid black;
+                border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
+                border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
+                border-bottom: clamp(24.8px, 3vw, 52px) solid black;
                 background: unset;
             }
         }
@@ -71,13 +81,14 @@ section {
 
 // SLIDES
 section:target {
+    h2 a {
+        transform: unset !important;
+        transition: .2s;
+    }
+
     &:nth-child(1), &:nth-child(2), &:nth-child(3) {
         h2 a {
-            letter-spacing: 0;
-            color: black;
-
             &::before {
-
             }
         }
     } 
@@ -106,6 +117,13 @@ section:target {
         transition: .4s;
     }
 
+
+    h2 a {
+        transform: unset !important;
+        transition: .2s;
+    }
+    
+    
     h2 a {
         transform: unset !important;
         transition: .2s;
@@ -132,21 +150,24 @@ section:target {
 
     h2, h2 a {
         padding: 0 clamp(0.5rem, 2vw, 1rem);
-        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+        font-size: clamp(1.75rem, 3.75vw, 4.375rem);
+        font-weight: 500;
         text-transform: uppercase;
         white-space: nowrap;
-    }
-
-    p {
-        letter-spacing: -.0375rem;
     }
 
     p:not(:first-child) {
         margin-top: .83rem;
     }
 
-    p, li, a {
-        font-size: clamp(1.125rem, 2vw, 1.875rem);
+    p, li, a:not(h2 a) {
+        font-size: clamp(1.125rem, 2vw, 2.25rem);
+        max-width: 1000px;
+        font-weight: 300;
+    }
+
+    h3 {
+        font-weight: 500;
     }
 
     a:not(h2 a) {
@@ -187,3 +208,16 @@ section:target {
     //     }
     // }
 }
+
+// #test {
+//     border: 1px solid red;
+//     background: black;
+//     position: absolute;
+//     inset: 0 0 0 0;
+//     top: 110%;
+// }
+
+// #test:target {
+//     top: 0;
+//     overflow: scroll;
+// }
