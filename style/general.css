@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap");
 *, *::before, *::after {
   margin: 0;
@@ -91,11 +92,31 @@ main {
     flex-direction: row;
   }
 }
-header h1 {
+header .heading-container {
+  position: relative;
   display: flex;
   padding: 0 clamp(0.5rem, 2vw, 1rem);
   font-size: clamp(1.75rem, 3.75vw, 4.375rem);
   font-weight: 500;
+}
+header .vertical-text {
+  position: absolute;
+  font-size: clamp(1.75rem, 3.75vw, 4.375rem);
+  transform: translate(50%);
+}
+header .vertical-text span {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform: rotate(90deg);
+}
+header .vertical-text span:nth-of-type(1)::after {
+  content: "Naiden Radnev";
+  position: absolute;
+  text-transform: uppercase;
+}
+header .heading-container:hover .horizontal-text {
+  opacity: 0;
 }
 
 section {

@@ -1,8 +1,37 @@
 header {
-    h1 {
+    .heading-container {
+        position: relative;
         display: flex;
         padding: 0 clamp(0.5rem, 2vw, 1rem);
         font-size: clamp(1.75rem, 3.75vw, 4.375rem);
         font-weight: 500;
+    }
+
+    .vertical-text {
+        position: absolute;
+        font-size: clamp(1.75rem, 3.75vw, 4.375rem);
+        transform: translate(50%);
+
+        span {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform: rotate(90deg);
+
+            &:nth-of-type(1) {
+
+                &::after {
+                    content: "Naiden\00a0 Radnev";
+                    position: absolute;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .heading-container:hover {
+        .horizontal-text {
+            opacity: 0;
+        }
     }
 }
