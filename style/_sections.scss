@@ -10,7 +10,7 @@ section {
         transition: .4s;
 
         & > :last-child {
-            margin-bottom: 3rem;
+            margin-bottom: 6rem;
         }
     }
 
@@ -53,10 +53,9 @@ section:target {
 
     &:nth-child(2) {
         .info {
-            overflow-y: hidden !important;
+            width: 100%;
 
             ul {
-                overflow-y: scroll;
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;

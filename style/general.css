@@ -155,7 +155,7 @@ section .info {
   transition: 0.4s;
 }
 section .info > :last-child {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 section:nth-child(1) h2 a, section:nth-child(2) h2 a, section:nth-child(3) h2 a {
   display: flex;
@@ -189,10 +189,9 @@ section:target {
   transition: 0.4s;
 }
 section:target:nth-child(2) .info {
-  overflow-y: hidden !important;
+  width: 100%;
 }
 section:target:nth-child(2) .info ul {
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: 2rem;
