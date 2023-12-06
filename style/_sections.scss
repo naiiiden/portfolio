@@ -60,7 +60,37 @@ section:target {
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
-                height: 100%;
+
+                h4 {
+                    font-size: 2rem;
+                }
+                
+                ul {
+                    display: unset;
+                    gap: unset;
+
+                    li {
+                        display: inline;
+                        width: fit-content;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+
+                        &:not(:last-child)::after {
+                            content: ","
+                        }
+                    }
+                }
+
+                li div {
+                    div {
+                        display: flex;
+                        
+                        a {
+                            display: block;
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -97,7 +127,7 @@ section:target {
         font-weight: 300;
     }
 
-    h3 {
+    h3, h4 {
         font-weight: 500;
     }
 

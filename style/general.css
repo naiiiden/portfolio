@@ -196,7 +196,29 @@ section:target:nth-child(2) .info ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 100%;
+}
+section:target:nth-child(2) .info ul h4 {
+  font-size: 2rem;
+}
+section:target:nth-child(2) .info ul ul {
+  display: unset;
+  gap: unset;
+}
+section:target:nth-child(2) .info ul ul li {
+  display: inline;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+section:target:nth-child(2) .info ul ul li:not(:last-child)::after {
+  content: ",";
+}
+section:target:nth-child(2) .info ul li div div {
+  display: flex;
+}
+section:target:nth-child(2) .info ul li div div a {
+  display: block;
 }
 section:target .info {
   height: 100%;
@@ -224,7 +246,7 @@ section:target .info {
   max-width: 1000px;
   font-weight: 300;
 }
-.container h3 {
+.container h3, .container h4 {
   font-weight: 500;
 }
 .container a:not(h2 a) {
