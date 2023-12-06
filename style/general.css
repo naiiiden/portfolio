@@ -103,6 +103,7 @@ header .vertical-text {
   position: absolute;
   font-size: clamp(1.75rem, 3.75vw, 4.375rem);
   transform: translate(50%);
+  opacity: 0;
 }
 header .vertical-text span {
   display: flex;
@@ -110,13 +111,22 @@ header .vertical-text span {
   position: relative;
   transform: rotate(90deg);
 }
-header .vertical-text span:nth-of-type(1)::after {
+header .vertical-text span::after {
+  letter-spacing: -2.75rem;
   content: "Naiden Radnev";
   position: absolute;
   text-transform: uppercase;
+  transition: 0.3s;
 }
 header .heading-container:hover .horizontal-text {
   opacity: 0;
+}
+header .heading-container:hover .vertical-text {
+  opacity: 1;
+}
+header .heading-container:hover .vertical-text span::after {
+  letter-spacing: 0;
+  transition: 0.3s;
 }
 
 section {

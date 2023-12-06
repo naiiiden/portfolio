@@ -11,6 +11,7 @@ header {
         position: absolute;
         font-size: clamp(1.75rem, 3.75vw, 4.375rem);
         transform: translate(50%);
+        opacity: 0;
 
         span {
             display: flex;
@@ -18,13 +19,12 @@ header {
             position: relative;
             transform: rotate(90deg);
 
-            &:nth-of-type(1) {
-
-                &::after {
-                    content: "Naiden\00a0 Radnev";
-                    position: absolute;
-                    text-transform: uppercase;
-                }
+            &::after {
+                letter-spacing: -2.75rem;
+                content: "Naiden\00a0 Radnev";
+                position: absolute;
+                text-transform: uppercase;
+                transition: .3s;
             }
         }
     }
@@ -32,6 +32,15 @@ header {
     .heading-container:hover {
         .horizontal-text {
             opacity: 0;
+        }
+        
+        .vertical-text {
+            opacity: 1;
+
+            span::after {
+                letter-spacing: 0;
+                transition: .3s;
+            }
         }
     }
 }
