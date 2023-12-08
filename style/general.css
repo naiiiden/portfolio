@@ -149,6 +149,8 @@ section {
   overflow: hidden;
 }
 section .info {
+  width: 100%;
+  padding: 0.83rem clamp(0.5rem, 2vw, 1rem);
   position: absolute;
   opacity: 0;
   visibility: hidden;
@@ -156,6 +158,81 @@ section .info {
 }
 section .info > :last-child {
   margin-bottom: 6rem;
+}
+section h2, section h2 a {
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+  font-size: clamp(1.75rem, 3.75vw, 4.375rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+section p:not(:first-child) {
+  margin-top: 0.83rem;
+}
+section p, section li, section a:not(h2 a) {
+  font-size: clamp(1.125rem, 2vw, 2.25rem);
+  max-width: 1000px;
+  font-weight: 300;
+}
+section h3, section h4 {
+  font-weight: 500;
+}
+section a:not(h2 a) {
+  color: blue;
+  text-decoration: underline;
+}
+section a:not(h2 a):hover, section a:not(h2 a):focus-visible {
+  color: #000;
+  text-decoration: none;
+  font-style: italic;
+}
+section a:not(h2 a):focus-visible {
+  outline: 3px dashed #000;
+}
+section:nth-child(2) .info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+section:nth-child(2) .info ul li {
+  position: relative;
+}
+section:nth-child(2) .info ul li h3 {
+  font-size: 1.5rem;
+}
+section:nth-child(2) .info ul li h4 {
+  font-size: 1.25rem;
+}
+section:nth-child(2) .info ul li img {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  opacity: 0;
+  z-index: -1;
+}
+section:nth-child(2) .info ul li:hover img {
+  opacity: 1;
+}
+section:nth-child(2) .info ul ul {
+  display: unset;
+  gap: unset;
+}
+section:nth-child(2) .info ul ul li {
+  display: inline;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1rem;
+}
+section:nth-child(2) .info ul ul li:not(:last-child)::after {
+  content: ",";
+}
+section:nth-child(2) .info ul li div {
+  display: flex;
+  gap: 0.5rem;
+}
+section:nth-child(2) .info ul li div a {
+  display: block;
+  font-size: 1rem;
 }
 section:nth-child(1) h2 a, section:nth-child(2) h2 a, section:nth-child(3) h2 a {
   display: flex;
@@ -188,92 +265,10 @@ section:target {
   flex-grow: 1;
   transition: 0.4s;
 }
-section:target:nth-child(2) .info {
-  width: 100%;
-}
-section:target:nth-child(2) .info ul {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-section:target:nth-child(2) .info ul li {
-  position: relative;
-}
-section:target:nth-child(2) .info ul li h3 {
-  font-size: 1.5rem;
-}
-section:target:nth-child(2) .info ul li h4 {
-  font-size: 1.25rem;
-}
-section:target:nth-child(2) .info ul li img {
-  position: absolute;
-  top: 0;
-  right: 3rem;
-  opacity: 0;
-  z-index: -1;
-}
-section:target:nth-child(2) .info ul li:hover img {
-  opacity: 1;
-}
-section:target:nth-child(2) .info ul ul {
-  display: unset;
-  gap: unset;
-}
-section:target:nth-child(2) .info ul ul li {
-  display: inline;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-}
-section:target:nth-child(2) .info ul ul li:not(:last-child)::after {
-  content: ",";
-}
-section:target:nth-child(2) .info ul li div {
-  display: flex;
-  gap: 0.5rem;
-}
-section:target:nth-child(2) .info ul li div a {
-  display: block;
-  font-size: 1rem;
-}
 section:target .info {
   height: 100%;
   overflow-y: auto;
   opacity: 1;
   visibility: unset;
   transition: 0.4s;
-}
-
-.container .info {
-  padding: 0.83rem clamp(0.5rem, 2vw, 1rem);
-}
-.container h2, .container h2 a {
-  padding: 0 clamp(0.5rem, 2vw, 1rem);
-  font-size: clamp(1.75rem, 3.75vw, 4.375rem);
-  font-weight: 500;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.container p:not(:first-child) {
-  margin-top: 0.83rem;
-}
-.container p, .container li, .container a:not(h2 a) {
-  font-size: clamp(1.125rem, 2vw, 2.25rem);
-  max-width: 1000px;
-  font-weight: 300;
-}
-.container h3, .container h4 {
-  font-weight: 500;
-}
-.container a:not(h2 a) {
-  color: blue;
-  text-decoration: underline;
-}
-.container a:not(h2 a):hover, .container a:not(h2 a):focus-visible {
-  color: #000;
-  text-decoration: none;
-  font-style: italic;
-}
-.container a:not(h2 a):focus-visible {
-  outline: 3px dashed #000;
 }/*# sourceMappingURL=general.css.map */
