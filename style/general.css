@@ -196,8 +196,24 @@ section:target:nth-child(2) .info ul {
   flex-direction: column;
   gap: 2rem;
 }
-section:target:nth-child(2) .info ul h4 {
-  font-size: 2rem;
+section:target:nth-child(2) .info ul li {
+  position: relative;
+}
+section:target:nth-child(2) .info ul li h3 {
+  font-size: 1.5rem;
+}
+section:target:nth-child(2) .info ul li h4 {
+  font-size: 1.25rem;
+}
+section:target:nth-child(2) .info ul li img {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  opacity: 0;
+  z-index: -1;
+}
+section:target:nth-child(2) .info ul li:hover img {
+  opacity: 1;
 }
 section:target:nth-child(2) .info ul ul {
   display: unset;
@@ -207,17 +223,18 @@ section:target:nth-child(2) .info ul ul li {
   display: inline;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1rem;
 }
 section:target:nth-child(2) .info ul ul li:not(:last-child)::after {
   content: ",";
 }
-section:target:nth-child(2) .info ul li div div {
+section:target:nth-child(2) .info ul li div {
   display: flex;
+  gap: 0.5rem;
 }
-section:target:nth-child(2) .info ul li div div a {
+section:target:nth-child(2) .info ul li div a {
   display: block;
+  font-size: 1rem;
 }
 section:target .info {
   height: 100%;
