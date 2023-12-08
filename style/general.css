@@ -287,9 +287,6 @@ section:nth-child(2) .info ul {
   flex-direction: column;
   gap: 2rem;
 }
-section:nth-child(2) .info ul li {
-  position: relative;
-}
 section:nth-child(2) .info ul li h3 {
   font-size: 1.5rem;
 }
@@ -299,9 +296,7 @@ section:nth-child(2) .info ul li h4 {
 section:nth-child(2) .info ul li img {
   opacity: 0;
   z-index: -1;
-  position: absolute;
-  top: -100%;
-  left: 25%;
+  position: fixed;
 }
 section:nth-child(2) .info ul li:hover h3, section:nth-child(2) .info ul li:hover h4, section:nth-child(2) .info ul li:hover p, section:nth-child(2) .info ul li:hover li {
   color: aliceblue;

@@ -76,8 +76,6 @@ section {
                 gap: 2rem;
 
                 li {
-                    position: relative;
-                    
                     h3 {
                         font-size: 1.5rem;
                     }
@@ -90,9 +88,7 @@ section {
                 li img {
                     opacity: 0;
                     z-index: -1;
-                    position: absolute;
-                    top: -100%;
-                    left: 25%;
+                    position: fixed;
                 }
 
                 li:hover {
