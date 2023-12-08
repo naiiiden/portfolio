@@ -16,12 +16,47 @@ section {
         }
     }
 
-    h2, h2 a {
+    h2 {
         padding: 0 clamp(0.5rem, 2vw, 1rem);
-        font-size: clamp(1.75rem, 3.75vw, 4.375rem);
+    }
+
+    h2, h3, h4 {
         font-weight: 500;
-        text-transform: uppercase;
-        white-space: nowrap;
+    }
+
+    // Shapes
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        h2 a {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            width: fit-content;
+            padding: unset;
+            font-size: clamp(1.75rem, 3.75vw, 4.375rem);
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            &::before {
+                content: '';
+                background: $black;
+            }
+        }
+    } 
+
+    &:nth-child(1) h2 a::before, &:nth-child(2) h2 a::before {
+        width: clamp(1.5rem, 3vw, 3.25rem);
+        height: clamp(1.5rem, 3vw, 3.25rem);
+    }
+
+    &:nth-child(2) h2 a::before {
+        border-radius: 50%;
+    }
+
+    &:nth-child(3) h2 a::before {
+        border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
+        border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
+        border-bottom: clamp(24.8px, 3vw, 52px) solid $black;
+        background: unset;
     }
 
     p:not(:first-child) {
@@ -30,27 +65,7 @@ section {
 
     p, li, a:not(h2 a) {
         font-size: clamp(1.125rem, 2vw, 2.25rem);
-        max-width: 1000px;
         font-weight: 300;
-    }
-
-    h3, h4 {
-        font-weight: 500;
-    }
-
-    a:not(h2 a) {
-        color: blue;
-        text-decoration: underline;
-
-        &:hover, &:focus-visible {
-            color: $black;
-            text-decoration: none;
-            font-style: italic;
-        }
-
-        &:focus-visible {
-            outline: 3px dashed $black;
-        }
     }
 
     &:nth-child(2) {
@@ -112,39 +127,6 @@ section {
                 }
             }
         }
-    }
-
-    // Shapes
-    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-        h2 a {
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-            width: fit-content;
-            transition: .2s;
-            padding: unset;
-
-            &::before {
-                content: '';
-                background: $black;
-            }
-        }
-    } 
-
-    &:nth-child(1) h2 a::before, &:nth-child(2) h2 a::before {
-        width: clamp(1.5rem, 3vw, 3.25rem);
-        height: clamp(1.5rem, 3vw, 3.25rem);
-    }
-
-    &:nth-child(2) h2 a::before {
-        border-radius: 50%;
-    }
-
-    &:nth-child(3) h2 a::before {
-        border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
-        border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
-        border-bottom: clamp(24.8px, 3vw, 52px) solid $black;
-        background: unset;
     }
 }
 

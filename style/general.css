@@ -143,6 +143,18 @@ main {
   width: 100%;
 }
 
+a:not(h2 a, h3 a) {
+  color: blue !important;
+  text-decoration: underline;
+}
+a:not(h2 a, h3 a):hover, a:not(h2 a, h3 a):focus-visible {
+  background: #000;
+  color: #fff !important;
+}
+a:not(h2 a, h3 a):focus-visible {
+  outline: 3px dashed #000;
+}
+
 @media screen and (min-width: 900px) {
   main {
     flex-direction: row;
@@ -214,35 +226,46 @@ section .info {
 section .info > :last-child {
   margin-bottom: 6rem;
 }
-section h2, section h2 a {
+section h2 {
   padding: 0 clamp(0.5rem, 2vw, 1rem);
-  font-size: clamp(1.75rem, 3.75vw, 4.375rem);
+}
+section h2, section h3, section h4 {
   font-weight: 500;
+}
+section:nth-child(1) h2 a, section:nth-child(2) h2 a, section:nth-child(3) h2 a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: unset;
+  font-size: clamp(1.75rem, 3.75vw, 4.375rem);
   text-transform: uppercase;
   white-space: nowrap;
+}
+section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before, section:nth-child(3) h2 a::before {
+  content: "";
+  background: #000;
+}
+section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before {
+  width: clamp(1.5rem, 3vw, 3.25rem);
+  height: clamp(1.5rem, 3vw, 3.25rem);
+}
+section:nth-child(2) h2 a::before {
+  border-radius: 50%;
+}
+section:nth-child(3) h2 a::before {
+  border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
+  border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
+  border-bottom: clamp(24.8px, 3vw, 52px) solid #000;
+  background: unset;
 }
 section p:not(:first-child) {
   margin-top: 0.83rem;
 }
 section p, section li, section a:not(h2 a) {
   font-size: clamp(1.125rem, 2vw, 2.25rem);
-  max-width: 1000px;
   font-weight: 300;
-}
-section h3, section h4 {
-  font-weight: 500;
-}
-section a:not(h2 a) {
-  color: blue;
-  text-decoration: underline;
-}
-section a:not(h2 a):hover, section a:not(h2 a):focus-visible {
-  color: #000;
-  text-decoration: none;
-  font-style: italic;
-}
-section a:not(h2 a):focus-visible {
-  outline: 3px dashed #000;
 }
 section:nth-child(2) .info ul {
   display: flex;
@@ -288,32 +311,6 @@ section:nth-child(2) .info ul li div {
 section:nth-child(2) .info ul li div a {
   display: block;
   font-size: 1rem;
-}
-section:nth-child(1) h2 a, section:nth-child(2) h2 a, section:nth-child(3) h2 a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  transition: 0.2s;
-  padding: unset;
-}
-section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before, section:nth-child(3) h2 a::before {
-  content: "";
-  background: #000;
-}
-section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before {
-  width: clamp(1.5rem, 3vw, 3.25rem);
-  height: clamp(1.5rem, 3vw, 3.25rem);
-}
-section:nth-child(2) h2 a::before {
-  border-radius: 50%;
-}
-section:nth-child(3) h2 a::before {
-  border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
-  border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
-  border-bottom: clamp(24.8px, 3vw, 52px) solid #000;
-  background: unset;
 }
 
 section:target {

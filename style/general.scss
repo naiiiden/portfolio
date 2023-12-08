@@ -77,6 +77,20 @@ main {
     width: 100%;
 }
 
+a:not(h2 a, h3 a) {
+    color: blue !important;
+    text-decoration: underline;
+
+    &:hover, &:focus-visible {
+        background: $black;
+        color: $white !important;
+    }
+
+    &:focus-visible {
+        outline: 3px dashed $black;
+    }
+}
+
 @media screen and (min-width: 900px) {
     main {
         flex-direction: row;
