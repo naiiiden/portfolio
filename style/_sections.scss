@@ -85,23 +85,6 @@ section {
                     }
                 }
 
-                li img {
-                    opacity: 0;
-                    z-index: -1;
-                    position: fixed;
-                }
-
-                li:hover {
-                    h3, h4, p, li {
-                        color: aliceblue;
-                        mix-blend-mode: difference;
-                    }
-
-                    img {
-                        opacity: 1;
-                    }
-                }
-                
                 ul {
                     display: unset;
                     gap: unset;
@@ -141,5 +124,30 @@ section:target {
         opacity: 1;
         visibility: unset;
         transition: .4s;
+    }
+}
+
+@media (pointer: fine) {
+    section:nth-child(2) {
+        .info ul {
+            li img {
+                user-select: none;
+                pointer-events: none;
+                opacity: 0;
+                z-index: -1;
+                position: fixed;
+            }
+
+            li:hover {
+                h3, h4, p, li {
+                    color: aliceblue;
+                    mix-blend-mode: difference;
+                }
+
+                img {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

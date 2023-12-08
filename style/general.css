@@ -170,19 +170,20 @@ a:not(h2 a, h3 a):focus-visible {
   background: rgba(17, 17, 17, 0.875);
 }
 
-.cursor {
-  position: fixed;
-  top: -2rem;
-  left: -2rem;
-  pointer-events: none;
-  z-index: 9999;
-  width: 1.125rem;
-  height: 1.125rem;
-  border-radius: 50%;
-  background-color: aliceblue;
-  mix-blend-mode: difference;
+@media (pointer: fine) {
+  .cursor {
+    position: fixed;
+    top: -2rem;
+    left: -2rem;
+    pointer-events: none;
+    z-index: 9999;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 50%;
+    background-color: aliceblue;
+    mix-blend-mode: difference;
+  }
 }
-
 header .heading-container {
   font-size: clamp(1.75rem, 3.75vw, 4.375rem);
   position: relative;
@@ -293,18 +294,6 @@ section:nth-child(2) .info ul li h3 {
 section:nth-child(2) .info ul li h4 {
   font-size: 1.25rem;
 }
-section:nth-child(2) .info ul li img {
-  opacity: 0;
-  z-index: -1;
-  position: fixed;
-}
-section:nth-child(2) .info ul li:hover h3, section:nth-child(2) .info ul li:hover h4, section:nth-child(2) .info ul li:hover p, section:nth-child(2) .info ul li:hover li {
-  color: aliceblue;
-  mix-blend-mode: difference;
-}
-section:nth-child(2) .info ul li:hover img {
-  opacity: 1;
-}
 section:nth-child(2) .info ul ul {
   display: unset;
   gap: unset;
@@ -337,4 +326,23 @@ section:target .info {
   opacity: 1;
   visibility: unset;
   transition: 0.4s;
+}
+
+@media (pointer: fine) {
+  section:nth-child(2) .info ul li img {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+  }
+  section:nth-child(2) .info ul li:hover h3, section:nth-child(2) .info ul li:hover h4, section:nth-child(2) .info ul li:hover p, section:nth-child(2) .info ul li:hover li {
+    color: aliceblue;
+    mix-blend-mode: difference;
+  }
+  section:nth-child(2) .info ul li:hover img {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=general.css.map */
