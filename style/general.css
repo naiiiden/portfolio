@@ -79,6 +79,8 @@ html {
 body {
   display: flex;
   font-family: "Public Sans", Arial;
+  background: #fff;
+  cursor: none;
 }
 body::before {
   content: "";
@@ -166,6 +168,19 @@ a:not(h2 a, h3 a):focus-visible {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(17, 17, 17, 0.875);
+}
+
+.cursor {
+  position: fixed;
+  top: -2rem;
+  left: -2rem;
+  pointer-events: none;
+  z-index: 9999;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background-color: aliceblue;
+  mix-blend-mode: difference;
 }
 
 header .heading-container {
