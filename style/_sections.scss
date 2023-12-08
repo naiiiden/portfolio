@@ -77,22 +77,23 @@ section {
 
                 li {
                     h3 {
-                        font-size: 1.5rem;
+                        font-size: clamp(1.5rem, 2vw, 2rem);
                     }
 
                     h4 {
-                        font-size: 1.25rem;
+                        font-size: clamp(1.25rem, 2vw, 1.75rem);
                     }
                 }
 
                 ul {
-                    display: unset;
-                    gap: unset;
+                    flex-direction: row;
+                    gap: .5rem;
 
                     li {
                         display: inline;
                         width: fit-content;
-                        font-size: 1rem;
+                        font-size: clamp(1rem, 2vw, 1.5rem);
+                        font-weight: 500;
 
                         &:not(:last-child)::after {
                             content: ","
@@ -106,7 +107,7 @@ section {
                     
                     a {
                         display: block;
-                        font-size: 1rem;
+                        font-size: clamp(1rem, 2vw, 1.5rem);
                     }
                 }
             }

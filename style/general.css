@@ -289,20 +289,21 @@ section:nth-child(2) .info ul {
   gap: 2rem;
 }
 section:nth-child(2) .info ul li h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 section:nth-child(2) .info ul li h4 {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
 }
 section:nth-child(2) .info ul ul {
-  display: unset;
-  gap: unset;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 section:nth-child(2) .info ul ul li {
   display: inline;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 500;
 }
 section:nth-child(2) .info ul ul li:not(:last-child)::after {
   content: ",";
@@ -313,7 +314,7 @@ section:nth-child(2) .info ul li div {
 }
 section:nth-child(2) .info ul li div a {
   display: block;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 section:target {
