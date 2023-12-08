@@ -297,11 +297,15 @@ section:nth-child(2) .info ul li h4 {
   font-size: 1.25rem;
 }
 section:nth-child(2) .info ul li img {
-  position: absolute;
-  top: 0;
-  right: 3rem;
   opacity: 0;
   z-index: -1;
+  position: absolute;
+  top: -100%;
+  left: 25%;
+}
+section:nth-child(2) .info ul li:hover h3, section:nth-child(2) .info ul li:hover h4, section:nth-child(2) .info ul li:hover p, section:nth-child(2) .info ul li:hover li {
+  color: aliceblue;
+  mix-blend-mode: difference;
 }
 section:nth-child(2) .info ul li:hover img {
   opacity: 1;

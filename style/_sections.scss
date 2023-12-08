@@ -77,7 +77,7 @@ section {
 
                 li {
                     position: relative;
-
+                    
                     h3 {
                         font-size: 1.5rem;
                     }
@@ -88,14 +88,19 @@ section {
                 }
 
                 li img {
-                    position: absolute;
-                    top: 0;
-                    right: 3rem;
                     opacity: 0;
                     z-index: -1;
+                    position: absolute;
+                    top: -100%;
+                    left: 25%;
                 }
 
                 li:hover {
+                    h3, h4, p, li {
+                        color: aliceblue;
+                        mix-blend-mode: difference;
+                    }
+
                     img {
                         opacity: 1;
                     }
