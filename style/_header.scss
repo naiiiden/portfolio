@@ -19,7 +19,7 @@ header {
             user-select: none;
 
             &::after {
-                color: black;
+                color: $black;
                 letter-spacing: -2.75rem;
                 content: "Naiden\00a0 Radnev";
                 position: absolute;

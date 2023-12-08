@@ -66,6 +66,11 @@ body {
     }
 }
 
+::selection {
+    background: $black;
+    color: $white;
+}
+
 main {
     display: flex;
     flex-direction: column;

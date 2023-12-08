@@ -126,7 +126,7 @@ section {
 
             &::before {
                 content: '';
-                background: black;
+                background: $black;
             }
         }
     } 
@@ -143,7 +143,7 @@ section {
     &:nth-child(3) h2 a::before {
         border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
         border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
-        border-bottom: clamp(24.8px, 3vw, 52px) solid black;
+        border-bottom: clamp(24.8px, 3vw, 52px) solid $black;
         background: unset;
     }
 }
