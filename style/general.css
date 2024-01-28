@@ -296,6 +296,7 @@ section:nth-child(2) .info ul li h4 {
 }
 section:nth-child(2) .info ul ul {
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 section:nth-child(2) .info ul ul li {
@@ -307,6 +308,12 @@ section:nth-child(2) .info ul ul li {
 }
 section:nth-child(2) .info ul ul li:not(:last-child)::after {
   content: ",";
+}
+section:nth-child(2) .info ul ul hr {
+  display: block;
+  opacity: 0;
+  width: 100%;
+  margin-bottom: -1rem;
 }
 section:nth-child(2) .info ul li div {
   display: flex;

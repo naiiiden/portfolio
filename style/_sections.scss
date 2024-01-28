@@ -87,6 +87,7 @@ section {
 
                 ul {
                     flex-direction: row;
+                    flex-wrap: wrap;
                     gap: .5rem;
 
                     li {
@@ -98,6 +99,13 @@ section {
                         &:not(:last-child)::after {
                             content: ","
                         }
+                    }
+
+                    hr {
+                        display: block;
+                        opacity: 0;
+                        width: 100%;
+                        margin-bottom: -1rem;
                     }
                 }
 
