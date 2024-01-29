@@ -18,6 +18,10 @@ section {
 
     h2 {
         padding: 0 clamp(0.5rem, 2vw, 1rem);
+        color: aliceblue;
+        mix-blend-mode: difference;
+        z-index: 9999;
+        position: relative;
     }
 
     h2, h3, h4 {
@@ -38,7 +42,7 @@ section {
 
             &::before {
                 content: '';
-                background: $black;
+                background: aliceblue;
             }
         }
     } 
@@ -55,7 +59,7 @@ section {
     &:nth-child(3) h2 a::before {
         border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
         border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
-        border-bottom: clamp(24.8px, 3vw, 52px) solid $black;
+        border-bottom: clamp(24.8px, 3vw, 52px) solid aliceblue;
         background: unset;
     }
 
@@ -159,4 +163,12 @@ section:target {
             }
         }
     }
+}
+
+.test {
+    position: absolute;
+    width: 100vw;
+    top: 0; 
+    bottom: 0;
+    background: black;
 }

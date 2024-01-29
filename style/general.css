@@ -244,6 +244,10 @@ section .info > :last-child {
 }
 section h2 {
   padding: 0 clamp(0.5rem, 2vw, 1rem);
+  color: aliceblue;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  position: relative;
 }
 section h2, section h3, section h4 {
   font-weight: 500;
@@ -261,7 +265,7 @@ section:nth-child(1) h2 a, section:nth-child(2) h2 a, section:nth-child(3) h2 a 
 }
 section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before, section:nth-child(3) h2 a::before {
   content: "";
-  background: #000;
+  background: aliceblue;
 }
 section:nth-child(1) h2 a::before, section:nth-child(2) h2 a::before {
   width: clamp(1.5rem, 3vw, 3.25rem);
@@ -273,7 +277,7 @@ section:nth-child(2) h2 a::before {
 section:nth-child(3) h2 a::before {
   border-left: clamp(12.4px, 1.5vw, 26px) solid transparent;
   border-right: clamp(12.4px, 1.5vw, 26px) solid transparent;
-  border-bottom: clamp(24.8px, 3vw, 52px) solid #000;
+  border-bottom: clamp(24.8px, 3vw, 52px) solid aliceblue;
   background: unset;
 }
 section p:not(:first-child) {
@@ -353,4 +357,11 @@ section:target .info {
   section:nth-child(2) .info ul li:hover img {
     opacity: 1;
   }
+}
+.test {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  background: black;
 }/*# sourceMappingURL=general.css.map */
