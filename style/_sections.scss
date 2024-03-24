@@ -138,6 +138,10 @@ section:target {
         visibility: unset;
         transition: .4s;
     }
+
+    .test {
+        transform: translateY(0);
+    }
 }
 
 @media (pointer: fine) {
@@ -166,9 +170,11 @@ section:target {
 }
 
 .test {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     top: 0; 
     bottom: 0;
+    left: 0;
     background: black;
+    transform: translateY(100%);
 }

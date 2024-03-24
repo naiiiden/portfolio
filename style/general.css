@@ -339,6 +339,9 @@ section:target .info {
   visibility: unset;
   transition: 0.4s;
 }
+section:target .test {
+  transform: translateY(0);
+}
 
 @media (pointer: fine) {
   section:nth-child(2) .info ul li img {
@@ -359,9 +362,11 @@ section:target .info {
   }
 }
 .test {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   top: 0;
   bottom: 0;
+  left: 0;
   background: black;
+  transform: translateY(100%);
 }/*# sourceMappingURL=general.css.map */
